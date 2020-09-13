@@ -149,15 +149,17 @@ bindsym $mod+g split v
 
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed 
-bindsym $mod+e layout toggle split
+#bindsym $mod+w layout toggle tabbed 
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
-bindsym $mod+space fullscreen toggle
+#bindsym $mod+space fullscreen toggle
+bindsym $mod+w fullscreen toggle
+bindsym $mod+space layout toggle tabbed split
 
 # focus the parent container
 #bindsym $mod+a focus parent
@@ -282,10 +284,10 @@ mode "resize" {
 		bindsym semicolon resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-		bindsym Left resize shrink width 10 px or 10 ppt
+		bindsym Right resize shrink width 10 px or 10 ppt
 		bindsym Down resize grow height 10 px or 10 ppt
 		bindsym Up resize shrink height 10 px or 10 ppt
-		bindsym Right resize grow width 10 px or 10 ppt
+		bindsym Left resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape or $mod+r
 		bindsym Return mode "default"

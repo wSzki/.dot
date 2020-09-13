@@ -52,7 +52,7 @@ alias cdt="cd /tmp"
 alias cdn="cd ~/Tree/Suckless/notes/"
 alias dot="cd ~/.dot"
 alias pod="cd ~/.pod"
-alias 42="cd ~/42_libft/srcs"
+alias 42="cd ~/42_libft/"
 
 ### YOUTUBLE DL
 alias ytdlm="cdyt; youtube-dl -x --audio-format wav"
