@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/wsz/.oh-my-zsh"
 export suck="/home/wsz/Tree/Suckless"
+export pod="/home/wsz/.pod"
 #export ANDROID_SDK="/home/wsz/Android/Sdk"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -48,6 +49,7 @@ alias cdd="cd ~/Tree "
 alias cdt="cd /tmp"
 alias cdn="cd ~/Tree/Suckless/notes/"
 alias dot="cd ~/.dot"
+alias pod="cd ~/.pod"
 alias 42="cd ~/42_libft/srcs"
 
 ### YOUTUBLE DL
