@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/bin/chromium --app="file:///home/wsz/Tree/Suckless/i3/tab/index.html"
+#/bin/chromium --app="https://www.koryschneider.com/tab/"
