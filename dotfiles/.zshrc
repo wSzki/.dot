@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+#export PATH=/home/wsz/.dot/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/wsz/.oh-my-zsh"
 export suck="/home/wsz/Tree/Suckless"
@@ -67,6 +69,9 @@ alias pac="sudo pacman -S"
 ### DATABASE
 alias maria="sudo mariadb"
 alias portinfo="sudo nmap -n -PN -sT -sU -p- localhost"
+
+### K IS LS
+alias ka="k -a"
 
 ### XCLIP
 alias pbc="xclip -selection clipboard"
