@@ -8,7 +8,7 @@
 " """"""
 syntax on
 set nu
-set relativenumber
+"set relativenumber
 filetype indent on
 
 " Indentation
@@ -38,8 +38,9 @@ set lazyredraw
 " Activate Mouse
 set mouse=a
 set splitright
+
 " Whitespacces
-set list   
+set list
 set listchars=space:.,tab:•-,trail:~,extends:>,precedes:<
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
@@ -81,7 +82,7 @@ map <C-b> :RainbowToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-n> :NERDTreeToggle<CR>
+map <C-i> :NERDTreeToggle<CR>
 
 " "### YCM ### " "
 " YcmRestartServer to reload

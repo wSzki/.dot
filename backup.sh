@@ -12,3 +12,7 @@ cp ~/.config/i3/* ~/.dot/i3_config
 
 # Lid Control
 #/etc/systemd/logind.conf
+
+cd ~/.dot
+gitap
+cd
