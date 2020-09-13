@@ -15,6 +15,4 @@ cp ~/.config/i3/* ~/.dot/i3_config
 
 cd ~/.dot
 gitap
-cd ~/.pod
-gitap
 cd
