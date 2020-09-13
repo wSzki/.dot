@@ -14,6 +14,8 @@ source ~/.oh-my-zsh/themes/geometry/geometry.zsh
 
 ########################### ALIASES ############################
 
+### BACKUP
+alias back="~/.dot/backup.sh"
 
 ### C
 alias gccc="gcc -Wall -Werror -Wextra"
