@@ -61,6 +61,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'mg979/vim-visual-multi'
 Plug 'dense-analysis/ale'
+Plug 'airblade/vim-gitgutter'
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'majutsushi/tagbar'
 "###############################"
@@ -88,7 +89,11 @@ map <C-i> :NERDTreeToggle<CR>
 " YcmRestartServer to reload
 let g:ycm_max_num_candidates = 5
 let g:ycm_max_num_identifier_candidates = 5
-
+let g:ycm_min_num_of_chars_for_completion = 2
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>                
+" turn off YCM
+nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>                
+"turn on YCM
 " "### 42 HEADER ### " "
 nmap <f12> :FortyTwoHeader<CR>
 let b:fortytwoheader_user="wszurkow"
@@ -107,8 +112,12 @@ let g:airline#extensions#ale#enabled = 1
 "let g:ale_lint_on_text_changed = 'always'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 1
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 let g:ale_hover_cursor = 0
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '✖✖'
+let g:ale_sign_warning = '∙∙'
+
 " # Propreties #  "
 " bold, underline, undercurl, strikethrough, reverse, italic, standout,  nocombine
 highlight ALEError ctermfg=Red cterm=italic 
