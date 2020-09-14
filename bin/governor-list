@@ -14,8 +14,8 @@ then
 echo "☍ "
 fi
 
-
-
-
-
+if [ "${aa}" == "ondemand" ]
+then
+echo "⎋ "
+fi
 
