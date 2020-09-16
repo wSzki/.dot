@@ -97,7 +97,7 @@ nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
 " "### 42 HEADER ### " "
 nmap <f12> :FortyTwoHeader<CR>
 let b:fortytwoheader_user="wszurkow"
-let b:fortytwoheader_mail="marvin@42.fr"
+let b:fortytwoheader_mail="wszurkow@student.42.fr"
 
 " "### NERDTREE ### " "
 " Start NERDTree

@@ -37,6 +37,7 @@ xset r rate 250 50
 #dwmblocks &
 #discord --start-minimized &
 telegram-desktop -startintray &
+slack -startintray &
 #blueman-applet &
 slock &
 #exec dwm

@@ -189,6 +189,7 @@ gaps bottom -3
 #assign [class="discord"] $ws7
 assign [class="discord"] "d"
 assign [class="TelegramDesktop"] "d"
+assign [class="Slack"] "d"
 assign [class="QjackCtl"] "j"
 assign [class="Chromium" instance="2.webmail.autistici.org"] "m"
 assign [class="Chromium" instance="chromium"] "9"
