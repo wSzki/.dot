@@ -1,0 +1,6 @@
+#!/bin/bash
+
+/bin/chromium --app="https://adm.42.fr/sessions/26/sessions_users/16597/edit"
+
+
+
