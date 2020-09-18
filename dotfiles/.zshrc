@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 #export PATH=$HOME/.dot/bin:$PATH
 cd ~/'...';
 # Path to your oh-my-zsh installation.
@@ -17,6 +18,20 @@ export DOT="$HOME/.dot"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 source ~/.oh-my-zsh/themes/geometry/geometry.zsh
+
+########################### PLUGINS ############################
+source ~/.zplug/init.zsh
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "wting/autojump", defer:2
+zplug load
+#zplug load --verbose
+
+
+# Syntax highlighting
+ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow, bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow, bold'
+ZSH_HIGHLIGHT_STYLES[command]='fg=yellow, bold'
 
 ########################### ALIASES ############################
 
@@ -174,7 +189,7 @@ alias battery-monitor="udevadm monitor --property"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git k colored-man-pages fzf thefuck zsh-autosuggestions)
+plugins=(autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
 
 
 source $ZSH/oh-my-zsh.sh
