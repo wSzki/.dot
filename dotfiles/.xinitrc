@@ -20,7 +20,7 @@ xbacklight -set 70 &
 xbindkeys &
 xgamma -gamma 1.3 &
 redshift -P -O 3725 &
-feh --bg-scale ~/.bg.png &
+feh --bg-scale ~/.dot/dotfiles/bg.png &
 unclutter -idle 1 -jitter 1 -root &
 setxkbmap -option compose:prsc -option caps:hyper & 
 xset r rate 250 50
