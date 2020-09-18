@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 #export PATH=$HOME/.dot/bin:$PATH
-
+cd ~/'...';
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -41,21 +41,15 @@ alias zrc="vim ~/.zshrc"
 alias xrc="vim ~/.xinitrc"
 alias vrc="vim ~/.vimrc"
 alias irc="vim ~/.config/i3/config"
-#alias irc="sudo vim /etc/i3/config"
-
 alias config="cd ~/.config"
-alias isrc="sudo vim /etc/i3status.conf"
-alias ibrc="sudo vim /etc/i3blocks.conf"
-alias ib2rc="sudo vim /etc/i3blocks2.conf"
 ### CD
-alias cdsu="cd ~/Tree/Suckless"
-alias cddl="cd ~/Downloads"
-alias cdd="cd ~/Tree "
+alias cddl="cd ~/.dl"
 alias cdt="cd /tmp"
-alias cdn="cd ~/Tree/Suckless/notes/"
 alias dot="cd ~/.dot"
 alias pod="cd ~/.pod"
-alias 42="cd ~/42_libft/"
+alias 42="cd ~/'...'/42_libft/"
+alias cdd="cd ~/'...'"
+#alias cdd="cd ~/Tree "
 
 ### YOUTUBLE DL
 alias ytdlm="cdyt; youtube-dl -x --audio-format wav"
@@ -75,6 +69,7 @@ alias portinfo="sudo nmap -n -PN -sT -sU -p- localhost"
 
 ### K IS LS
 alias ka="k -a"
+alias l="k -a"
 
 ### XCLIP
 alias pbc="xclip -selection clipboard"
