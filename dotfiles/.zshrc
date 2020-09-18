@@ -84,6 +84,7 @@ alias portinfo="sudo nmap -n -PN -sT -sU -p- localhost"
 
 ### K IS LS
 alias ka="k -a"
+alias kk="k -Ah"
 alias l="k -a"
 
 ### XCLIP

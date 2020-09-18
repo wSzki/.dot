@@ -44,6 +44,16 @@ set list
 set listchars=space:.,tab:•-,trail:~,extends:>,precedes:<
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
+" No Indent Pasting
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+function! XTermPasteBegin()
+	set pastetoggle=<Esc>[201~
+	set paste
+	return ""
+endfunction
+
 " "#################################################" "
 " "  ### PLUG ###"
 " PlugInstall, PlugClean
@@ -124,13 +134,13 @@ highlight ALEError ctermfg=Red cterm=italic
 highlight ALEWarning ctermfg=Yellow cterm=italic
 highlight ALEStyleWarning ctermbg=none cterm=none
 highlight ALEStyleError ctermbg=none cterm=none
- 
+
 function! LinterStatus() abort 
 	let l:counts = ale#statusline#Count(bufnr(''))
-  
+
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
-  
+
 	return l:counts.total == 0 ? 'OK' : printf(
 				\   '%dW %dE', 
 				\   all_non_errors, 
