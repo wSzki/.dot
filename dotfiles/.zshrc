@@ -28,10 +28,13 @@ zplug load
 
 
 # Syntax highlighting
-ZSH_HIGHLIGHT_STYLES[path]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[path]='fg=gray, italic'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=yellow, bold'
+ZSH_HIGHLIGHT_STYLES[global-alias]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=magenta'
 
 ########################### ALIASES ############################
 
@@ -40,6 +43,7 @@ alias back="~/.dot/backup.sh"
 
 ### C
 alias gccc="gcc -Wall -Werror -Wextra"
+alias gccf="gcc -fsanitize=address -Wall -Werror -Wextra"
 alias norminette="~/.norminette/norminette.rb"
 alias norme="norminette -R CheckForbiddenSourceHeader"
 
@@ -56,7 +60,15 @@ alias zrc="vim ~/.zshrc"
 alias xrc="vim ~/.xinitrc"
 alias vrc="vim ~/.vimrc"
 alias irc="vim ~/.config/i3/config"
+alias ibrc="vim ~/.config/i3/i3blocks.conf"
+alias ib2rc="vim ~/.config/i3/i3blocks2.conf"
+alias isrc="vim ~/.config/i3/i3status.conf"
 alias config="cd ~/.config"
+
+### NOTES
+alias n0="vim $DOT/notes.md"
+
+
 ### CD
 alias cddl="cd ~/.dl"
 alias cdt="cd /tmp"
@@ -93,10 +105,12 @@ alias pbp="xclip -selection clipboard -o"
 
 ### MISC
 alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
+alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
+alias ack="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
 alias veille="systemctl suspend && slock"
 alias services="systemctl --type=service"
 alias is="vim ~/Tree/Suckless/installScript/installScript.sh"
-alias hdmi="xrandr --output HDMI2 --auto --above eDP1"
+alias hdmi="xrandr --output HDMI-2 --auto --above eDP-1"
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 

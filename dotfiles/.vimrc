@@ -10,11 +10,16 @@ syntax on
 set nu
 "set relativenumber
 filetype indent on
+nmap <f11> :windo set relativenumber!<CR>
 
 " Indentation
 set autoindent
 set cindent
 set smartindent
+
+" Pasteboard
+"nmap <f9>:w !xclip -i -sel c<CR>
+":w !xclip -sel c
 
 " Lines, rulers, anti word wrap
 set linebreak
@@ -26,6 +31,10 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+
+"Split
+set splitbelow
+set splitright
 
 " Tabs & Spaces
 set tabstop=4
@@ -54,6 +63,10 @@ function! XTermPasteBegin()
 	return ""
 endfunction
 
+" Unknown
+" set hidden
+" set noshowmode
+
 " "#################################################" "
 " "  ### PLUG ###"
 " PlugInstall, PlugClean
@@ -72,6 +85,7 @@ Plug 'mbbill/undotree'
 Plug 'mg979/vim-visual-multi'
 Plug 'dense-analysis/ale'
 Plug 'airblade/vim-gitgutter'
+Plug 'mileszs/ack.vim'
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'majutsushi/tagbar'
 "###############################"
@@ -93,7 +107,7 @@ map <C-b> :RainbowToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-i> :NERDTreeToggle<CR>
+nmap <f10> :NERDTreeToggle<CR>
 
 " "### YCM ### " "
 " YcmRestartServer to reload
