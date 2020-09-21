@@ -305,12 +305,12 @@ bindsym $mod+r mode "resize"
 bar {
 height 15
 		position bottom
-	mode hide
-		hidden_state hide
-		modifier Mod4
+#	mode hide
+#		hidden_state hide
+#		modifier Mod4
 	font pango:scientifica 10
-tray_output none
-		workspace_buttons no
+#tray_output none
+#		workspace_buttons no
 		font pango:scientifica 10 
 		status_command i3status --config ~/.config/i3/i3status.conf
 		colors {
@@ -322,18 +322,18 @@ tray_output none
 				inactive_workspace #3c3836 #191D20 #d5c4a1
 				urgent_workspace   #7c6f64 #fabd2f #3c3836
 		}
-}
-
+}    
+     
 bar {
-height 18
+height 15
 #	i3bar_command i3bar --transparency
 #	mode hide
 #		hidden_state hide
 #		modifier Mod4
 	font pango:scientifica 10
-#		tray_output none
-		position bottom
-#		workspace_buttons no
+		tray_output none
+		position top
+		workspace_buttons no
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 		colors{
 			background #191D20
@@ -342,7 +342,7 @@ height 18
 				inactive_workspace #3c3836 #191D20 #d5c4a1
 				urgent_workspace   #7c6f64 #fabd2f #3c3836
 		}
-}
+} 
 
 
 #bar {

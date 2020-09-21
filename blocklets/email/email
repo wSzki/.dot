@@ -123,9 +123,10 @@ def printer(new_count):
     print(new_count)
     print(new_count)
     if new_count > 0:
-        print('#00ff00')
+        print('#8ec07c')
+#        print('#689d6a')
     else:
-        print('#ededed')
+        print('#fabd2f')
 
 if (keyring_loaded and not get_args()) or not keyring_loaded:
     parse_instance()
