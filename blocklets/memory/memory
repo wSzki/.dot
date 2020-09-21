@@ -14,6 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#	printf("%.1fG (%.f%%)\n", used, pct)
 TYPE="${BLOCK_INSTANCE:-mem}"
 
 awk -v type=$TYPE '
@@ -52,7 +53,7 @@ END {
 	}
 
 	# full text
-	printf("%.1fG/%.1fG (%.f%%)\n", used, total, pct)
+	printf("%.1fG (%.f%%)\n", used, total, pct)
 
 	# short text
 	printf("%.f%%\n", pct)

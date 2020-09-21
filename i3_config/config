@@ -194,7 +194,7 @@ assign [class="TelegramDesktop"] "d"
 assign [class="Slack"] "d"
 assign [class="QjackCtl"] "j"
 assign [class="Chromium" instance="2.webmail.autistici.org"] "m"
-assign [class="Chromium" instance="chromium"] "9"
+#assign [class="Chromium" instance="chromium"] "9"
 assign [class="Chromium" instance="youtube"] "y"
 assign [class="Left"] "l"
 assign [class="orca"] "o"
@@ -325,7 +325,7 @@ tray_output none
 }
 
 bar {
-height 15
+height 18
 #	i3bar_command i3bar --transparency
 #	mode hide
 #		hidden_state hide

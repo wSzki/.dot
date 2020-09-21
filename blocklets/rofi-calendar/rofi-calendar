@@ -25,14 +25,13 @@ cal --color=always $month $year \
     | rofi \
         -dmenu \
         -markup-rows \
-        -no-fullscreen \
         -font "Monospace 6" \
         -hide-scrollbar \
         -bw 2 \
         -m -3 \
         -theme-str '#window {anchor:southeast; location: northwest;}' \
         -eh 1 \
-        -width -22 \
+        -width -50 \
         -no-custom \
         -p "$date" > /dev/null 
     esac
