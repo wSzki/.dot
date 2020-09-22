@@ -32,6 +32,7 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=gray, italic'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=yellow, bold'
+ZSH_HIGHLIGHT_STYLES[autodirectory]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[global-alias]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=magenta'
@@ -93,6 +94,13 @@ alias pac="sudo pacman -S"
 ### DATABASE
 alias maria="sudo mariadb"
 alias portinfo="sudo nmap -n -PN -sT -sU -p- localhost"
+
+### CCAT
+alias cat="/bin/ccat --color=always"
+alias ccat="/bin/ccat --color=always"
+
+### GDB TUI
+alias gdb="gdb -tui"
 
 ### K IS LS
 alias ka="k -a"
@@ -204,7 +212,7 @@ alias battery-monitor="udevadm monitor --property"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
+plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
 
 
 source $ZSH/oh-my-zsh.sh

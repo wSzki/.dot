@@ -20,11 +20,11 @@ xbacklight -set 70 &
 xbindkeys &
 xgamma -gamma 1.3 &
 redshift -P -O 3725 &
-feh --bg-scale ~/.dot/dotfiles/bg.png &
+#feh --bg-scale ~/.dot/dotfiles/bg.png &
 unclutter -idle 1 -jitter 1 -root &
 setxkbmap -option compose:prsc -option caps:hyper & 
 xset r rate 250 50 &
-#xsetroot -solid '#1d2021' &
+xsetroot -solid '#1d2021' &
 #setxkbmap -option compose:prsc -option ctrl:nocaps &
 
 #jackd -R -d alsa -d hw:PCH&

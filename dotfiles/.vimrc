@@ -8,7 +8,7 @@
 " """"""
 syntax on
 set nu
-"set relativenumber
+set relativenumber
 filetype indent on
 nmap <f11> :windo set relativenumber!<CR>
 
@@ -111,8 +111,8 @@ nmap <f10> :NERDTreeToggle<CR>
 
 " "### YCM ### " "
 " YcmRestartServer to reload
-let g:ycm_max_num_candidates = 5
-let g:ycm_max_num_identifier_candidates = 5
+let g:ycm_max_num_candidates = 15 
+let g:ycm_max_num_identifier_candidates = 15
 let g:ycm_min_num_of_chars_for_completion = 2
 nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>                
 " turn off YCM

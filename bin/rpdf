@@ -1,0 +1,6 @@
+
+
+
+#!/bin/bash
+pdftotext -layout $1 - | /bin/ccat --color=always | less -r
+
