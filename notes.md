@@ -12,7 +12,7 @@ Set priority in config file /etc/netctl/wlan0-...
 
 # [AUR]
 
-- poppler > pdftotext
+
 - sysstat -> mpstat 
 - compton // opacity, fade
 
@@ -25,7 +25,9 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+- gnome-boxes
 - ack
+- poppler > pdftotext
 - code
 - xclip
 - alsa-utils
