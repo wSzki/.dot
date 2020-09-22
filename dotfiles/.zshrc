@@ -6,7 +6,8 @@
 cd ~/'...';
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+#export PATH=/home/wsz/.dot/bin/scripts:$PATH
+#export PATH=/home/wsz/.dot/bin/bookmarks:$PATH
 # Global Variables
 export POD="$HOME/.pod"
 export DOT="$HOME/.dot"
@@ -77,6 +78,8 @@ alias dot="cd ~/.dot"
 alias pod="cd ~/.pod"
 alias 42="cd ~/'...'/42_libft/"
 alias cdd="cd ~/'...'"
+alias bookmarks="cd ~/.dot/bin/bookmarks"
+alias dbin="cd ~/.dot/bin/"
 #alias cdd="cd ~/Tree "
 
 ### YOUTUBLE DL
