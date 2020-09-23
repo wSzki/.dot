@@ -11,6 +11,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Global Variables
 export POD="$HOME/.pod"
 export DOT="$HOME/.dot"
+export PATH=/home/wsz/.dot/bin/scripts:$PATH
+export PATH=/home/wsz/.dot/bin/bookmarks:$PATH
+
+
 
 #export ANDROID_SDK="/home/wsz/Android/Sdk"
 # Set name of the theme to load --- if set to "random", it will
@@ -103,7 +107,7 @@ alias cat="/bin/ccat --color=always"
 alias ccat="/bin/ccat --color=always"
 
 ### GDB TUI
-alias gdb="gdb -tui"
+alias db="gdb -tui"
 
 ### K IS LS
 alias ka="k -a"
