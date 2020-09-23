@@ -3,7 +3,6 @@
 
 
 #export PATH=$HOME/.dot/bin:$PATH
-cd ~/'...';
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 #export PATH=/home/wsz/.dot/bin/scripts:$PATH
@@ -80,8 +79,7 @@ alias cddl="cd ~/.dl"
 alias cdt="cd /tmp"
 alias dot="cd ~/.dot"
 alias pod="cd ~/.pod"
-alias 42="cd ~/'...'/42_libft/"
-alias cdd="cd ~/'...'"
+alias 42="cd ~/42_libft/"
 alias bookmarks="cd ~/.dot/bin/bookmarks"
 alias dbin="cd ~/.dot/bin/"
 #alias cdd="cd ~/Tree "
@@ -103,7 +101,7 @@ alias maria="sudo mariadb"
 alias portinfo="sudo nmap -n -PN -sT -sU -p- localhost"
 
 ### CCAT
-alias cat="/bin/ccat --color=always"
+#alias cat="/bin/ccat --color=always"
 alias ccat="/bin/ccat --color=always"
 
 ### GDB TUI
