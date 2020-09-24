@@ -102,10 +102,11 @@ alias portinfo="sudo nmap -n -PN -sT -sU -p- localhost"
 
 ### CCAT
 #alias cat="/bin/ccat --color=always"
-alias ccat="/bin/ccat --color=always"
+alias catc="/bin/ccat --color=always"
 
 ### GDB TUI
-alias db="gdb -tui"
+alias db="gdb -tui -q"
+alias gdb="gdb -q"
 
 ### K IS LS
 alias ka="k -a"

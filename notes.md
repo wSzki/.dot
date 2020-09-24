@@ -25,6 +25,8 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+- ueberzug
+- ytop
 - gnome-boxes
 - ack
 - poppler > pdftotext
