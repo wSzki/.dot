@@ -51,6 +51,8 @@ alias gccc="gcc -Wall -Werror -Wextra"
 alias gccf="gcc -fsanitize=address -Wall -Werror -Wextra"
 alias norminette="~/.norminette/norminette.rb"
 alias norme="norminette -R CheckForbiddenSourceHeader"
+alias grademe="~/Libftest/grademe.sh -n"
+alias deepthought="vim ~/Libftest/deepthought"
 
 ### SERVER
 alias serverstart="sudo systemctl start mariadb.service; sudo systemctl start httpd.service"

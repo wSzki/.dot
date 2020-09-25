@@ -30,7 +30,7 @@ xsetroot -solid '#1d2021' &
 #jackd -R -d alsa -d hw:PCH&
 #setxkbmap -option ctrl:nocaps &
 #ping -i 5 google.fr | grep -o 'time=[0-9].[0-9][0-9]' > ~/.ping &
-#xautolock -time 5 -locker "systemctl suspend" &
+xautolock -time 5 -locker "slock && systemctl suspend" &
 #st &
 #autistici &
 #Left &
