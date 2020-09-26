@@ -25,6 +25,7 @@ source ~/.oh-my-zsh/themes/geometry/geometry.zsh
 ########################### PLUGINS ############################
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "aloxaf/fzf-tab", defer:2
 zplug "wting/autojump", defer:2
 zplug load
 #zplug load --verbose
@@ -59,7 +60,7 @@ alias serverstop="sudo systemctl stop mariadb.service; sudo systemctl stop httpd
 alias serverrestart="sudo systemctl restart mariadb.service; sudo systemctl restart httpd.service"
 
 ### RENAULT
-alias renault="cd /home/wsz/Renault/wszki.github.io/Renault"
+#alias renault="cd /home/wsz/Renault/wszki.github.io/Renault"
 
 ### DOTFILES
 alias zrc="vim ~/.zshrc"
@@ -118,12 +119,12 @@ alias pbc="xclip -selection clipboard"
 alias pbp="xclip -selection clipboard -o"
 
 ### MISC
-alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
-alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
+#alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
+#alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
 alias ack="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
 alias veille="systemctl suspend && slock"
 alias services="systemctl --type=service"
-alias is="vim ~/Tree/Suckless/installScript/installScript.sh"
+#alias is="vim ~/Tree/Suckless/installScript/installScript.sh"
 alias hdmi="xrandr --output HDMI-2 --auto --above eDP-1"
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
@@ -134,7 +135,7 @@ alias autopush="git add .; git status; git commit -m "autopush"; git push"
 ######  SERVICES
 ###     WIFI
 alias ipinfo="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
-alias p="ping google.fr"
+#alias p="ping google.fr"
 alias autoWifiOn="sudo systemctl enable netctl-auto@wlan0.service && sudo systemctl start netctl-auto@wlan0.service"
 alias autoWifiOff="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
 alias wifi="sudo wifi-menu"
@@ -218,7 +219,9 @@ alias battery-monitor="udevadm monitor --property"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
+plugins=(fzf-tab colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
+
+#source ~/.oh-my-zsh/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 
 
 source $ZSH/oh-my-zsh.sh
