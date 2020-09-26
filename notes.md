@@ -1,3 +1,4 @@
+https://kkovacs.eu/cool-but-obscure-unix-tools
 
 - xev : keystroke monitor
 - xprop : window properties
@@ -12,8 +13,11 @@ Set priority in config file /etc/netctl/wlan0-...
 
 # [AUR]
 
+- tmpmail-git
+- gotop
+- curl cheat.sh
 
-- sysstat -> mpstat 
+- sysstat -> mpstat
 - compton // opacity, fade
 
 - xorg-xfd // print charsets
@@ -25,6 +29,15 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+- rsstail
+- epr-git // epub reader?
+- hascard // notes?
+- howdoi// tldr like
+- lcharmap // ansi chracter viewer
+- micro - vim alternative
+- aerc // mail client
+- powertop
+- kmdr
 - ueberzug
 - ytop
 - gnome-boxes

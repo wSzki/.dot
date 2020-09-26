@@ -22,7 +22,6 @@ export PATH=/home/wsz/.dot/bin/bookmarks:$PATH
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 source ~/.oh-my-zsh/themes/geometry/geometry.zsh
-
 ########################### PLUGINS ############################
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -74,7 +73,6 @@ alias config="cd ~/.config"
 
 ### NOTES
 alias n0="vim $DOT/notes.md"
-
 
 ### CD
 alias cddl="cd ~/.dl"
