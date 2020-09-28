@@ -46,7 +46,12 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
-
+- code-minimap
+- xprop // window prop
+- gvim
+- tlpui
+- conky
+- skroll
 - tmpmail-git
 - gotop
 - rsstail

@@ -11,11 +11,14 @@ set nu
 set relativenumber
 filetype indent on
 nmap <f11> :windo set relativenumber!<CR>
-
+set nowrap
+set clipboard=unnamedplus
 " Indentation
 set autoindent
 set cindent
 set smartindent
+
+"autocmd VimEnter * Minimap
 
 " Pasteboard
 "nmap <f9>:w !xclip -i -sel c<CR>
@@ -72,7 +75,7 @@ endfunction
 " PlugInstall, PlugClean
 call plug#begin('~/.vim/plugged')
 "###############################"
-Plug 'VundleVim/Vundle.vim'
+"Plug 'VundleVim/Vundle.vim'
 Plug 'morhetz/gruvbox'
 Plug 'frazrepo/vim-rainbow'
 Plug 'vim-airline/vim-airline'
@@ -87,6 +90,7 @@ Plug 'dense-analysis/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'thirtythreeforty/lessspace.vim'
 Plug 'mileszs/ack.vim'
+Plug 'wfxr/minimap.vim'
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'majutsushi/tagbar'
 "###############################"
@@ -115,7 +119,7 @@ nmap <f10> :NERDTreeToggle<CR>
 let g:ycm_max_num_candidates = 15 
 let g:ycm_max_num_identifier_candidates = 15
 let g:ycm_min_num_of_chars_for_completion = 2
-nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>                
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
 " turn off YCM
 nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>                
 "turn on YCM
@@ -150,25 +154,25 @@ highlight ALEWarning ctermfg=Yellow cterm=italic
 highlight ALEStyleWarning ctermbg=none cterm=none
 highlight ALEStyleError ctermbg=none cterm=none
 
-function! LinterStatus() abort 
-	let l:counts = ale#statusline#Count(bufnr(''))
+"function! LinterStatus() abort
+"	let l:counts = ale#statusline#Count(bufnr(''))
 
-	let l:all_errors = l:counts.error + l:counts.style_error
-	let l:all_non_errors = l:counts.total - l:all_errors
-
-	return l:counts.total == 0 ? 'OK' : printf(
-				\   '%dW %dE', 
-				\   all_non_errors, 
-				\   all_errors 
-				\) 
-endfunction 
-set statusline=%{LinterStatus()} 
+"	let l:all_errors = l:counts.error + l:counts.style_error
+"	let l:all_non_errors = l:counts.total - l:all_errors
+"
+"	return l:counts.total == 0 ? 'OK' : printf(
+"				\   '%dW %dE',
+"				\   all_non_errors,
+"				\   all_errors
+"			\)
+"endfunction
+"set statusline=%{LinterStatus()}
 
 " "### VISUAL-MULTIPLE-CURSORS ### " "
 let g:VM_maps = {}
 let g:VM_maps['Find Under']                  = '<C-n>'
 let g:VM_maps['Find Subword Under']          = '<C-n>'
-let g:VM_maps["Select All"]                  = '\\A' 
+let g:VM_maps["Select All"]                  = '\\A'
 let g:VM_maps["Start Regex Search"]          = '\\/'
 let g:VM_maps["Add Cursor Down"]             = '<C-j>'
 let g:VM_maps["Add Cursor Up"]               = '<C-k>'
