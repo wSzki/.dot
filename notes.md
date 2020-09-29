@@ -2,7 +2,6 @@ https://kkovacs.eu/cool-but-obscure-unix-tools
 
 # [TIPS]
 
-
 `
 for i in *.png
 do
@@ -17,7 +16,6 @@ ctrl e = end
 convert file.{jpg, png}
 
 `
-
 
 - xev : keystroke monitor
 - xprop : window properties
@@ -119,4 +117,5 @@ sudo systemctl enable tlp-sleep.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.sokcet
 
--
+# POWERTOP
+etc.default/cpupower -> set default governor-
