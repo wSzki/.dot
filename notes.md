@@ -44,6 +44,7 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+- xcape
 - code-minimap
 - xprop // window prop
 - gvim
@@ -118,4 +119,4 @@ sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.sokcet
 
 # POWERTOP
-etc.default/cpupower -> set default governor-
+etc/default/cpupower -> set default governor-

@@ -28,23 +28,25 @@ ZSH_HIGHLIGHT_STYLES[precommand]='fg=magenta'
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 #export PATH=$HOME/.dot/bin:$PATH
-# Path to your oh-my-zsh installation.
 #export PATH=/home/wsz/.dot/bin/scripts:$PATH
 #export PATH=/home/wsz/.dot/bin/bookmarks:$PATH
 # Global Variables
 
-
+# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export POD="$HOME/.pod"
 export DOT="$HOME/.dot"
 export PATH=$DOT/bin/scripts:$PATH
 export PATH=$DOT/bin/bookmarks:$PATH
 
-
-
-#plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
+# Native Plugins
 plugins=(colorize git colored-man-pages fzf)
-#bindkey "^T" fzf-file-widget
+#plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
+
+# Bindkeys
+bindkey "^f" fzf-file-widget
+
+# Sources
 source ~/.oh-my-zsh/themes/geometry/geometry.zsh
 source $ZSH/oh-my-zsh.sh
 
@@ -80,6 +82,7 @@ alias config="cd ~/.config"
 
 ### NOTES
 alias n0="vim $DOT/notes.md"
+alias n1="vim $DOT/todo.md"
 
 ### CD
 alias cddl="cd ~/.dl"

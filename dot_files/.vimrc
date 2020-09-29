@@ -36,7 +36,7 @@ set nowrap
 set incsearch
 set hlsearch
 set ignorecase
-set smartcase
+"set smartcase
 nnoremap <CR> :noh<CR><CR>
 
 "Split
@@ -85,7 +85,6 @@ endfunction
 " Pasteboard
 "nmap <f9>:w !xclip -i -sel c<CR>
 ":w !xclip -sel c
-
 " "#################################################" "
 " "### PLUG ###"
 " "#################################################" "
@@ -109,9 +108,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'thirtythreeforty/lessspace.vim'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-peekaboo'
-Plug 'terryma/vim-smooth-scroll'
+Plug 'wSzki/vim-smooth-scroll'
 Plug 'ericbn/vim-relativize'
+Plug 'coldfix/hexhighlight'
+"Plug 'gko/vim-coloresque'
+"Plug 'c0r73x/colorizer'
 "Plug 'jiangmiao/auto-pairs'
+"Plug 'chrisbra/Colorizer'
+"Plug 'terryma/vim-smooth-scroll'
 "Plug 'severin-lemaignan/vim-minimap'
 "Plug 'wfxr/minimap.vim'
 "Plug 'majutsushi/tagbar'
@@ -158,10 +162,16 @@ augroup END
 " "#################################################" "
 " "### SMOOTH SCROLL ### " "
 " "#################################################" "
-noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 5, 1)<CR>
-noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 5, 1)<CR>
+noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 3, 1)<CR>
+noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 3, 1)<CR>
 "noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 "noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" "#################################################" "
+" "### HEX HIGHLIGHT### " "
+" "#################################################" "
+nmap <F2>           <Plug>ToggleHexHighlight
+nmap <leader><F2>   <Plug>ToggleSchemeHighlight
 
 " "#################################################" "
 " "### YCM ### " "
