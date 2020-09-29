@@ -1,14 +1,9 @@
 "check > vimawesome.com
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-
 " "#################################################" "
-" "#################################################" "
-
 " "### NATIVE ###" "
 " "#################################################" "
-
-" """"""
 
 "Centering Cursor
 "augroup VCenterCursor
@@ -92,7 +87,8 @@ endfunction
 ":w !xclip -sel c
 
 " "#################################################" "
-" "  ### PLUG ###"
+" "### PLUG ###"
+" "#################################################" "
 " PlugInstall, PlugClean
 call plug#begin('~/.vim/plugged')
 "###############################"
@@ -124,18 +120,22 @@ call plug#end()
 
 " "#################################################" "
 " "### GRUVBOX ### " "
+" "#################################################" "
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
 let g:airline_theme='gruvbox'
 set background=dark
 
+" "#################################################" "
 " "### RAINBOW BRACKETS ### " "
+" "#################################################" "
 "let g:rainbow_active = 1
 map <C-b> :RainbowToggle<CR>
 
+" "#################################################" "
 " "### NERDTREE ### " "
+" "#################################################" "
 "autoquit if only left is nerdtree
-
 augroup vimrc_autocmd
 	autocmd!
 	"toggle quickfix window
@@ -148,16 +148,24 @@ augroup vimrc_autocmd
 	autocmd StdinReadPre * let s:std_in=1
 	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+	" Start NERDTree
+	"autocmd VimEnter * NERDTree
+	" Go to previous (last accessed) window.
+	autocmd VimEnter * wincmd p"
 	nmap <f10> :NERDTreeToggle<CR>
 augroup END
 
+" "#################################################" "
 " "### SMOOTH SCROLL ### " "
+" "#################################################" "
 noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 5, 1)<CR>
 noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 5, 1)<CR>
 "noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 "noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
+" "#################################################" "
 " "### YCM ### " "
+" "#################################################" "
 " YcmRestartServer to reload
 let g:ycm_max_num_candidates = 15
 let g:ycm_max_num_identifier_candidates = 15
@@ -166,21 +174,21 @@ nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
 " turn off YCM
 nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
 
+" "#################################################" "
 " "### 42 HEADER ### " "
+" "#################################################" "
 nmap <f12> :FortyTwoHeader<CR>
 let b:fortytwoheader_user="wszurkow"
 let b:fortytwoheader_mail="wszurkow@student.42.fr"
 
-" "### NERDTREE ### " "
-" Start NERDTree
-"autocmd VimEnter * NERDTree
-" " Go to previous (last accessed) window.
-"autocmd VimEnter * wincmd p"
-
+" "#################################################" "
 " "### PEEKABOO ### " "
+" "#################################################" "
 "let g:peekaboo_compact=1
 
+" "#################################################" "
 " "### ALE ### " "
+" "#################################################" "
 let g:ale_set_highlights = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_lint_on_text_changed = 'never'
@@ -213,7 +221,9 @@ function! LinterStatus() abort
 endfunction
 set statusline=%{LinterStatus()}
 
+" "#################################################" "
 " "### VISUAL-MULTIPLE-CURSORS ### " "
+" "#################################################" "
 let g:VM_maps = {}
 let g:VM_maps['Find Under']                  = '<C-n>'
 let g:VM_maps['Find Subword Under']          = '<C-n>'
@@ -229,11 +239,15 @@ let g:VM_maps["Visual Add"]                  = '\\a'
 let g:VM_maps["Visual Find"]                 = '\\f'
 let g:VM_maps["Visual Cursors"]              = '\\c'
 
+" "#################################################" "
 " "### FZF ### " "
+" "#################################################" "
 nnoremap <silent> <C-f> :Files<CR>
 let g:fzf_preview_window = 'right:60%'
 
+" "#################################################" "
 " "### UNDOTREE ### " "
+" "#################################################" "
 nnoremap <F5> :UndotreeToggle<cr>
 "if has("persistent_undo")
 "	set undodir=$HOME."/.undodir"

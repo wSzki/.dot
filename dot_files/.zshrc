@@ -1,25 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-#export PATH=$HOME/.dot/bin:$PATH
-# Path to your oh-my-zsh installation.
-#export PATH=/home/wsz/.dot/bin/scripts:$PATH
-#export PATH=/home/wsz/.dot/bin/bookmarks:$PATH
-# Global Variables
-
-
-export ZSH="$HOME/.oh-my-zsh"
-export POD="$HOME/.pod"
-export DOT="$HOME/.dot"
-export PATH=$DOT/bin/scripts:$PATH
-export PATH=$DOT/bin/bookmarks:$PATH
-
-bindkey "^f" fzf-file-widget
-
-source $ZSH/oh-my-zsh.sh
-source ~/.oh-my-zsh/themes/geometry/geometry.zsh
-
-plugins=(colorize git colored-man-pages fzf)
-#plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
 
 ########################### PLUGINS ############################
 source ~/.zplug/init.zsh
@@ -28,7 +6,7 @@ zplug "laggardkernel/zsh-thefuck", defer:2
 zplug "wting/autojump", defer:2
 zplug "supercrabtree/k", defer:2
 zplug "zsh-users/zsh-autosuggestions"
-zplug "aloxaf/fzf-tab", defer:2
+zplug "aloxaf/fzf-tab"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 #zplug "geometry-zsh/geometry"
 #zplug "nvbn/thefuck", defer:2
@@ -46,8 +24,31 @@ ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=magenta'
 
-########################### ALIASES ############################
+########################### SHELL SETTINGS ############################
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/.dot/bin:$PATH
+# Path to your oh-my-zsh installation.
+#export PATH=/home/wsz/.dot/bin/scripts:$PATH
+#export PATH=/home/wsz/.dot/bin/bookmarks:$PATH
+# Global Variables
 
+
+export ZSH="$HOME/.oh-my-zsh"
+export POD="$HOME/.pod"
+export DOT="$HOME/.dot"
+export PATH=$DOT/bin/scripts:$PATH
+export PATH=$DOT/bin/bookmarks:$PATH
+
+
+
+#plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
+plugins=(colorize git colored-man-pages fzf)
+#bindkey "^T" fzf-file-widget
+source ~/.oh-my-zsh/themes/geometry/geometry.zsh
+source $ZSH/oh-my-zsh.sh
+
+########################### ALIASES ############################
 ### BACKUP
 alias back="~/.dot/backup.sh"
 
