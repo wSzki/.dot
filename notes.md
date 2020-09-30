@@ -44,6 +44,7 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+- peek
 - xcape
 - code-minimap
 - xprop // window prop

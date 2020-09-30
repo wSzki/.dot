@@ -1,3 +1,15 @@
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    .vimrc                                             :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
+"    Updated: 2020/09/30 18:42:52 by wszurkow         ###   ########.fr        "
+"                                                                              "
+" **************************************************************************** "
+
 "check > vimawesome.com
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -12,13 +24,28 @@
 "        \ let &scrolloff=winheight(win_getid())/2
 "augroup END
 
-set scrolloff=5
-syntax on
+
+noremap <Leader>libft i #include "libft.h"<CR><ESC>
+noremap <Leader>stdlib i #include <stdlib.h><CR><ESC>
+noremap <Leader>stdlio i #include <stdio.h><CR><ESC>
+noremap <Leader>unistd i #include <unistd.h><CR><ESC>
+
+" General settings
 set nu
+syntax on
+set scrolloff=5
 set relativenumber
 set clipboard=unnamedplus
+set encoding=utf-8
+set history=1000
+set noswapfile
+
+" Key maps
 nmap <f11> :windo set relativenumber!<CR>
-map gg gg=G``
+map gg gg=G''
+"map gg gg=G``
+"map <C-r> :redo<CR>``
+
 
 " Indentation
 filetype indent on
@@ -36,7 +63,7 @@ set nowrap
 set incsearch
 set hlsearch
 set ignorecase
-"set smartcase
+set smartcase
 nnoremap <CR> :noh<CR><CR>
 
 "Split
@@ -58,6 +85,13 @@ syntax sync minlines=256
 "set nocursorcolumn
 "set nocursorline
 "set norelativenumber
+
+" WILDMENU
+"set wildmode=longest,list,full
+"set wildmode=list
+set wildmode=longest:full,full
+set wildmenu
+set wildignorecase
 
 " Activate Mouse
 set mouse=a
@@ -85,6 +119,9 @@ endfunction
 " Pasteboard
 "nmap <f9>:w !xclip -i -sel c<CR>
 ":w !xclip -sel c
+
+" "#######################################################################################################################" "
+
 " "#################################################" "
 " "### PLUG ###"
 " "#################################################" "
@@ -108,10 +145,17 @@ Plug 'airblade/vim-gitgutter'
 Plug 'thirtythreeforty/lessspace.vim'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-peekaboo'
-Plug 'wSzki/vim-smooth-scroll'
 Plug 'ericbn/vim-relativize'
 Plug 'coldfix/hexhighlight'
+Plug 'raimondi/delimitmate'
+Plug 'cpiger/NeoDebug'
+Plug 'wSzki/vim-smooth-scroll'
+Plug 'gelguy/wilder.nvim'
+"Plug 'puremourning/vimspector'
+"Plug 'cskeeters/vim-smooth-scroll'
 "Plug 'gko/vim-coloresque'
+"Plug 'junegunn/vim-easy-align'
+"Plug 'yuttie/comfortable-motion.vim'
 "Plug 'c0r73x/colorizer'
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'chrisbra/Colorizer'
@@ -121,6 +165,26 @@ Plug 'coldfix/hexhighlight'
 "Plug 'majutsushi/tagbar'
 "###############################"
 call plug#end()
+
+" "#######################################################################################################################" "
+
+" "#################################################" "
+" "### WILDMENU  ### " "
+" "#################################################" "
+
+call wilder#enable_cmdline_enter()
+set wildcharm=<Tab>
+cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
+cmap <expr> <S-Tab> wilder#in_context() ? wilder#previous() : "\<S-Tab>"
+" only / and ? is enabled by default
+call wilder#set_option('modes', ['/', '?', ':'])
+
+" "#################################################" "
+" "### VIMSPECTOR ### " "
+" "#################################################" "
+"packadd! vimspector
+"let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
+"let g:vimspector_enable_mappings = 'HUMAN'
 
 " "#################################################" "
 " "### GRUVBOX ### " "
@@ -155,17 +219,38 @@ augroup vimrc_autocmd
 	" Start NERDTree
 	"autocmd VimEnter * NERDTree
 	" Go to previous (last accessed) window.
-	autocmd VimEnter * wincmd p"
-	nmap <f10> :NERDTreeToggle<CR>
+	autocmd VimEnter * wincmd p
+	nmap <C-p> :NERDTreeToggle<CR>
 augroup END
+
+" "#################################################" "
+" "### Minimap ### " "
+" "#################################################" "
+"let g:minimap_width = 1
+"let g:minimap_highlight = 'Keyword'
+"let g:minimap_auto_start = 1
+"autocmd VimEnter * Minimap
+"autocmd VimEnter * wincmd p
 
 " "#################################################" "
 " "### SMOOTH SCROLL ### " "
 " "#################################################" "
-noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 3, 1)<CR>
-noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 3, 1)<CR>
-"noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-"noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 0, 4)<CR>i
+inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 0, 4)<CR>i
+"let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_friction = 100.0
+"let g:comfortable_motion_air_interval = 600/60
+"let g:comfortable_motion_air_drag = 4.0
+"nnoremap <silent> <PageDown> :call comfortable_motion#flick(600)<CR>
+"nnoremap <silent> <PageUp> :call comfortable_motion#flick(-600)<CR>
+"noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
+"noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
+"noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 3, 1)<CR>
+"noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 3, 1)<CR>
 
 " "#################################################" "
 " "### HEX HIGHLIGHT### " "
@@ -177,6 +262,7 @@ nmap <leader><F2>   <Plug>ToggleSchemeHighlight
 " "### YCM ### " "
 " "#################################################" "
 " YcmRestartServer to reload
+let g:ycm_auto_trigger = 0
 let g:ycm_max_num_candidates = 15
 let g:ycm_max_num_identifier_candidates = 15
 let g:ycm_min_num_of_chars_for_completion = 2
@@ -258,11 +344,22 @@ let g:fzf_preview_window = 'right:60%'
 " "#################################################" "
 " "### UNDOTREE ### " "
 " "#################################################" "
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <C-u> :UndotreeToggle<cr>
+let g:undotree_WindowLayout = 2
+let g:undotree_ShortIndicators = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_HighlightChangedText = 1
+let g:undotree_HelpLine = 1
+try
+	set undodir=~/.undodir
+	set undofile
+catch
+endtry
 "if has("persistent_undo")
 "	set undodir=$HOME."/.undodir"
 "	set undofile
 "endif
 " undotree window width
-"let g:undotree_SplitWidth = 40
+
+" "#################################################" "
 " "#################################################" "
