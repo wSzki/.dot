@@ -3,7 +3,7 @@
 source ~/.zplug/init.zsh
 zplug "wting/autojump", defer:2
 zplug "laggardkernel/zsh-thefuck", defer:2
-zplug "wting/autojump", defer:2
+#zplug "wting/autojump"
 zplug "supercrabtree/k", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "aloxaf/fzf-tab"

@@ -38,6 +38,7 @@ Set priority in config file /etc/netctl/wlan0-...
 - xorg-xfd // print charsets
 - ttf-scientifica
 - pkg-utils
+- pkgconfig
 - make
 - gcc
 - cpupower

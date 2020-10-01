@@ -90,62 +90,41 @@ float alpha = 1;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#BF616A",
-	"#EBCB8B",
-//	"#A3BE8C",
+	"#fb4934",
+	"#b8bb26",
 	"#fabd2f",
 	"#83a598",
 	"#d3869b",
-	"#fabd2f",
-//	"#8ec07c",
+	"#8ec07c",
 	"#a89984",
 	"#928374",
 	"#ebdbb2",
-	"#BF616A",
-	"#A3BE8C",
+	"#cc241d",
+	"#98971a",
 	"#d79921",
-	"#81A1C1",
+	"#458588",
 	"#b16286",
 	"#689d6a",
-	// NORD
-	//#BF616A
-	//#D08770
-	//#EBCB8B
-	//#A3BE8C
-	//#B48EAD
-	//#8FBCBB
-	//#88C0D0
-	//#81A1C1
-	//#5E81AC
-	//#2E3440
-	//#3B4252
-	//#434C5E
-	//#4C566A
-	//#D8DEE9
-	//#E5E9F0
-	//#ECEFF4
-
-	//GRUVBOX
-	//#282828,
-	//#cc241d,
-	//#98971a,
-	//#d79921,
-	//#458588,
-	//#b16286,
-	//#689d6a,
-	//#a89984,
-	//#928374,
-	//#fb4934,
-	//#b8bb26,
-	//#fabd2f,
-	//#83a598,
-	//#d3869b,
-	//#8ec07c,
+   //#282828,
+   //#cc241d,
+   //#98971a,
+   //#d79921,
+   //#458588,
+   //#b16286,
+   //#689d6a,
+   //#a89984,
+   //#928374,
+   //#fb4934,
+   //#b8bb26,
+   //#fabd2f,
+   //#83a598,
+   //#d3869b,
+   //#8ec07c,
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#1d2021",   /* 256 -> bg */
-	//	"#282828",   /* 256 -> bg */
-	//	"#ebdbb2",   /* 257 -> fg */
+//	"#282828",   /* 256 -> bg */
+//	"#ebdbb2",   /* 257 -> fg */
 	"#fdf9ef",   /* 257 -> fg */
 	"#add8e6", /* 258 -> cursor */
 };
@@ -193,38 +172,38 @@ static unsigned int defaultattr = 11;
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-	{ "font",         STRING,  &font },
-	{ "fontalt0",     STRING,  &font2[0] },
-	{ "color0",       STRING,  &colorname[0] },
-	{ "color1",       STRING,  &colorname[1] },
-	{ "color2",       STRING,  &colorname[2] },
-	{ "color3",       STRING,  &colorname[3] },
-	{ "color4",       STRING,  &colorname[4] },
-	{ "color5",       STRING,  &colorname[5] },
-	{ "color6",       STRING,  &colorname[6] },
-	{ "color7",       STRING,  &colorname[7] },
-	{ "color8",       STRING,  &colorname[8] },
-	{ "color9",       STRING,  &colorname[9] },
-	{ "color10",      STRING,  &colorname[10] },
-	{ "color11",      STRING,  &colorname[11] },
-	{ "color12",      STRING,  &colorname[12] },
-	{ "color13",      STRING,  &colorname[13] },
-	{ "color14",      STRING,  &colorname[14] },
-	{ "color15",      STRING,  &colorname[15] },
-	{ "background",   STRING,  &colorname[256] },
-	{ "foreground",   STRING,  &colorname[257] },
-	{ "cursorColor",  STRING,  &colorname[258] },
-	{ "termname",     STRING,  &termname },
-	{ "shell",        STRING,  &shell },
-	{ "xfps",         INTEGER, &xfps },
-	{ "actionfps",    INTEGER, &actionfps },
-	{ "blinktimeout", INTEGER, &blinktimeout },
-	{ "bellvolume",   INTEGER, &bellvolume },
-	{ "tabspaces",    INTEGER, &tabspaces },
-	{ "borderpx",     INTEGER, &borderpx },
-	{ "cwscale",      FLOAT,   &cwscale },
-	{ "chscale",      FLOAT,   &chscale },
-	{ "alpha",        FLOAT,   &alpha },
+		{ "font",         STRING,  &font },
+		{ "fontalt0",     STRING,  &font2[0] },
+		{ "color0",       STRING,  &colorname[0] },
+		{ "color1",       STRING,  &colorname[1] },
+		{ "color2",       STRING,  &colorname[2] },
+		{ "color3",       STRING,  &colorname[3] },
+		{ "color4",       STRING,  &colorname[4] },
+		{ "color5",       STRING,  &colorname[5] },
+		{ "color6",       STRING,  &colorname[6] },
+		{ "color7",       STRING,  &colorname[7] },
+		{ "color8",       STRING,  &colorname[8] },
+		{ "color9",       STRING,  &colorname[9] },
+		{ "color10",      STRING,  &colorname[10] },
+		{ "color11",      STRING,  &colorname[11] },
+		{ "color12",      STRING,  &colorname[12] },
+		{ "color13",      STRING,  &colorname[13] },
+		{ "color14",      STRING,  &colorname[14] },
+		{ "color15",      STRING,  &colorname[15] },
+		{ "background",   STRING,  &colorname[256] },
+		{ "foreground",   STRING,  &colorname[257] },
+		{ "cursorColor",  STRING,  &colorname[258] },
+		{ "termname",     STRING,  &termname },
+		{ "shell",        STRING,  &shell },
+		{ "xfps",         INTEGER, &xfps },
+		{ "actionfps",    INTEGER, &actionfps },
+		{ "blinktimeout", INTEGER, &blinktimeout },
+		{ "bellvolume",   INTEGER, &bellvolume },
+		{ "tabspaces",    INTEGER, &tabspaces },
+		{ "borderpx",     INTEGER, &borderpx },
+		{ "cwscale",      FLOAT,   &cwscale },
+		{ "chscale",      FLOAT,   &chscale },
+		{ "alpha",        FLOAT,   &alpha },
 };
 
 /*
@@ -252,12 +231,12 @@ MouseKey mkeys[] = {
 };
 
 static char *openurlcmd[] = { "/bin/sh", "-c",
-	"sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)'| uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -i -p 'Follow which url?' -l 10 | xargs -r xdg-open",
-	"externalpipe", NULL };
+    "sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)'| uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -i -p 'Follow which url?' -l 10 | xargs -r xdg-open",
+    "externalpipe", NULL };
 
 static char *copyurlcmd[] = { "/bin/sh", "-c",
-	"sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -i -p 'Copy which url?' -l 10 | tr -d '\n' | xclip -selection clipboard",
-	"externalpipe", NULL };
+    "sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -i -p 'Copy which url?' -l 10 | tr -d '\n' | xclip -selection clipboard",
+    "externalpipe", NULL };
 
 static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
 
@@ -267,35 +246,35 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +2} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -2} },
+	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
 	{ MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
 	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
 	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
 	{ MODKEY,               XK_v,           clippaste,      {.i =  0} },
 	{ MODKEY,               XK_x,           selpaste,       {.i =  0} },
-	//	{ MODKEY,               XK_p,           selpaste,       {.i =  0} },
+//	{ MODKEY,               XK_p,           selpaste,       {.i =  0} },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
 	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i =  20} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i =  20} },
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i =  1} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i =  1} },
 	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i =  1} },
 	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i =  1} },
-	//{ MODKEY,               XK_k,           kscrollup,      {.i =  -1} },
-	//{ MODKEY,               XK_j,           kscrolldown,    {.i =  -1} },
-	//{ MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
-	//{ MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
-	//{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
-	//{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
-	//{ TERMMOD,              XK_Up,          zoom,           {.f = +1} },
-	//{ TERMMOD,              XK_Down,        zoom,           {.f = -1} },
-	//{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
-	//{ TERMMOD,              XK_J,           zoom,           {.f = -1} },
-	//{ TERMMOD,              XK_U,           zoom,           {.f = +2} },
-	//{ TERMMOD,              XK_D,           zoom,           {.f = -2} },
-	//{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
-	//{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-	//{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+	{ MODKEY,               XK_k,           kscrollup,      {.i =  -1} },
+	{ MODKEY,               XK_j,           kscrolldown,    {.i =  -1} },
+//	{ MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
+//	{ MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
+//	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
+//	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
+//	{ TERMMOD,              XK_Up,          zoom,           {.f = +1} },
+//	{ TERMMOD,              XK_Down,        zoom,           {.f = -1} },
+//	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
+//	{ TERMMOD,              XK_J,           zoom,           {.f = -1} },
+//	{ TERMMOD,              XK_U,           zoom,           {.f = +2} },
+//	{ TERMMOD,              XK_D,           zoom,           {.f = -2} },
+	{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
+	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
+	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
@@ -575,6 +554,6 @@ static uint selmasks[] = {
  * of single wide characters.
  */
 static char ascii_printable[] =
-" !\"#$%&'()*+,-./0123456789:;<=>?"
-"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
-"`abcdefghijklmnopqrstuvwxyz{|}~";
+	" !\"#$%&'()*+,-./0123456789:;<=>?"
+	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
+	"`abcdefghijklmnopqrstuvwxyz{|}~";

@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/09/30 18:42:52 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/01 12:12:07 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -24,12 +24,6 @@
 "        \ let &scrolloff=winheight(win_getid())/2
 "augroup END
 
-
-noremap <Leader>libft i #include "libft.h"<CR><ESC>
-noremap <Leader>stdlib i #include <stdlib.h><CR><ESC>
-noremap <Leader>stdlio i #include <stdio.h><CR><ESC>
-noremap <Leader>unistd i #include <unistd.h><CR><ESC>
-
 " General settings
 set nu
 syntax on
@@ -45,7 +39,6 @@ nmap <f11> :windo set relativenumber!<CR>
 map gg gg=G''
 "map gg gg=G``
 "map <C-r> :redo<CR>``
-
 
 " Indentation
 filetype indent on
@@ -123,6 +116,20 @@ endfunction
 " "#######################################################################################################################" "
 
 " "#################################################" "
+" "### SNIPPETS ###"
+" "#################################################" "
+
+noremap <Leader>libft i#include "libft.h"<CR><ESC>
+noremap <Leader>stdlib i#include <stdlib.h><CR><ESC>
+noremap <Leader>stdlio i#include <stdio.h><CR><ESC>
+noremap <Leader>unistd i#include <unistd.h><CR><ESC>
+noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
+noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
+
+
+" "#######################################################################################################################" "
+
+" "#################################################" "
 " "### PLUG ###"
 " "#################################################" "
 " PlugInstall, PlugClean
@@ -151,6 +158,7 @@ Plug 'raimondi/delimitmate'
 Plug 'cpiger/NeoDebug'
 Plug 'wSzki/vim-smooth-scroll'
 Plug 'gelguy/wilder.nvim'
+Plug 'arcticicestudio/nord-vim'
 "Plug 'puremourning/vimspector'
 "Plug 'cskeeters/vim-smooth-scroll'
 "Plug 'gko/vim-coloresque'
@@ -189,10 +197,13 @@ call wilder#set_option('modes', ['/', '?', ':'])
 " "#################################################" "
 " "### GRUVBOX ### " "
 " "#################################################" "
-colorscheme gruvbox
+set background=dark
 let g:gruvbox_contrast_dark='hard'
 let g:airline_theme='gruvbox'
-set background=dark
+let g:gruvbox_improved_warnings=1
+"let g:gruvbox_sign_color='none'
+"let g:gruvbox_improved_strings=1
+colorscheme gruvbox
 
 " "#################################################" "
 " "### RAINBOW BRACKETS ### " "
@@ -235,10 +246,10 @@ augroup END
 " "#################################################" "
 " "### SMOOTH SCROLL ### " "
 " "#################################################" "
-noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
-inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 0, 4)<CR>i
-inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 0, 4)<CR>i
+noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 1, 4)<CR>
+noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 1, 4)<CR>
+inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
+inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
 "let g:comfortable_motion_no_default_key_mappings = 1
 "let g:comfortable_motion_no_default_key_mappings = 1
 "let g:comfortable_motion_no_default_key_mappings = 1
