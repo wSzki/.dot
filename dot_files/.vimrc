@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/02 11:04:45 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/02 16:17:35 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -26,15 +26,16 @@
 
 " General settings
 set nu
+set signcolumn=number
 syntax on
 set scrolloff=5
 set relativenumber
+set laststatus=2
 set clipboard=unnamedplus
 set background=dark
 set encoding=utf-8
 set history=1000
 set noswapfile
-
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>
 map gg gg=G''
@@ -59,6 +60,7 @@ set hlsearch
 set ignorecase
 set smartcase
 nnoremap <CR> :noh<CR><CR>
+nnoremap <ESC> <ESC><ESC>
 
 "Split
 set splitbelow
@@ -159,12 +161,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'frazrepo/vim-rainbow'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'pandark/42header.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'mg979/vim-visual-multi'
-Plug 'dense-analysis/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'thirtythreeforty/lessspace.vim'
 Plug 'mileszs/ack.vim'
@@ -173,11 +173,13 @@ Plug 'ericbn/vim-relativize'
 Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wSzki/vim-smooth-scroll'
-
+"Plug 'dense-analysis/ale'
+"Plug 'ycm-core/YouCompleteMe'
 " ###### "
 " Neovim "
 " ###### "
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'nvim-treesitter/nvim-treesitter'
 "Plug 'Xuyuanp/scrollbar.nvim'
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
@@ -187,6 +189,7 @@ Plug 'wSzki/vim-smooth-scroll'
 " Archive "
 " ####### "
 
+"Plug 'vim-syntastic/syntastic'
 "Plug 'sheerun/vim-polyglot'
 "Plug 'coldfix/hexhighlight'
 "Plug 'puremourning/vimspector'
@@ -225,6 +228,13 @@ call plug#end()
 "let g:vimspector_enable_mappings = 'HUMAN'
 
 "################################################ "
+"### NCOC ### "
+"################################################ "
+
+nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
+
+"################################################ "
 "### SCROLLBAR ### "
 "################################################ "
 
@@ -250,7 +260,7 @@ call plug#end()
 " Airline
 let g:airline_theme='gruvbox_material'
 "let g:airline_theme='base16'
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#formatter = 'default'
 
 """ Material
@@ -296,6 +306,19 @@ let g:gruvbox_material_palette = {
 colorscheme gruvbox-material
 
 "################################################ "
+"### SYNTASTIC ### "
+"################################################ "
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+
+"################################################ "
 "### RAINBOW BRACKETS ### "
 "################################################ "
 "let g:rainbow_active = 1
@@ -327,7 +350,7 @@ augroup END
 "################################################ "
 "### Minimap ### "
 "################################################ "
-"let g:minimap_width = 10
+"let g:minimap_width = 1
 "let g:minimap_highlight = 'Keyword'
 "let g:minimap_auto_start = 1
 "autocmd VimEnter * Minimap
@@ -340,10 +363,10 @@ augroup END
 "noremap <silent> <PageDown> 20jzz
 "inoremap <silent> <PageUp> <ESC> 20kzzi
 "inoremap <silent> <PageDown> <ESC> 20jzzi
-noremap <silent> <PageUp> :call smooth_scroll#up(40, 3, 1)<CR>
-noremap <silent> <PageDown> :call smooth_scroll#down(40, 3, 1)<CR>
-inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(40, 3, 1)<CR>i
-inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(40, 3, 1)<CR>i
+noremap <silent> <PageUp> :call smooth_scroll#up(25, 3, 1)<CR>
+noremap <silent> <PageDown> :call smooth_scroll#down(25, 3, 1)<CR>
+inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(25, 3, 1)<CR>i
+inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>i
 "inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
 "inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
 "let g:comfortable_motion_no_default_key_mappings = 1
@@ -362,9 +385,9 @@ inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(40, 3, 1)<CR>i
 "################################################ "
 "### HEX HIGHLIGHT### "
 "################################################ "
+nmap <F2>			<ESC>:ColorToggle<CR>
 "nmap <F2>           <Plug>ToggleHexHighlight
 "nmap <leader><F2>   <Plug>ToggleSchemeHighlight
-nmap <F2>			<ESC>:ColorToggle<CR>
 "################################################ "
 "### YCM ### "
 "################################################ "
@@ -392,37 +415,44 @@ let b:fortytwoheader_mail="wszurkow@student.42.fr"
 "################################################ "
 "### ALE ### "
 "################################################ "
-let g:ale_set_highlights = 1
-let g:airline#extensions#ale#enabled = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 1
-let g:ale_lint_on_enter = 1
-let g:ale_hover_cursor = 0
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '✖✖'
-let g:ale_sign_warning = '∙∙'
-"let g:ale_enabled = 1
-"let g:ale_lint_on_text_changed = 'always'
-
-" # Propreties #  "
-" bold, underline, undercurl, strikethrough, reverse, italic, standout,  nocombine
-highlight ALEError ctermfg=Red cterm=italic
-highlight ALEWarning ctermfg=Yellow cterm=italic
-highlight ALEStyleWarning ctermbg=none cterm=none
-highlight ALEStyleError ctermbg=none cterm=none
-
-function! LinterStatus() abort
-	let l:counts = ale#statusline#Count(bufnr(''))
-	let l:all_errors = l:counts.error + l:counts.style_error
-	let l:all_non_errors = l:counts.total - l:all_errors
-
-	return l:counts.total == 0 ? 'OK' : printf(
-				\   '%dW %dE',
-				\   all_non_errors,
-				\   all_errors
-				\)
-endfunction
-set statusline=%{LinterStatus()}
+"let g:ale_set_highlights = 1
+"let g:airline#extensions#ale#enabled = 1
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_insert_leave = 1
+"let g:ale_lint_on_enter = 1
+"let g:ale_hover_cursor = 1
+"let g:ale_set_balloons = 1
+"let g:ale_sign_column_always = 1
+"let g:ale_sign_error = '✖✖'
+"let g:ale_sign_warning = '∙∙'
+"let g:ale_open_list = 0
+"let g:ale_change_sign_column_color = 1
+"let g:ale_list_vertical = 0
+"let g:ale_set_quickfix = 0
+"nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+"nmap <silent> <C-j> <Plug>(ale_next_wrap)
+""let g:ale_enabled = 1
+""let g:ale_lint_on_text_changed = 'always'
+"
+"" # Propreties #  "
+"" bold, underline, undercurl, strikethrough, reverse, italic, standout,  nocombine
+"highlight ALEError ctermfg=Red cterm=italic
+"highlight ALEWarning ctermfg=Yellow cterm=italic
+"highlight ALEStyleWarning ctermbg=none cterm=none
+"highlight ALEStyleError ctermbg=none cterm=none
+"
+"function! LinterStatus() abort
+"	let l:counts = ale#statusline#Count(bufnr(''))
+"	let l:all_errors = l:counts.error + l:counts.style_error
+"	let l:all_non_errors = l:counts.total - l:all_errors
+"
+"	return l:counts.total == 0 ? 'OK' : printf(
+"				\   '%dW %dE',
+"				\   all_non_errors,
+"				\   all_errors
+"				\)
+"endfunction
+"set statusline=%{LinterStatus()}
 
 "################################################ "
 "### VISUAL-MULTIPLE-CURSORS ### "
@@ -470,3 +500,28 @@ endtry
 
 "################################################ "
 "################################################ "
+" SCROLL BAR - not working
+"func! STL()
+"  let stl = '%f [%{(&fenc==""?&enc:&fenc).((exists("+bomb") && &bomb)?",B":"")}%M%R%H%W] %y [%l/%L,%v] [%p%%]'
+"  let barWidth = &columns - 65 " <-- wild guess
+"  let barWidth = barWidth < 3 ? 3 : barWidth
+"
+"  if line('$') > 1
+"    let progress = (line('.')-1) * (barWidth-1) / (line('$')-1)
+"  else
+"    let progress = barWidth/2
+"  endif
+"
+"  " line + vcol + %
+"  let pad = strlen(line('$'))-strlen(line('.')) + 3 - strlen(virtcol('.')) + 3 - strlen(line('.')*100/line('$'))
+"  let bar = repeat(' ',pad).' [%1*%'.barWidth.'.'.barWidth.'('
+"        \.repeat('-',progress )
+"        \.'%2*0%1*'
+"        \.repeat('-',barWidth - progress - 1).'%0*%)%<]'
+"
+"  return stl.bar
+"endfun
+"
+"hi def link User1 DiffAdd
+"hi def link User2 DiffDelete
+"set stl=%!STL()

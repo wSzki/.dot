@@ -96,6 +96,7 @@ Set priority in config file /etc/netctl/wlan0-...
 - feh
 - tlp
 - acpi
+- acpid // monitoring AC battery
 - hub
 - tldr
 - ncdu

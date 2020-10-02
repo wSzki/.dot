@@ -16,7 +16,7 @@ zplug load #--verbose
 # Syntax highlighting
 ZSH_HIGHLIGHT_STYLES[path]='fg=gray, italic'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow, bold'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=green, bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[autodirectory]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[global-alias]='fg=cyan'
@@ -176,10 +176,6 @@ alias sleepon="sudo systemctl unmask sleep.target suspend.target hibernate.targe
 
 ###     BATTERY
 alias battery-monitor="udevadm monitor --property"
-
-
-
-
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
