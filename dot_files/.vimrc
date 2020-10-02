@@ -6,16 +6,16 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/01 12:12:07 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/02 11:04:45 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 "check > vimawesome.com
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-" "#################################################" "
-" "### NATIVE ###" "
-" "#################################################" "
+"################################################ "
+"### NATIVE ## "
+"################################################ "
 
 "Centering Cursor
 "augroup VCenterCursor
@@ -30,6 +30,7 @@ syntax on
 set scrolloff=5
 set relativenumber
 set clipboard=unnamedplus
+set background=dark
 set encoding=utf-8
 set history=1000
 set noswapfile
@@ -75,8 +76,8 @@ set timeoutlen=1000
 set ttimeoutlen=0
 set synmaxcol=200
 syntax sync minlines=256
-"set nocursorcolumn
-"set nocursorline
+set nocursorcolumn
+set nocursorline
 "set norelativenumber
 
 " WILDMENU
@@ -85,6 +86,16 @@ syntax sync minlines=256
 set wildmode=longest:full,full
 set wildmenu
 set wildignorecase
+
+"" True Color settings
+if has('termguicolors')
+	set termguicolors
+endif
+"" Correct RGB escape codes for vim inside tmux
+"if !has('nvim') && $TERM ==# 'screen-256color'
+"	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"endif
 
 " Activate Mouse
 set mouse=a
@@ -113,12 +124,15 @@ endfunction
 "nmap <f9>:w !xclip -i -sel c<CR>
 ":w !xclip -sel c
 
-" "#######################################################################################################################" "
+"################################################ "
+"### SNIPPETS ###"
+"################################################ "
 
-" "#################################################" "
-" "### SNIPPETS ###"
-" "#################################################" "
+" GLOBAL
+noremap <Leader>pi :so% <CR> :PlugInstall<CR><ESC>
+noremap <Leader>wso :w <CR>:so % <CR><ESC>
 
+" C
 noremap <Leader>libft i#include "libft.h"<CR><ESC>
 noremap <Leader>stdlib i#include <stdlib.h><CR><ESC>
 noremap <Leader>stdlio i#include <stdio.h><CR><ESC>
@@ -127,16 +141,19 @@ noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
 noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
 
 
-" "#######################################################################################################################" "
-
-" "#################################################" "
-" "### PLUG ###"
-" "#################################################" "
+"################################################ "
+"### PLUG ###"
+"################################################ "
 " PlugInstall, PlugClean
 call plug#begin('~/.vim/plugged')
 "###############################"
-"Plug 'VundleVim/Vundle.vim'
+
+" ####### "
+"   Vim   "
+" ####### "
+
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'frazrepo/vim-rainbow'
@@ -153,13 +170,28 @@ Plug 'thirtythreeforty/lessspace.vim'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'ericbn/vim-relativize'
-Plug 'coldfix/hexhighlight'
+Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
-Plug 'cpiger/NeoDebug'
 Plug 'wSzki/vim-smooth-scroll'
-Plug 'gelguy/wilder.nvim'
-Plug 'arcticicestudio/nord-vim'
+
+" ###### "
+" Neovim "
+" ###### "
+
+"Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'Xuyuanp/scrollbar.nvim'
+"Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+"Plug 'cpiger/NeoDebug'
+
+" ####### "
+" Archive "
+" ####### "
+
+"Plug 'sheerun/vim-polyglot'
+"Plug 'coldfix/hexhighlight'
 "Plug 'puremourning/vimspector'
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'gelguy/wilder.nvim'
 "Plug 'cskeeters/vim-smooth-scroll'
 "Plug 'gko/vim-coloresque'
 "Plug 'junegunn/vim-easy-align'
@@ -174,46 +206,104 @@ Plug 'arcticicestudio/nord-vim'
 "###############################"
 call plug#end()
 
-" "#######################################################################################################################" "
+"################################################ "
+"### WILDMENU  ### "
+"################################################ "
 
-" "#################################################" "
-" "### WILDMENU  ### " "
-" "#################################################" "
+"call wilder#enable_cmdline_enter()
+"set wildcharm=<Tab>
+"cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
+"cmap <expr> <S-Tab> wilder#in_context() ? wilder#previous() : "\<S-Tab>"
+""" only / and ? is enabled by default
+"call wilder#set_option('modes', ['/', '?', ':'])
 
-call wilder#enable_cmdline_enter()
-set wildcharm=<Tab>
-cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
-cmap <expr> <S-Tab> wilder#in_context() ? wilder#previous() : "\<S-Tab>"
-" only / and ? is enabled by default
-call wilder#set_option('modes', ['/', '?', ':'])
-
-" "#################################################" "
-" "### VIMSPECTOR ### " "
-" "#################################################" "
+"################################################ "
+"### VIMSPECTOR ### "
+"################################################ "
 "packadd! vimspector
 "let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
 "let g:vimspector_enable_mappings = 'HUMAN'
 
-" "#################################################" "
-" "### GRUVBOX ### " "
-" "#################################################" "
-set background=dark
-let g:gruvbox_contrast_dark='hard'
-let g:airline_theme='gruvbox'
-let g:gruvbox_improved_warnings=1
+"################################################ "
+"### SCROLLBAR ### "
+"################################################ "
+
+"augroup ScrollbarInit
+"  autocmd!
+"  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+"  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+"  autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
+"augroup end
+
+"################################################ "
+"### GRUVBOX ### "
+"################################################ "
+
+
+" Classic
+"let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_improved_warnings=1
 "let g:gruvbox_sign_color='none'
 "let g:gruvbox_improved_strings=1
-colorscheme gruvbox
+"colorscheme gruvbox
 
-" "#################################################" "
-" "### RAINBOW BRACKETS ### " "
-" "#################################################" "
+" Airline
+let g:airline_theme='gruvbox_material'
+"let g:airline_theme='base16'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#formatter = 'default'
+
+""" Material
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_menu_selection_background = 'yellow'
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_palette = {
+			\ 'bg0':              ['#191d20',   '234'],
+			\ 'bg1':              ['#262727',   '235'],
+			\ 'bg2':              ['#191d20',   '235'],
+			\ 'bg3':              ['#3c3836',   '237'],
+			\ 'bg4':              ['#3c3836',   '237'],
+			\ 'bg5':              ['#504945',   '239'],
+			\ 'bg_statusline1':   ['#191d20',   '235'],
+			\ 'bg_statusline2':   ['#32302f',   '235'],
+			\ 'bg_statusline3':   ['#504945',   '239'],
+			\ 'bg_diff_green':    ['#32361a',   '22'],
+			\ 'bg_visual_green':  ['#333e34',   '22'],
+			\ 'bg_diff_red':      ['#3c1f1e',   '52'],
+			\ 'bg_visual_red':    ['#442e2d',   '52'],
+			\ 'bg_diff_blue':     ['#0d3138',   '17'],
+			\ 'bg_visual_blue':   ['#2e3b3b',   '17'],
+			\ 'bg_visual_yellow': ['#473c29',   '94'],
+			\ 'bg_current_word':  ['#32302f',   '236'],
+			\ 'fg0':              ['#d4be98',   '223'],
+			\ 'fg1':              ['#ddc7a1',   '223'],
+			\ 'red':              ['#ea6962',   '167'],
+			\ 'orange':           ['#e78a4e',   '208'],
+			\ 'yellow':           ['#d8a657',   '214'],
+			\ 'green':            ['#A3BE8C',   '142'],
+			\ 'aqua':             ['#D08770',   '108'],
+			\ 'blue':             ['#7C9C90',   '109'],
+			\ 'purple':           ['#EBCB8B',   '175'],
+			\ 'bg_red':           ['#ea6962',   '167'],
+			\ 'bg_green':         ['#a9b665',   '142'],
+			\ 'bg_yellow':        ['#d8a657',   '214'],
+			\ 'grey0':            ['#7c6f64',   '243'],
+			\ 'grey1':            ['#928374',   '245'],
+			\ 'grey2':            ['#a89984',   '246'],
+			\ 'none':             ['NONE',      'NONE']
+			\ }
+colorscheme gruvbox-material
+
+"################################################ "
+"### RAINBOW BRACKETS ### "
+"################################################ "
 "let g:rainbow_active = 1
 map <C-b> :RainbowToggle<CR>
 
-" "#################################################" "
-" "### NERDTREE ### " "
-" "#################################################" "
+"################################################ "
+"### NERDTREE ### "
+"################################################ "
 "autoquit if only left is nerdtree
 augroup vimrc_autocmd
 	autocmd!
@@ -234,22 +324,28 @@ augroup vimrc_autocmd
 	nmap <C-p> :NERDTreeToggle<CR>
 augroup END
 
-" "#################################################" "
-" "### Minimap ### " "
-" "#################################################" "
-"let g:minimap_width = 1
+"################################################ "
+"### Minimap ### "
+"################################################ "
+"let g:minimap_width = 10
 "let g:minimap_highlight = 'Keyword'
 "let g:minimap_auto_start = 1
 "autocmd VimEnter * Minimap
 "autocmd VimEnter * wincmd p
 
-" "#################################################" "
-" "### SMOOTH SCROLL ### " "
-" "#################################################" "
-noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 1, 4)<CR>
-noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 1, 4)<CR>
-inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
-inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
+"################################################ "
+"### SMOOTH SCROLL ### "
+"################################################ "
+"noremap <silent> <PageUp> 20kzz
+"noremap <silent> <PageDown> 20jzz
+"inoremap <silent> <PageUp> <ESC> 20kzzi
+"inoremap <silent> <PageDown> <ESC> 20jzzi
+noremap <silent> <PageUp> :call smooth_scroll#up(40, 3, 1)<CR>
+noremap <silent> <PageDown> :call smooth_scroll#down(40, 3, 1)<CR>
+inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(40, 3, 1)<CR>i
+inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(40, 3, 1)<CR>i
+"inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
+"inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
 "let g:comfortable_motion_no_default_key_mappings = 1
 "let g:comfortable_motion_no_default_key_mappings = 1
 "let g:comfortable_motion_no_default_key_mappings = 1
@@ -263,15 +359,15 @@ inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
 "noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 3, 1)<CR>
 "noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 3, 1)<CR>
 
-" "#################################################" "
-" "### HEX HIGHLIGHT### " "
-" "#################################################" "
-nmap <F2>           <Plug>ToggleHexHighlight
-nmap <leader><F2>   <Plug>ToggleSchemeHighlight
-
-" "#################################################" "
-" "### YCM ### " "
-" "#################################################" "
+"################################################ "
+"### HEX HIGHLIGHT### "
+"################################################ "
+"nmap <F2>           <Plug>ToggleHexHighlight
+"nmap <leader><F2>   <Plug>ToggleSchemeHighlight
+nmap <F2>			<ESC>:ColorToggle<CR>
+"################################################ "
+"### YCM ### "
+"################################################ "
 " YcmRestartServer to reload
 let g:ycm_auto_trigger = 0
 let g:ycm_max_num_candidates = 15
@@ -281,21 +377,21 @@ nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
 " turn off YCM
 nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
 
-" "#################################################" "
-" "### 42 HEADER ### " "
-" "#################################################" "
+"################################################ "
+"### 42 HEADER ### "
+"################################################ "
 nmap <f12> :FortyTwoHeader<CR>
 let b:fortytwoheader_user="wszurkow"
 let b:fortytwoheader_mail="wszurkow@student.42.fr"
 
-" "#################################################" "
-" "### PEEKABOO ### " "
-" "#################################################" "
+"################################################ "
+"### PEEKABOO ### "
+"################################################ "
 "let g:peekaboo_compact=1
 
-" "#################################################" "
-" "### ALE ### " "
-" "#################################################" "
+"################################################ "
+"### ALE ### "
+"################################################ "
 let g:ale_set_highlights = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_lint_on_text_changed = 'never'
@@ -328,16 +424,16 @@ function! LinterStatus() abort
 endfunction
 set statusline=%{LinterStatus()}
 
-" "#################################################" "
-" "### VISUAL-MULTIPLE-CURSORS ### " "
-" "#################################################" "
+"################################################ "
+"### VISUAL-MULTIPLE-CURSORS ### "
+"################################################ "
 let g:VM_maps = {}
 let g:VM_maps['Find Under']                  = '<C-n>'
 let g:VM_maps['Find Subword Under']          = '<C-n>'
 let g:VM_maps["Select All"]                  = '\\A'
 let g:VM_maps["Start Regex Search"]          = '\\/'
-let g:VM_maps["Add Cursor Down"]             = '<C-j>'
-let g:VM_maps["Add Cursor Up"]               = '<C-k>'
+let g:VM_maps["Add Cursor Down"]             = '<C-Down>'
+let g:VM_maps["Add Cursor Up"]               = '<C-Up>'
 let g:VM_maps["Add Cursor At Pos"]           = '\\\'
 
 let g:VM_maps["Visual Regex"]                = '\\/'
@@ -346,15 +442,15 @@ let g:VM_maps["Visual Add"]                  = '\\a'
 let g:VM_maps["Visual Find"]                 = '\\f'
 let g:VM_maps["Visual Cursors"]              = '\\c'
 
-" "#################################################" "
-" "### FZF ### " "
-" "#################################################" "
+"################################################ "
+"### FZF ### "
+"################################################ "
 nnoremap <silent> <C-f> :Files<CR>
 let g:fzf_preview_window = 'right:60%'
 
-" "#################################################" "
-" "### UNDOTREE ### " "
-" "#################################################" "
+"################################################ "
+"### UNDOTREE ### "
+"################################################ "
 nnoremap <C-u> :UndotreeToggle<cr>
 let g:undotree_WindowLayout = 2
 let g:undotree_ShortIndicators = 1
@@ -372,5 +468,5 @@ endtry
 "endif
 " undotree window width
 
-" "#################################################" "
-" "#################################################" "
+"################################################ "
+"################################################ "

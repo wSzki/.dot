@@ -16,7 +16,7 @@ zplug load #--verbose
 # Syntax highlighting
 ZSH_HIGHLIGHT_STYLES[path]='fg=gray, italic'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow, bold'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow, bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=green, bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[autodirectory]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[global-alias]='fg=cyan'
@@ -79,6 +79,10 @@ alias ibrc="vim ~/.config/i3/i3blocks.conf"
 alias ib2rc="vim ~/.config/i3/i3blocks2.conf"
 alias isrc="vim ~/.config/i3/i3status.conf"
 alias config="cd ~/.config"
+alias krc="vim ~/.config/kitty/kitty.conf"
+
+### VIM
+alias vim="nvim"
 
 ### NOTES
 alias n0="vim $DOT/notes.md"

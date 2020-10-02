@@ -45,6 +45,7 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+- autotiling // [i3] // pip install autotiling
 - peek
 - xcape
 - code-minimap
