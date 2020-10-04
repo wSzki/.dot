@@ -27,6 +27,10 @@ sudo systemctl stop NetworkManager.service
 sudo systemctl disable NetworkManager.service
 sudo systemctl enable netctl-auto@wlan0.service
 Set priority in config file /etc/netctl/wlan0-...
+wifi-menu
+- dialog
+- netctl
+- openresolv
 
 # [AUR]
 
@@ -121,6 +125,10 @@ sudo systemctl enable tlp-sleep.service
 sudo systemctl enable tlp-sleep.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.sokcet
+sudo systemctl restart nscd.service
+sudo systemctl restart named
+sudo systemctl restart dnsmasq
+- openresolv
 
 # POWERTOP
 etc/default/cpupower -> set default governor-

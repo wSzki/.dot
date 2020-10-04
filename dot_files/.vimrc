@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/02 16:17:35 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/02 18:49:22 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -180,6 +180,8 @@ Plug 'wSzki/vim-smooth-scroll'
 " ###### "
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'josa42/coc-sh'
+"Plug 'tjdevries/coc-zsh'
 "Plug 'nvim-treesitter/nvim-treesitter'
 "Plug 'Xuyuanp/scrollbar.nvim'
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
@@ -422,6 +424,8 @@ let b:fortytwoheader_mail="wszurkow@student.42.fr"
 "let g:ale_lint_on_enter = 1
 "let g:ale_hover_cursor = 1
 "let g:ale_set_balloons = 1
+"let g:ale_hover_to_preview = 1
+"let g:ale_cursor_details =1
 "let g:ale_sign_column_always = 1
 "let g:ale_sign_error = '✖✖'
 "let g:ale_sign_warning = '∙∙'
