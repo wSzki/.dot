@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/02 18:49:22 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/04 14:39:33 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -184,7 +184,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'tjdevries/coc-zsh'
 "Plug 'nvim-treesitter/nvim-treesitter'
 "Plug 'Xuyuanp/scrollbar.nvim'
-"Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'cpiger/NeoDebug'
 
 " ####### "
