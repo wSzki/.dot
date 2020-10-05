@@ -108,6 +108,9 @@ alias ddlddl="cdyt; youtube-dl -xi --audio-format wav --no-playlist"
 ### PACMAN
 alias pac="sudo pacman -S"
 
+### YAY
+alias yaycache="rm ~/.cache/yay/completion.cache"
+
 ### RM LOCK
 #alias rm="rm -i"
 

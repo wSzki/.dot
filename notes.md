@@ -49,6 +49,7 @@ wifi-menu
 - valgrind
 - gdb
 
+- fontpreview-ueberzug-git
 - autotiling // [i3] // pip install autotiling
 - peek
 - xcape

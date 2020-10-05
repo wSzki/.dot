@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/04 14:39:33 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/05 14:16:21 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -131,16 +131,19 @@ endfunction
 "################################################ "
 
 " GLOBAL
-noremap <Leader>pi :so% <CR> :PlugInstall<CR><ESC>
+"noremap <Leader>pi :so% <CR> :PlugInstall<CR><ESC>
 noremap <Leader>wso :w <CR>:so % <CR><ESC>
 
 " C
-noremap <Leader>libft i#include "libft.h"<CR><ESC>
+noremap <Leader>libft i#include "libft.h"<CR><CR><ESC>
 noremap <Leader>stdlib i#include <stdlib.h><CR><ESC>
-noremap <Leader>stdlio i#include <stdio.h><CR><ESC>
+noremap <Leader>stdio i#include <stdio.h><CR><ESC>
 noremap <Leader>unistd i#include <unistd.h><CR><ESC>
 noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
 noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
+noremap <Leader>pd i<Right><CR>printf("%d\n", );<Left><Left>
+noremap <Leader>pi i<Right><CR>printf("%i\n", );<Left><Left>
+noremap <Leader>ps i<Right><CR>printf("%s\n", );<Left><Left>
 
 
 "################################################ "
@@ -291,12 +294,12 @@ let g:gruvbox_material_palette = {
 			\ 'fg0':              ['#d4be98',   '223'],
 			\ 'fg1':              ['#ddc7a1',   '223'],
 			\ 'red':              ['#ea6962',   '167'],
-			\ 'orange':           ['#e78a4e',   '208'],
+			\ 'orange':           ['#EBCB8B',   '208'],
 			\ 'yellow':           ['#d8a657',   '214'],
 			\ 'green':            ['#A3BE8C',   '142'],
 			\ 'aqua':             ['#D08770',   '108'],
 			\ 'blue':             ['#7C9C90',   '109'],
-			\ 'purple':           ['#EBCB8B',   '175'],
+			\ 'purple':           ['#e78a4e',   '175'],
 			\ 'bg_red':           ['#ea6962',   '167'],
 			\ 'bg_green':         ['#a9b665',   '142'],
 			\ 'bg_yellow':        ['#d8a657',   '214'],
