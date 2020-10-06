@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/05 14:16:21 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/05 17:40:00 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -144,6 +144,9 @@ noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
 noremap <Leader>pd i<Right><CR>printf("%d\n", );<Left><Left>
 noremap <Leader>pi i<Right><CR>printf("%i\n", );<Left><Left>
 noremap <Leader>ps i<Right><CR>printf("%s\n", );<Left><Left>
+noremap <Leader>intmax i2147483647
+noremap <Leader>intmin i-2147483648
+
 
 
 "################################################ "

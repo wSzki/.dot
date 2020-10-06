@@ -53,6 +53,7 @@ source $ZSH/oh-my-zsh.sh
 ########################### ALIASES ############################
 ### BACKUP
 alias back="~/.dot/backup.sh"
+alias autopush="git add .; git status; git commit -m "autopush"; git push"
 
 ### C
 alias gccc="gcc -Wall -Werror -Wextra"
@@ -83,6 +84,7 @@ alias krc="vim ~/.config/kitty/kitty.conf"
 
 ### VIM
 alias vim="nvim"
+alias v="vim -o \`fzf\`"
 
 ### NOTES
 alias n0="vim $DOT/notes.md"
@@ -136,7 +138,6 @@ alias pbc="xclip -selection clipboard"
 alias pbp="xclip -selection clipboard -o"
 
 ### MISC
-alias v="vim -o \`fzf\`"
 #alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
 #alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
 alias ack="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
@@ -147,16 +148,13 @@ alias hdmi="xrandr --output HDMI-2 --auto --above eDP-1"
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 
-### GIT
-alias autopush="git add .; git status; git commit -m "autopush"; git push"
-
 ######  SERVICES
 ###     WIFI
 alias ipinfo="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
-#alias p="ping google.fr"
 alias autoWifiOn="sudo systemctl enable netctl-auto@wlan0.service && sudo systemctl start netctl-auto@wlan0.service"
 alias autoWifiOff="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
 alias wifi="sudo wifi-menu"
+#alias p="ping google.fr"
 
 ###     BLUETOOTH
 alias bluestart="sudo systemctl enable bluetooth.service && sudo systemctl start bluetooth.service"
@@ -179,6 +177,9 @@ alias sleepon="sudo systemctl unmask sleep.target suspend.target hibernate.targe
 
 ###     BATTERY
 alias battery-monitor="udevadm monitor --property"
+
+###		AUDIO
+alias glitchout="aplay /bin/*"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
