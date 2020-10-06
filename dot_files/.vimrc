@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/05 17:40:00 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/06 17:48:29 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -18,6 +18,7 @@
 "################################################ "
 
 "Centering Cursor
+
 "augroup VCenterCursor
 "  au!
 "  au BufEnter,WinEnter,WinNew,VimResized *,*.*
@@ -36,6 +37,8 @@ set background=dark
 set encoding=utf-8
 set history=1000
 set noswapfile
+set foldmethod=manual
+
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>
 map gg gg=G''
@@ -60,7 +63,6 @@ set hlsearch
 set ignorecase
 set smartcase
 nnoremap <CR> :noh<CR><CR>
-nnoremap <ESC> <ESC><ESC>
 
 "Split
 set splitbelow
@@ -130,20 +132,28 @@ endfunction
 "### SNIPPETS ###"
 "################################################ "
 
-" GLOBAL
+" ### GLOBAL
 "noremap <Leader>pi :so% <CR> :PlugInstall<CR><ESC>
 noremap <Leader>wso :w <CR>:so % <CR><ESC>
+nnoremap <ESC> <ESC><ESC>
 
-" C
-noremap <Leader>libft i#include "libft.h"<CR><CR><ESC>
+" ### C
+" Libraries
+noremap <Leader>libft i#include "libft.h"<CR><ESC>
 noremap <Leader>stdlib i#include <stdlib.h><CR><ESC>
 noremap <Leader>stdio i#include <stdio.h><CR><ESC>
 noremap <Leader>unistd i#include <unistd.h><CR><ESC>
+
+" Misc
 noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
 noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
-noremap <Leader>pd i<Right><CR>printf("%d\n", );<Left><Left>
-noremap <Leader>pi i<Right><CR>printf("%i\n", );<Left><Left>
-noremap <Leader>ps i<Right><CR>printf("%s\n", );<Left><Left>
+
+" Printf
+noremap <Leader>pd i<Right><CR>printf("%d\n", );2<Left>
+noremap <Leader>pi i<Right><CR>printf("%i\n", );2<Left>
+noremap <Leader>ps i<Right><CR>printf("%s\n", );2<Left>
+
+" Int min & max
 noremap <Leader>intmax i2147483647
 noremap <Leader>intmin i-2147483648
 
@@ -186,11 +196,11 @@ Plug 'wSzki/vim-smooth-scroll'
 " ###### "
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'josa42/coc-sh'
 "Plug 'tjdevries/coc-zsh'
 "Plug 'nvim-treesitter/nvim-treesitter'
 "Plug 'Xuyuanp/scrollbar.nvim'
-Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'cpiger/NeoDebug'
 
 " ####### "
@@ -214,6 +224,7 @@ Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'severin-lemaignan/vim-minimap'
 "Plug 'wfxr/minimap.vim'
 "Plug 'majutsushi/tagbar'
+
 "###############################"
 call plug#end()
 
@@ -231,6 +242,7 @@ call plug#end()
 "################################################ "
 "### VIMSPECTOR ### "
 "################################################ "
+
 "packadd! vimspector
 "let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
 "let g:vimspector_enable_mappings = 'HUMAN'
@@ -267,8 +279,8 @@ nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
 
 " Airline
 let g:airline_theme='gruvbox_material'
-"let g:airline_theme='base16'
 let g:airline#extensions#tabline#enabled = 1
+"let g:airline_theme='base16'
 "let g:airline#extensions#tabline#formatter = 'default'
 
 """ Material
@@ -316,6 +328,7 @@ colorscheme gruvbox-material
 "################################################ "
 "### SYNTASTIC ### "
 "################################################ "
+
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
@@ -325,12 +338,12 @@ colorscheme gruvbox-material
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
-
 "################################################ "
 "### RAINBOW BRACKETS ### "
 "################################################ "
-"let g:rainbow_active = 1
+
 map <C-b> :RainbowToggle<CR>
+"let g:rainbow_active = 1
 
 "################################################ "
 "### NERDTREE ### "
@@ -358,6 +371,7 @@ augroup END
 "################################################ "
 "### Minimap ### "
 "################################################ "
+
 "let g:minimap_width = 1
 "let g:minimap_highlight = 'Keyword'
 "let g:minimap_auto_start = 1
@@ -367,14 +381,16 @@ augroup END
 "################################################ "
 "### SMOOTH SCROLL ### "
 "################################################ "
-"noremap <silent> <PageUp> 20kzz
-"noremap <silent> <PageDown> 20jzz
-"inoremap <silent> <PageUp> <ESC> 20kzzi
-"inoremap <silent> <PageDown> <ESC> 20jzzi
+
 noremap <silent> <PageUp> :call smooth_scroll#up(25, 3, 1)<CR>
 noremap <silent> <PageDown> :call smooth_scroll#down(25, 3, 1)<CR>
 inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(25, 3, 1)<CR>i
 inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>i
+
+"noremap <silent> <PageUp> 20kzz
+"noremap <silent> <PageDown> 20jzz
+"inoremap <silent> <PageUp> <ESC> 20kzzi
+"inoremap <silent> <PageDown> <ESC> 20jzzi
 "inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
 "inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
 "let g:comfortable_motion_no_default_key_mappings = 1
@@ -393,24 +409,28 @@ inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>i
 "################################################ "
 "### HEX HIGHLIGHT### "
 "################################################ "
+
 nmap <F2>			<ESC>:ColorToggle<CR>
 "nmap <F2>           <Plug>ToggleHexHighlight
 "nmap <leader><F2>   <Plug>ToggleSchemeHighlight
+
 "################################################ "
 "### YCM ### "
 "################################################ "
+
 " YcmRestartServer to reload
-let g:ycm_auto_trigger = 0
-let g:ycm_max_num_candidates = 15
-let g:ycm_max_num_identifier_candidates = 15
-let g:ycm_min_num_of_chars_for_completion = 2
-nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
-" turn off YCM
-nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
+"let g:ycm_auto_trigger = 0
+"let g:ycm_max_num_candidates = 15
+"let g:ycm_max_num_identifier_candidates = 15
+"let g:ycm_min_num_of_chars_for_completion = 2
+"nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
+"" turn off YCM
+"nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
 
 "################################################ "
 "### 42 HEADER ### "
 "################################################ "
+
 nmap <f12> :FortyTwoHeader<CR>
 let b:fortytwoheader_user="wszurkow"
 let b:fortytwoheader_mail="wszurkow@student.42.fr"
@@ -423,6 +443,7 @@ let b:fortytwoheader_mail="wszurkow@student.42.fr"
 "################################################ "
 "### ALE ### "
 "################################################ "
+
 "let g:ale_set_highlights = 1
 "let g:airline#extensions#ale#enabled = 1
 "let g:ale_lint_on_text_changed = 'never'
@@ -502,15 +523,16 @@ try
 	set undofile
 catch
 endtry
+
 "if has("persistent_undo")
 "	set undodir=$HOME."/.undodir"
 "	set undofile
 "endif
-" undotree window width
 
 "################################################ "
 "################################################ "
 " SCROLL BAR - not working
+"
 "func! STL()
 "  let stl = '%f [%{(&fenc==""?&enc:&fenc).((exists("+bomb") && &bomb)?",B":"")}%M%R%H%W] %y [%l/%L,%v] [%p%%]'
 "  let barWidth = &columns - 65 " <-- wild guess

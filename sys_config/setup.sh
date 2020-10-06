@@ -17,5 +17,8 @@ sudo systemctl start powertop.service
 sudo systemctl start acpid.service
 sudo systemctl start slock@wsz.service
 
+sudo sed -i 's/\#DefaultTimeoutStartSec=90s/DefaultTimeoutStartSec=10s/' /etc/systemd/system.conf
+sudo sed -i 's/\#DefaultTimeoutStopSec=90s/DefaultTimeoutStopSec=10s/' /etc/systemd/system.conf
+
 # Automatic Login - Copy override.conf in 
 # /etc/systemd/system/getty@tty1.service.d/override.conf

@@ -1,14 +1,14 @@
 
 ########################### PLUGINS ############################
 source ~/.zplug/init.zsh
-zplug "wting/autojump", defer:2
+
 zplug "laggardkernel/zsh-thefuck", defer:2
-#zplug "wting/autojump"
 zplug "supercrabtree/k", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "aloxaf/fzf-tab"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 #zplug "geometry-zsh/geometry"
+#zplug "wting/autojump", defer:2
 #zplug "nvbn/thefuck", defer:2
 
 zplug load #--verbose
@@ -23,6 +23,7 @@ ZSH_HIGHLIGHT_STYLES[global-alias]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=magenta'
+
 
 ########################### SHELL SETTINGS ############################
 # If you come from bash you might have to change your $PATH.
