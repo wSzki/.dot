@@ -89,8 +89,9 @@ alias v="vim -o \`fzf\`"
 
 ### NOTES
 alias n0="vim $DOT/notes.md"
-alias n1="vim $DOT/todo.md"
-
+alias n1="vim $POD/todo.md"
+alias n2="vim $POD/todo2.md"
+alias n9="vim $POD/urgent.md"
 ### CD
 alias cddl="cd ~/.dl"
 alias cdt="cd /tmp"

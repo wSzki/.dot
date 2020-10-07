@@ -64,7 +64,7 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Shift+Return exec st;
 bindsym $mod+Shift+Return exec kitty;
-bindsym $mod+Return split v exec st;
+bindsym $mod+Return split v exec kitty;
 
 # BINDINGS
 #
