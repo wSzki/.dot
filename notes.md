@@ -39,6 +39,7 @@ wifi-menu
 - sysstat -> mpstat
 - picom - compton // opacity, fade
 
+- taskwarrior-tui-git
 - xorg-xfd // print charsets
 - ttf-scientifica
 - pkg-utils

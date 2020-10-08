@@ -6,7 +6,7 @@
 "    By: wszurkow <wszurkow@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2020/09/29 17:22:42 by wszurkow          #+#    #+#              "
-"    Updated: 2020/10/06 17:48:29 by wszurkow         ###   ########.fr        "
+"    Updated: 2020/10/07 15:58:18 by wszurkow         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -27,7 +27,6 @@
 
 " General settings
 set nu
-set signcolumn=number
 syntax on
 set scrolloff=5
 set relativenumber
@@ -38,6 +37,7 @@ set encoding=utf-8
 set history=1000
 set noswapfile
 set foldmethod=manual
+"set signcolumn=number
 
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>

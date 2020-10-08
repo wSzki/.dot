@@ -64,6 +64,16 @@ alias norme="norminette -R CheckForbiddenSourceHeader"
 alias grademe="~/Libftest/grademe.sh -n"
 alias deepthought="vim ~/Libftest/deepthought"
 
+### TASK
+alias ,t="task"
+alias t="clear && task summary && task l list && task list rc.dateformat=A_D_M_H:N:S && task calendar "
+alias ,tdt="task due:tomorrowT12:00"
+alias ,tdl="task delete"
+alias ,tadd="task add"
+# task add Pay rent due:28th recur:monthly until:now+1yr
+
+
+
 ### SERVER
 alias serverstart="sudo systemctl start mariadb.service; sudo systemctl start httpd.service"
 alias serverstop="sudo systemctl stop mariadb.service; sudo systemctl stop httpd.service"
@@ -133,7 +143,7 @@ alias gdb="gdb -q"
 ### K IS LS
 alias ka="k -a"
 alias kk="k -Ah"
-alias l="k -a"
+alias l="k"
 
 ### XCLIP
 alias pbc="xclip -selection clipboard"
