@@ -17,7 +17,7 @@
 "################################################ "
 "### NATIVE ## "
 "################################################ "
-
+"nmap <F7> <Plug>(scnvim-send-block)
 "Centering Cursor
 
 "augroup VCenterCursor
@@ -136,7 +136,15 @@ endfunction
 " ### GLOBAL
 "noremap <Leader>pi :so% <CR> :PlugInstall<CR><ESC>
 noremap <Leader>wso :w <CR>:so % <CR><ESC>
-nnoremap <ESC> <ESC><ESC>
+
+nnoremap <C-w> <ESC><ESC>:w<CR>
+inoremap <C-w> <ESC><ESC>:w<CR>i
+
+" Remap visual block
+nnoremap <C-e> <C-q>
+
+nnoremap <C-q> <ESC><ESC>:q<CR>
+inoremap <C-q> <ESC><ESC>:q<CR>
 
 " ### C
 " Libraries
@@ -150,9 +158,9 @@ noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
 noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
 
 " Printf
-noremap <Leader>pd i<Right><CR>printf("%d\n", );2<Left>
-noremap <Leader>pi i<Right><CR>printf("%i\n", );2<Left>
-noremap <Leader>ps i<Right><CR>printf("%s\n", );2<Left>
+noremap <Leader>pd i<Right><CR>printf("%d\n", );<Left><Left>
+noremap <Leader>pi i<Right><CR>printf("%i\n", );<Left><Left>
+noremap <Leader>ps i<Right><CR>printf("%s\n", );<left><Left>
 
 " Int min & max
 noremap <Leader>intmax i2147483647
@@ -203,6 +211,11 @@ Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'nvim-treesitter/nvim-treesitter'
 "Plug 'Xuyuanp/scrollbar.nvim'
 "Plug 'cpiger/NeoDebug'
+
+" #############
+" SUPERCOLLIDER
+" #############
+Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 
 " ####### "
 " Archive "

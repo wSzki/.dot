@@ -1,0 +1,74 @@
+{"description":"call Eliiot","entry":"20201007T111238Z","modified":"20201007T111238Z","status":"pending","uuid":"bc254d1e-0ee6-44bd-973e-7a8fe68dd7d3"}
+{"description":"call Eliiot","end":"20201007T111317Z","entry":"20201007T111238Z","modified":"20201007T111319Z","status":"deleted","uuid":"bc254d1e-0ee6-44bd-973e-7a8fe68dd7d3"}
+{"description":"call Elliot due tomorrow","entry":"20201007T111337Z","modified":"20201007T111337Z","status":"pending","uuid":"441e6d86-a867-44f0-b17d-48a0d002553c"}
+{"description":"call Elliot due tomorrow","end":"20201007T111553Z","entry":"20201007T111337Z","modified":"20201007T111554Z","status":"deleted","uuid":"441e6d86-a867-44f0-b17d-48a0d002553c"}
+{"description":"elliot","due":"20201007T220000Z","entry":"20201007T111621Z","modified":"20201007T111621Z","status":"pending","uuid":"0dd5fb8b-92ee-4256-9c2a-347354ea64fa"}
+{"description":"elliot 10:36","due":"20201007T220000Z","entry":"20201007T111646Z","modified":"20201007T111646Z","status":"pending","uuid":"78b71e68-0aa2-4930-81d4-98c27e207dd6"}
+{"description":"elliot","due":"20201007T220000Z","end":"20201007T111920Z","entry":"20201007T111621Z","modified":"20201007T111921Z","status":"deleted","uuid":"0dd5fb8b-92ee-4256-9c2a-347354ea64fa"}
+{"description":"elliot 10:36","due":"20201007T220000Z","end":"20201007T111921Z","entry":"20201007T111646Z","modified":"20201007T111921Z","status":"deleted","uuid":"78b71e68-0aa2-4930-81d4-98c27e207dd6"}
+{"description":"Elliot","entry":"20201007T111933Z","modified":"20201007T111933Z","status":"pending","uuid":"7ece58c7-0eef-414d-9f39-758f547ed69a"}
+{"description":"Ella","entry":"20201007T111936Z","modified":"20201007T111936Z","status":"pending","uuid":"ed66bcff-fae7-466f-9b0f-abe9a8314b00"}
+{"description":"Youssef","entry":"20201007T111942Z","modified":"20201007T111942Z","status":"pending","uuid":"57d4415d-cccc-494c-a8b4-9c9633eb7f69"}
+{"description":"Flo","entry":"20201007T111945Z","modified":"20201007T111945Z","status":"pending","uuid":"4d44a587-746e-4e2d-94ca-d7fa04f6e948"}
+{"description":"IMPOTS","entry":"20201007T112238Z","modified":"20201007T112238Z","priority":"H","status":"pending","uuid":"066b4fc6-4684-4f91-9b0e-f4575f6ddb9c"}
+{"description":"IMPOTS","entry":"20201007T112337Z","modified":"20201007T112337Z","priority":"H","status":"pending","uuid":"48cb196d-9969-4d2c-a0f5-c0c684673f3d"}
+{"description":"IMPOTS","entry":"20201007T112338Z","modified":"20201007T112338Z","priority":"H","status":"pending","uuid":"6347a526-b84f-4630-b3d2-b95dd5980986"}
+{"description":"elliot","due":"20201007T220000Z","entry":"20201007T112625Z","modified":"20201007T112625Z","status":"pending","uuid":"55d34a78-5dc7-4cd8-8132-40db07c845d6"}
+{"description":"Elliot","end":"20201007T112653Z","entry":"20201007T111933Z","modified":"20201007T112654Z","status":"deleted","uuid":"7ece58c7-0eef-414d-9f39-758f547ed69a"}
+{"description":"Ella","end":"20201007T112654Z","entry":"20201007T111936Z","modified":"20201007T112654Z","status":"deleted","uuid":"ed66bcff-fae7-466f-9b0f-abe9a8314b00"}
+{"description":"Youssef","end":"20201007T112654Z","entry":"20201007T111942Z","modified":"20201007T112654Z","status":"deleted","uuid":"57d4415d-cccc-494c-a8b4-9c9633eb7f69"}
+{"description":"Flo","end":"20201007T112654Z","entry":"20201007T111945Z","modified":"20201007T112654Z","status":"deleted","uuid":"4d44a587-746e-4e2d-94ca-d7fa04f6e948"}
+{"description":"IMPOTS","end":"20201007T112654Z","entry":"20201007T112238Z","modified":"20201007T112654Z","priority":"H","status":"deleted","uuid":"066b4fc6-4684-4f91-9b0e-f4575f6ddb9c"}
+{"description":"IMPOTS","end":"20201007T112654Z","entry":"20201007T112337Z","modified":"20201007T112655Z","priority":"H","status":"deleted","uuid":"48cb196d-9969-4d2c-a0f5-c0c684673f3d"}
+{"description":"IMPOTS","end":"20201007T112655Z","entry":"20201007T112338Z","modified":"20201007T112655Z","priority":"H","status":"deleted","uuid":"6347a526-b84f-4630-b3d2-b95dd5980986"}
+{"description":"elliot","due":"20201007T220000Z","end":"20201007T112655Z","entry":"20201007T112625Z","modified":"20201007T112655Z","status":"deleted","uuid":"55d34a78-5dc7-4cd8-8132-40db07c845d6"}
+{"description":"elliot","entry":"20201007T112953Z","modified":"20201007T112953Z","status":"pending","uuid":"3f93a51f-458e-4b5b-9807-0605a1baa641"}
+{"description":"18:00 mom","due":"20201007T220000Z","entry":"20201007T113353Z","modified":"20201007T113353Z","status":"pending","uuid":"0688400a-d15c-44f7-88dd-60ddd6d58cda"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115403Z","modified":"20201007T115403Z","recur":"monthly","status":"recurring","until":"20211007T115403Z","uuid":"eea7beb5-6a24-471b-8706-391954105363"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115405Z","imask":0,"modified":"20201007T115403Z","parent":"eea7beb5-6a24-471b-8706-391954105363","recur":"monthly","status":"pending","until":"20211007T115403Z","uuid":"1656928f-168c-45b6-956f-c785d1c8f82a"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115403Z","mask":"-","modified":"20201007T115405Z","recur":"monthly","status":"recurring","until":"20211007T115403Z","uuid":"eea7beb5-6a24-471b-8706-391954105363"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115403Z","mask":"X","modified":"20201007T115727Z","recur":"monthly","status":"recurring","until":"20211007T115403Z","uuid":"eea7beb5-6a24-471b-8706-391954105363"}
+{"description":"Pay the rent","due":"20201031T225959Z","end":"20201007T115726Z","entry":"20201007T115405Z","imask":0,"modified":"20201007T115727Z","parent":"eea7beb5-6a24-471b-8706-391954105363","recur":"monthly","status":"deleted","until":"20211007T115403Z","uuid":"1656928f-168c-45b6-956f-c785d1c8f82a"}
+{"description":"Pay the rent","due":"20201031T225959Z","end":"20201007T115729Z","entry":"20201007T115403Z","mask":"X","modified":"20201007T115729Z","recur":"monthly","status":"deleted","until":"20211007T115403Z","uuid":"eea7beb5-6a24-471b-8706-391954105363"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115736Z","modified":"20201007T115736Z","recur":"monthly","status":"recurring","uuid":"49090cb4-7e88-4e2e-895b-d7ace8162540"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115740Z","imask":0,"modified":"20201007T115736Z","parent":"49090cb4-7e88-4e2e-895b-d7ace8162540","recur":"monthly","status":"pending","uuid":"3d8505a7-002b-4b1d-9f5a-edb98f1a9044"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115736Z","mask":"-","modified":"20201007T115740Z","recur":"monthly","status":"recurring","uuid":"49090cb4-7e88-4e2e-895b-d7ace8162540"}
+{"description":"18:00 mom","due":"20201007T220000Z","end":"20201007T120228Z","entry":"20201007T113353Z","modified":"20201007T120230Z","status":"deleted","uuid":"0688400a-d15c-44f7-88dd-60ddd6d58cda"}
+{"description":"elliot","end":"20201007T120252Z","entry":"20201007T112953Z","modified":"20201007T120253Z","status":"deleted","uuid":"3f93a51f-458e-4b5b-9807-0605a1baa641"}
+{"description":"Perrine Canap","due":"20201027T230000Z","entry":"20201007T121512Z","modified":"20201007T121512Z","status":"pending","uuid":"e7e374ac-63ac-42cc-b029-ae9ff5b01a93"}
+{"description":"Pre-Rentree 42","due":"20201028T093000Z","entry":"20201007T121608Z","modified":"20201007T121608Z","status":"pending","uuid":"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"}
+{"description":"Pre-Rentree 42","due":"20201028T230000Z","entry":"20201007T121608Z","modified":"20201007T121637Z","status":"pending","uuid":"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"}
+{"description":"elliot","due":"20201007T220000Z","entry":"20201007T122110Z","modified":"20201007T122110Z","status":"pending","uuid":"5ce649e2-3a25-4bfc-829b-8565f6f3a489"}
+{"description":"tomorrow elliot","entry":"20201007T122345Z","modified":"20201007T122345Z","status":"pending","uuid":"a2f78e46-9bb2-460f-9b11-a90c1ff307a3"}
+{"description":"tomorrow elliot","end":"20201007T122405Z","entry":"20201007T122345Z","modified":"20201007T122408Z","status":"deleted","uuid":"a2f78e46-9bb2-460f-9b11-a90c1ff307a3"}
+{"description":"elliot","due":"20201007T220000Z","end":"20201007T122423Z","entry":"20201007T122110Z","modified":"20201007T122424Z","status":"deleted","uuid":"5ce649e2-3a25-4bfc-829b-8565f6f3a489"}
+{"description":"elliot","due":"20201029T110000Z","entry":"20201007T122531Z","modified":"20201007T122531Z","status":"pending","uuid":"7ea7d309-f145-492d-afbd-d9842bcf4f2a"}
+{"description":"elliot","due":"20201030T110000Z","entry":"20201007T122654Z","modified":"20201007T122654Z","status":"pending","uuid":"6a953808-044f-4d14-945d-3a84762e565b"}
+{"description":"elliot","due":"20201030T110000Z","entry":"20201007T122848Z","modified":"20201007T122848Z","status":"pending","uuid":"752923c1-4f65-4be5-98d3-18752a555e26"}
+{"description":"elliot","due":"20201029T110000Z","end":"20201007T122859Z","entry":"20201007T122531Z","modified":"20201007T122901Z","status":"deleted","uuid":"7ea7d309-f145-492d-afbd-d9842bcf4f2a"}
+{"description":"elliot","due":"20201030T110000Z","end":"20201007T122901Z","entry":"20201007T122654Z","modified":"20201007T122901Z","status":"deleted","uuid":"6a953808-044f-4d14-945d-3a84762e565b"}
+{"description":"elliot","due":"20201030T110000Z","end":"20201007T122901Z","entry":"20201007T122848Z","modified":"20201007T122902Z","status":"deleted","uuid":"752923c1-4f65-4be5-98d3-18752a555e26"}
+{"description":"pole emploi rdv","due":"20201008T133000Z","entry":"20201007T123822Z","modified":"20201007T123822Z","status":"pending","uuid":"5dc9d53b-00c1-4eac-a9ff-9e62e6ae9750"}
+{"description":"elele","due":"20201007T215959Z","entry":"20201007T124106Z","modified":"20201007T124106Z","status":"pending","uuid":"c0961031-7b03-40e4-8efb-0527a510a51c"}
+{"description":"elele","due":"20201007T215959Z","end":"20201007T124119Z","entry":"20201007T124106Z","modified":"20201007T124121Z","status":"deleted","uuid":"c0961031-7b03-40e4-8efb-0527a510a51c"}
+{"description":"elele","entry":"20201007T124605Z","modified":"20201007T124605Z","status":"pending","uuid":"a9c11f6d-9828-4e26-8b1c-fcc29829f7bd"}
+{"description":"Pole Emploi RDV","due":"20201008T133000Z","entry":"20201007T123822Z","modified":"20201007T125444Z","status":"pending","uuid":"5dc9d53b-00c1-4eac-a9ff-9e62e6ae9750"}
+{"description":"Mom","due":"20201008T160000Z","entry":"20201007T130305Z","modified":"20201007T130305Z","status":"pending","uuid":"b8c4cd1e-dd5a-4525-8f77-8ac995573e0f"}
+{"description":"elele","end":"20201007T134634Z","entry":"20201007T124605Z","modified":"20201007T134635Z","status":"deleted","uuid":"a9c11f6d-9828-4e26-8b1c-fcc29829f7bd"}
+{"description":"Perrine Canap","due":"20201028T150000Z","entry":"20201007T121512Z","modified":"20201007T151039Z","status":"pending","uuid":"e7e374ac-63ac-42cc-b029-ae9ff5b01a93"}
+{"description":"cyrille","due":"20201007T160000Z","entry":"20201007T162418Z","modified":"20201007T162418Z","status":"pending","uuid":"11963e57-7552-43c1-9204-2db0dcca9e70"}
+{"description":"cyrille","due":"20201007T160000Z","end":"20201007T163040Z","entry":"20201007T162418Z","modified":"20201007T163040Z","status":"completed","uuid":"11963e57-7552-43c1-9204-2db0dcca9e70"}
+{"description":"he","due":"20201010T180000Z","entry":"20201007T163625Z","modified":"20201007T163625Z","status":"pending","uuid":"a8acc931-c9c9-494e-bfe0-1cfa65aa8d87"}
+{"description":"dw","due":"20201007T163651Z","entry":"20201007T163651Z","modified":"20201007T163651Z","status":"pending","uuid":"16013a55-3d13-4ef2-be7e-027ff1a62f8b"}
+{"description":"he","due":"20201010T180000Z","end":"20201007T163716Z","entry":"20201007T163625Z","modified":"20201007T163719Z","status":"deleted","uuid":"a8acc931-c9c9-494e-bfe0-1cfa65aa8d87"}
+{"description":"dw","due":"20201007T163651Z","end":"20201007T163719Z","entry":"20201007T163651Z","modified":"20201007T163719Z","status":"deleted","uuid":"16013a55-3d13-4ef2-be7e-027ff1a62f8b"}
+{"description":"test","entry":"20201007T165632Z","modified":"20201007T165632Z","status":"pending","uuid":"cfcbf842-3e34-4b8d-b0c0-93c3443071bf"}
+{"description":"test","end":"20201007T165702Z","entry":"20201007T165632Z","modified":"20201007T165705Z","status":"deleted","uuid":"cfcbf842-3e34-4b8d-b0c0-93c3443071bf"}
+{"description":"IMPOTS DECLARATION","entry":"20201007T172422Z","modified":"20201007T172422Z","status":"pending","uuid":"87a5657a-b790-49a4-9267-e67d3b00cb91"}
+{"description":"FREE CHANGEMENT NUMERO","entry":"20201007T172511Z","modified":"20201007T172511Z","status":"pending","uuid":"8a42e9f8-9441-491d-ab12-b02ce41049bf"}
+{"description":"FREE FACTURE","entry":"20201007T172518Z","modified":"20201007T172518Z","status":"pending","uuid":"be52552f-f327-4c16-af43-50dc10114dd4"}
+{"description":"IMPOTS DECLARATION","entry":"20201007T172422Z","modified":"20201007T172536Z","project":"todo","status":"pending","uuid":"87a5657a-b790-49a4-9267-e67d3b00cb91"}
+{"description":"FREE CHANGEMENT NUMERO","entry":"20201007T172511Z","modified":"20201007T172536Z","project":"todo","status":"pending","uuid":"8a42e9f8-9441-491d-ab12-b02ce41049bf"}
+{"description":"FREE FACTURE","entry":"20201007T172518Z","modified":"20201007T172538Z","project":"todo","status":"pending","uuid":"be52552f-f327-4c16-af43-50dc10114dd4"}
+{"description":"Mom","due":"20201009T160000Z","entry":"20201007T130305Z","modified":"20201008T093925Z","status":"pending","uuid":"b8c4cd1e-dd5a-4525-8f77-8ac995573e0f"}
+{"description":"Pole Emploi RDV","due":"20201008T133000Z","end":"20201008T160944Z","entry":"20201007T123822Z","modified":"20201008T160944Z","status":"completed","uuid":"5dc9d53b-00c1-4eac-a9ff-9e62e6ae9750"}

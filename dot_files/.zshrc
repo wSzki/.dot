@@ -1,5 +1,3 @@
-
-
 ########################### PLUGINS ############################
 source ~/.zplug/init.zsh
 
@@ -8,6 +6,7 @@ zplug "supercrabtree/k", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "aloxaf/fzf-tab"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+#zplug "mjrafferty/apollo-zsh-theme"
 #zplug "geometry-zsh/geometry"
 #zplug "wting/autojump", defer:2
 #zplug "nvbn/thefuck", defer:2
@@ -25,6 +24,9 @@ ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=magenta'
 
+
+#zstyle ':apollo:*:core:modules:left' modules "vi_mode" "status" "dir"
+#zstyle ':apollo:*:core:modules:right' modules "git"
 
 ########################### SHELL SETTINGS ############################
 # If you come from bash you might have to change your $PATH.
@@ -67,12 +69,15 @@ alias deepthought="vim ~/Libftest/deepthought"
 
 ### TASK
 alias ,t="task"
-alias t="clear && task summary && task l list && task list rc.dateformat=A_D_M_H:N:S && task calendar "
+alias t="clear & task summary & task list & task list rc.dateformat=A_D_M_H:N:S && task calendar "
 alias ,tdt="task due:tomorrowT12:00"
 alias ,tdl="task delete"
 alias ,tadd="task add"
 # task add Pay rent due:28th recur:monthly until:now+1yr
 
+### POWERTOP
+alias powertop="sudo powertop"
+alias autotune="sudo powertop --auto-tune"
 
 
 ### SERVER
@@ -103,6 +108,11 @@ alias n0="vim $DOT/notes.md"
 alias n1="vim $POD/todo.md"
 alias n2="vim $POD/todo2.md"
 alias n9="vim $POD/urgent.md"
+
+### MPV
+alias mpyt="mpv --playlist=/home/wsz/.playlist --shuffle --no-video"
+alias playlist="vim ~/.playlist"
+
 ### CD
 alias cddl="cd ~/.dl"
 alias cdt="cd /tmp"

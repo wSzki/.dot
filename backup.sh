@@ -7,9 +7,13 @@ cp ~/.xinitrc 	  ~/.dot/dot_files
 cp ~/.zshrc 	  ~/.dot/dot_files
 cp ~/.xbindkeysrc ~/.dot/dot_files
 cp ~/.profile	  ~/.dot/dot_files
+cp ~/.taskrc	  ~/.dot/dot_files
 
 # i3 Configuration
 cp ~/.config/i3/* ~/.dot/i3_config
+
+# Task Files
+cp -r ~/.task	 	  ~/.dot/dot_files
 
 # Config Files
 cp -r ~/.config/ranger/ ~/.dot/config_files

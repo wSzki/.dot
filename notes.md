@@ -134,4 +134,11 @@ sudo systemctl restart dnsmasq
 - openresolv
 
 # POWERTOP
-etc/default/cpupower -> set default governor-
+etc/default/cpupower -> set default governor
+
+# AUDIO
+sudo pacman -S realtime-privileges
+sudo vim /etc/security/limits.d/99-realtime-privileges.conf
+@audio          -       rtprio          99
+sudo usermod -a -G realtime wsz
+
