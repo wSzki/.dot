@@ -69,7 +69,7 @@ alias deepthought="vim ~/Libftest/deepthought"
 
 ### TASK
 alias ,t="task"
-alias t="clear & task summary & task list & task list rc.dateformat=A_D_M_H:N:S && task calendar "
+alias t="clear & task summary ; task list rc.dateformat=a_d/m_H:N ; task calendar "
 alias ,tdt="task due:tomorrowT12:00"
 alias ,tdl="task delete"
 alias ,tadd="task add"
