@@ -38,6 +38,7 @@ wifi-menu
 
 - sysstat -> mpstat
 - picom - compton // opacity, fade
+- compiz // mission control, check SCALE plugin
 
 - taskwarrior-tui-git
 - xorg-xfd // print charsets
@@ -96,7 +97,7 @@ wifi-menu
 - nemo
 - nomacs
 - lynx
-- evince
+- evince //pdf
 - mpv
 - mplayer
 - unclutter
