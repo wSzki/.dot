@@ -108,6 +108,7 @@ alias n0="vim $DOT/notes.md"
 alias n1="vim $POD/todo.md"
 alias n2="vim $POD/todo2.md"
 alias n9="vim $POD/urgent.md"
+alias n3="vim $POD/cnb.md"
 
 ### MPV
 alias mpyt="mpv --playlist=/home/wsz/.playlist --shuffle --no-video"
@@ -177,6 +178,8 @@ alias ipinfo="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
 alias autoWifiOn="sudo systemctl enable netctl-auto@wlan0.service && sudo systemctl start netctl-auto@wlan0.service"
 alias autoWifiOff="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
 alias wifi="sudo wifi-menu"
+alias nmap_local="sudo nmap -sn 192.168.0.0/24"
+
 #alias p="ping google.fr"
 
 ###     BLUETOOTH

@@ -75,3 +75,68 @@
 {"description":"Mom","due":"20201009T160000Z","end":"20201009T191726Z","entry":"20201007T130305Z","modified":"20201009T191726Z","status":"completed","uuid":"b8c4cd1e-dd5a-4525-8f77-8ac995573e0f"}
 {"description":"test","due":"20201009T210000Z","entry":"20201009T200747Z","modified":"20201009T200747Z","status":"pending","uuid":"9dced861-3aec-48fe-ae22-1900f58eb4ce"}
 {"description":"test","due":"20201009T210000Z","end":"20201009T200837Z","entry":"20201009T200747Z","modified":"20201009T200839Z","status":"deleted","uuid":"9dced861-3aec-48fe-ae22-1900f58eb4ce"}
+{"description":"Call Ella","entry":"20201011T155610Z","modified":"20201011T155610Z","project":"todo","status":"pending","uuid":"0650d3b4-aac2-4b22-9dbe-bf77ac80d7b8"}
+{"description":"Call Flo","entry":"20201011T155617Z","modified":"20201011T155617Z","project":"todo","status":"pending","uuid":"e4893cc2-c151-42e1-b15a-36784e35b68b"}
+{"description":"Call Youssef","entry":"20201011T155622Z","modified":"20201011T155622Z","project":"todo","status":"pending","uuid":"2d712ac7-5854-402d-a284-fbf1d2a1e1cf"}
+{"description":"Change Bank","entry":"20201011T155644Z","modified":"20201011T155644Z","project":"todo","status":"pending","uuid":"52e923ec-d7a4-416e-be12-a35a756c116e"}
+{"description":"test","due":"20211012T135907Z","entry":"20201012T135907Z","modified":"20201012T135907Z","recur":"3days","status":"recurring","uuid":"74fa3ed0-4c6a-46df-9ce3-2fb33242c971"}
+{"description":"test","due":"20211012T135907Z","entry":"20201012T135909Z","imask":0,"modified":"20201012T135907Z","parent":"74fa3ed0-4c6a-46df-9ce3-2fb33242c971","recur":"3days","status":"pending","uuid":"5a6e4ea0-6ae3-4d64-8881-efb74bda9178"}
+{"description":"test","due":"20211012T135907Z","entry":"20201012T135907Z","mask":"-","modified":"20201012T135909Z","recur":"3days","status":"recurring","uuid":"74fa3ed0-4c6a-46df-9ce3-2fb33242c971"}
+{"description":"test","due":"20211012T135907Z","entry":"20201012T135907Z","mask":"X","modified":"20201012T135950Z","recur":"3days","status":"recurring","uuid":"74fa3ed0-4c6a-46df-9ce3-2fb33242c971"}
+{"description":"test","due":"20211012T135907Z","end":"20201012T135948Z","entry":"20201012T135909Z","imask":0,"modified":"20201012T135950Z","parent":"74fa3ed0-4c6a-46df-9ce3-2fb33242c971","recur":"3days","status":"deleted","uuid":"5a6e4ea0-6ae3-4d64-8881-efb74bda9178"}
+{"description":"test","due":"20211012T135907Z","end":"20201012T135952Z","entry":"20201012T135907Z","mask":"X","modified":"20201012T135952Z","recur":"3days","status":"deleted","uuid":"74fa3ed0-4c6a-46df-9ce3-2fb33242c971"}
+{"description":"test","due":"20201015T140007Z","entry":"20201012T140007Z","modified":"20201012T140007Z","recur":"3days","status":"recurring","uuid":"30d0ec15-3465-473f-a55e-fc77ddd3d730"}
+{"description":"test","due":"20201015T140007Z","entry":"20201012T140008Z","imask":0,"modified":"20201012T140007Z","parent":"30d0ec15-3465-473f-a55e-fc77ddd3d730","recur":"3days","status":"pending","uuid":"2f8096b1-d654-401e-99ef-6db3743799aa"}
+{"description":"test","due":"20201015T140007Z","entry":"20201012T140007Z","mask":"-","modified":"20201012T140008Z","recur":"3days","status":"recurring","uuid":"30d0ec15-3465-473f-a55e-fc77ddd3d730"}
+{"description":"test","due":"20201015T140007Z","entry":"20201012T140007Z","mask":"X","modified":"20201012T140022Z","recur":"3days","status":"recurring","uuid":"30d0ec15-3465-473f-a55e-fc77ddd3d730"}
+{"description":"test","due":"20201015T140007Z","end":"20201012T140021Z","entry":"20201012T140008Z","imask":0,"modified":"20201012T140022Z","parent":"30d0ec15-3465-473f-a55e-fc77ddd3d730","recur":"3days","status":"deleted","uuid":"2f8096b1-d654-401e-99ef-6db3743799aa"}
+{"description":"test","due":"20201015T140007Z","end":"20201012T140022Z","entry":"20201012T140007Z","mask":"X","modified":"20201012T140022Z","recur":"3days","status":"deleted","uuid":"30d0ec15-3465-473f-a55e-fc77ddd3d730"}
+{"description":"test","due":"20201212T140000Z","entry":"20201012T140221Z","modified":"20201012T140221Z","recur":"3days","status":"recurring","uuid":"f354a608-e233-41a5-8cd9-1533d818577e"}
+{"description":"test","due":"20201212T140000Z","entry":"20201012T140222Z","imask":0,"modified":"20201012T140221Z","parent":"f354a608-e233-41a5-8cd9-1533d818577e","recur":"3days","status":"pending","uuid":"161bf4f3-9d98-4178-af9d-6d83e17a4cb7"}
+{"description":"test","due":"20201212T140000Z","entry":"20201012T140221Z","mask":"-","modified":"20201012T140222Z","recur":"3days","status":"recurring","uuid":"f354a608-e233-41a5-8cd9-1533d818577e"}
+{"description":"test","due":"20211012T140253Z","entry":"20201012T140253Z","modified":"20201012T140253Z","recur":"daily","status":"recurring","uuid":"4d6b62f5-4ace-4986-adef-6507db6ee97a"}
+{"description":"test","due":"20211012T140253Z","entry":"20201012T140254Z","imask":0,"modified":"20201012T140253Z","parent":"4d6b62f5-4ace-4986-adef-6507db6ee97a","recur":"daily","status":"pending","uuid":"76a3d18c-23c4-4762-b53d-71677770ab1d"}
+{"description":"test","due":"20211012T140253Z","entry":"20201012T140253Z","mask":"-","modified":"20201012T140254Z","recur":"daily","status":"recurring","uuid":"4d6b62f5-4ace-4986-adef-6507db6ee97a"}
+{"description":"test","due":"20201212T140000Z","entry":"20201012T140221Z","mask":"X","modified":"20201012T140313Z","recur":"3days","status":"recurring","uuid":"f354a608-e233-41a5-8cd9-1533d818577e"}
+{"description":"test","due":"20201212T140000Z","end":"20201012T140311Z","entry":"20201012T140222Z","imask":0,"modified":"20201012T140313Z","parent":"f354a608-e233-41a5-8cd9-1533d818577e","recur":"3days","status":"deleted","uuid":"161bf4f3-9d98-4178-af9d-6d83e17a4cb7"}
+{"description":"test","due":"20201212T140000Z","end":"20201012T140314Z","entry":"20201012T140221Z","mask":"X","modified":"20201012T140314Z","recur":"3days","status":"deleted","uuid":"f354a608-e233-41a5-8cd9-1533d818577e"}
+{"description":"test","due":"20211012T140253Z","entry":"20201012T140253Z","mask":"X","modified":"20201012T140314Z","recur":"daily","status":"recurring","uuid":"4d6b62f5-4ace-4986-adef-6507db6ee97a"}
+{"description":"test","due":"20211012T140253Z","end":"20201012T140314Z","entry":"20201012T140254Z","imask":0,"modified":"20201012T140314Z","parent":"4d6b62f5-4ace-4986-adef-6507db6ee97a","recur":"daily","status":"deleted","uuid":"76a3d18c-23c4-4762-b53d-71677770ab1d"}
+{"description":"test","due":"20211012T140253Z","end":"20201012T140315Z","entry":"20201012T140253Z","mask":"X","modified":"20201012T140315Z","recur":"daily","status":"deleted","uuid":"4d6b62f5-4ace-4986-adef-6507db6ee97a"}
+{"description":"test","due":"20201015T140516Z","entry":"20201012T140516Z","modified":"20201012T140516Z","recur":"daily","status":"recurring","uuid":"f6d7c273-645d-4731-a684-8d006d13704a"}
+{"description":"test","due":"20201015T140516Z","entry":"20201012T140517Z","imask":0,"modified":"20201012T140516Z","parent":"f6d7c273-645d-4731-a684-8d006d13704a","recur":"daily","status":"pending","uuid":"796aea76-650c-42a9-8a02-bcc4e6fc057b"}
+{"description":"test","due":"20201015T140516Z","entry":"20201012T140516Z","mask":"-","modified":"20201012T140517Z","recur":"daily","status":"recurring","uuid":"f6d7c273-645d-4731-a684-8d006d13704a"}
+{"description":"WATER","due":"20201015T140516Z","entry":"20201012T140517Z","imask":0,"modified":"20201012T140550Z","parent":"f6d7c273-645d-4731-a684-8d006d13704a","recur":"daily","status":"pending","uuid":"796aea76-650c-42a9-8a02-bcc4e6fc057b"}
+{"description":"WATER","due":"20201015T140516Z","entry":"20201012T140516Z","mask":"-","modified":"20201012T140553Z","recur":"daily","status":"recurring","uuid":"f6d7c273-645d-4731-a684-8d006d13704a"}
+{"description":"FREE FACTURE","end":"20201012T151406Z","entry":"20201007T172518Z","modified":"20201012T151406Z","project":"todo","status":"completed","uuid":"be52552f-f327-4c16-af43-50dc10114dd4"}
+{"description":"Pre-Rentree 42","due":"20201029T090000Z","entry":"20201007T121608Z","modified":"20201012T151546Z","status":"pending","uuid":"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"}
+{"description":"YOUSSEF","due":"20201014T220000Z","entry":"20201013T124356Z","modified":"20201013T124356Z","status":"pending","uuid":"af202373-9af5-4f2a-9e4c-1d08dfb46c8a"}
+{"description":"YOUSSEtF","due":"20201014T220000Z","entry":"20201013T124414Z","modified":"20201013T124414Z","status":"pending","uuid":"57caa4fa-944f-4f9e-a73a-fb3b57106d26"}
+{"description":"YOUSSEtF","due":"20201014T220000Z","end":"20201013T124420Z","entry":"20201013T124414Z","modified":"20201013T124422Z","status":"deleted","uuid":"57caa4fa-944f-4f9e-a73a-fb3b57106d26"}
+{"description":"Elliot","due":"20201015T190000Z","entry":"20201014T194647Z","modified":"20201014T194647Z","status":"pending","uuid":"811cd1ae-ae81-48e6-a40e-6bde58719b16"}
+{"description":"Elliot","due":"20201015T190000Z","entry":"20201014T194724Z","modified":"20201014T194724Z","status":"pending","uuid":"90165086-fd0f-4ae6-b2ea-41998af23145"}
+{"description":"Elliot","due":"20201015T190000Z","end":"20201014T210230Z","entry":"20201014T194647Z","modified":"20201014T210232Z","status":"deleted","uuid":"811cd1ae-ae81-48e6-a40e-6bde58719b16"}
+{"description":"Elliot","due":"20201015T190000Z","end":"20201014T210246Z","entry":"20201014T194724Z","modified":"20201014T210248Z","status":"deleted","uuid":"90165086-fd0f-4ae6-b2ea-41998af23145"}
+{"description":"YOUSSEF","due":"20201014T220000Z","end":"20201015T134258Z","entry":"20201013T124356Z","modified":"20201015T134258Z","status":"completed","uuid":"af202373-9af5-4f2a-9e4c-1d08dfb46c8a"}
+{"description":"WATER","due":"20201015T140516Z","entry":"20201012T140516Z","mask":"+","modified":"20201015T134302Z","recur":"daily","status":"recurring","uuid":"f6d7c273-645d-4731-a684-8d006d13704a"}
+{"description":"WATER","due":"20201015T140516Z","end":"20201015T134302Z","entry":"20201012T140517Z","imask":0,"modified":"20201015T134302Z","parent":"f6d7c273-645d-4731-a684-8d006d13704a","recur":"daily","status":"completed","uuid":"796aea76-650c-42a9-8a02-bcc4e6fc057b"}
+{"description":"WATER","due":"20201018T134328Z","entry":"20201015T134328Z","modified":"20201015T134328Z","status":"pending","uuid":"84451e4c-baec-4f8e-8e7f-d21810ee9bbf"}
+{"description":"YOUSSEF","due":"20201019T220000Z","entry":"20201015T134356Z","modified":"20201015T134356Z","status":"pending","uuid":"1994aa92-d15b-4fab-8725-c6302a541985"}
+{"description":"WATER","due":"20201016T140516Z","entry":"20201015T163352Z","imask":1,"modified":"20201015T134302Z","parent":"f6d7c273-645d-4731-a684-8d006d13704a","recur":"daily","status":"pending","uuid":"84be65a7-d4f4-4b99-9220-036d00d37a31"}
+{"description":"WATER","due":"20201015T140516Z","entry":"20201012T140516Z","mask":"+-","modified":"20201015T163352Z","recur":"daily","status":"recurring","uuid":"f6d7c273-645d-4731-a684-8d006d13704a"}
+{"description":"WATER","due":"20201015T140516Z","entry":"20201012T140516Z","mask":"+X","modified":"20201015T173510Z","recur":"daily","status":"recurring","uuid":"f6d7c273-645d-4731-a684-8d006d13704a"}
+{"description":"WATER","due":"20201016T140516Z","end":"20201015T173508Z","entry":"20201015T163352Z","imask":1,"modified":"20201015T173510Z","parent":"f6d7c273-645d-4731-a684-8d006d13704a","recur":"daily","status":"deleted","uuid":"84be65a7-d4f4-4b99-9220-036d00d37a31"}
+{"description":"WATER","due":"20201015T140516Z","end":"20201015T173512Z","entry":"20201012T140516Z","mask":"+X","modified":"20201015T173512Z","recur":"daily","status":"deleted","uuid":"f6d7c273-645d-4731-a684-8d006d13704a"}
+{"description":"Call Youssef","end":"20201015T173541Z","entry":"20201011T155622Z","modified":"20201015T173541Z","project":"todo","status":"completed","uuid":"2d712ac7-5854-402d-a284-fbf1d2a1e1cf"}
+{"description":"Respond Marie Boucaud","entry":"20201015T173607Z","modified":"20201015T173607Z","project":"todo","status":"pending","uuid":"fe286424-1284-4fd3-9227-003e828a37bc"}
+{"description":"POLE EMPLOI 42 KAIROS","entry":"20201015T173810Z","modified":"20201015T173810Z","project":"todo","status":"pending","uuid":"2071785b-530d-43ce-bff0-8b9d6b4807c3"}
+{"description":"due 16111000 RENTREE 42","entry":"20201015T173839Z","modified":"20201015T173839Z","status":"pending","uuid":"08ada4ac-0561-4064-884f-74ef0cbbe80a"}
+{"description":"RENTREE 42","due":"20201116T090000Z","entry":"20201015T173856Z","modified":"20201015T173856Z","status":"pending","uuid":"baf0819c-1c49-4a62-b8d7-485ac4761673"}
+{"description":"due 16111000 RENTREE 42","end":"20201015T173904Z","entry":"20201015T173839Z","modified":"20201015T173905Z","status":"deleted","uuid":"08ada4ac-0561-4064-884f-74ef0cbbe80a"}
+{"description":"MOM BDAY","due":"20201208T110000Z","entry":"20201015T173942Z","modified":"20201015T173942Z","status":"pending","uuid":"99372c5d-2819-4278-97fe-cc30e4130bd8"}
+{"description":"due 25121200 XMAS","entry":"20201015T174001Z","modified":"20201015T174001Z","status":"pending","uuid":"967faa3d-8968-4224-8fc6-7e11ec45076b"}
+{"description":"XMAS","due":"20201225T110000Z","entry":"20201015T174005Z","modified":"20201015T174005Z","status":"pending","uuid":"26ec997c-a662-43c0-9b85-083e33663790"}
+{"description":"due 25121200 XMAS","end":"20201015T174008Z","entry":"20201015T174001Z","modified":"20201015T174009Z","status":"deleted","uuid":"967faa3d-8968-4224-8fc6-7e11ec45076b"}
+{"description":"due 31122359 NEW YEAR","entry":"20201015T174035Z","modified":"20201015T174035Z","status":"pending","uuid":"722844db-bb74-4c51-bb6b-a72c5a2f9f86"}
+{"description":"NEW YEAR","due":"20201231T225900Z","entry":"20201015T174038Z","modified":"20201015T174038Z","status":"pending","uuid":"344840c7-7f47-4d61-9715-7a84b5ade9e3"}
+{"description":"due 31122359 NEW YEAR","end":"20201015T174042Z","entry":"20201015T174035Z","modified":"20201015T174044Z","status":"deleted","uuid":"722844db-bb74-4c51-bb6b-a72c5a2f9f86"}

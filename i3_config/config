@@ -36,7 +36,6 @@ exec --no-startup-id i3-msg "workspace 1"
 ###################################
 ### SCRATCHPAD
 ###################################
-#for_window [floating] move scratchpad
 bindsym Shift+$mod+0 move scratchpad
 bindsym $mod+0 scratchpad show
 
@@ -45,7 +44,7 @@ bindsym $mod+0 scratchpad show
 bindsym $winmod+m [class="Chromium" instance="2.webmail.autistici.org"] scratchpad show
 #
 ## Telegram
-#for_window [class="TelegramDesktop"] move scratchpad scratchpad show
+#for_window [class="TelegramDesktop"] floating enable
 bindsym $winmod+t [class="TelegramDesktop"] scratchpad show
 #
 ## Chromium
@@ -56,7 +55,11 @@ bindsym $winmod+i [class="Chromium" instance="chromium"] scratchpad show
 #for_window  [class="Chromium" instance="youtube"] move scratchpad scratchpad show
 bindsym $winmod+y [class="Chromium" instance="youtube"] scratchpad show
 
+#for_window [floating] move scratchpad scratchpad show
 #for_window [class="Chromium" instance="chromium"] resize set 1900 1000
+
+## Raindrop
+for_window [class="Chromium" instance="crx_ldgfbffkinooeloadekpmfoklnobpien"] floating enable resize set 400 400
 
 ###################################
 # COMPTON, PICOM
@@ -324,8 +327,6 @@ height 15
 #		background #191D20
 #		}
 #}
-
-
 
 ###################################
 ### ARCHIVE

@@ -51,6 +51,8 @@ wifi-menu
 - valgrind
 - gdb
 
+- base-devel // raspi base utils
+- nmap // local ip ifnder
 - fasd
 - fontpreview-ueberzug-git
 - autotiling // [i3] // pip install autotiling

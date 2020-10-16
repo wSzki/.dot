@@ -17,6 +17,7 @@
 "################################################ "
 "### NATIVE ## "
 "################################################ "
+
 "nmap <F7> <Plug>(scnvim-send-block)
 "Centering Cursor
 
@@ -39,6 +40,13 @@ set history=1000
 set noswapfile
 set foldmethod=manual
 "set signcolumn=number
+
+" Folding - remember
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>
@@ -65,7 +73,7 @@ set ignorecase
 set smartcase
 nnoremap <CR> :noh<CR><CR>
 
-"Split
+" Split
 set splitbelow
 set splitright
 
@@ -85,7 +93,7 @@ set nocursorcolumn
 set nocursorline
 "set norelativenumber
 
-" WILDMENU
+" Wildmenu
 "set wildmode=longest,list,full
 "set wildmode=list
 set wildmode=longest:full,full
@@ -198,6 +206,8 @@ Plug 'ericbn/vim-relativize'
 Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wSzki/vim-smooth-scroll'
+Plug 'tommcdo/vim-exchange'
+
 "Plug 'dense-analysis/ale'
 "Plug 'ycm-core/YouCompleteMe'
 " ###### "
@@ -241,6 +251,13 @@ Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 
 "###############################"
 call plug#end()
+
+
+" #############
+" SUPERCOLLIDER
+" #############
+noremap <Leader>sc :SCNvimStart<CR><ESC>
+
 
 "################################################ "
 "### WILDMENU  ### "

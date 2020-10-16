@@ -37,8 +37,8 @@ xautolock -time 8 -locker "systemctl suspend" &
 #Left &
 #youtube & 
 #dwmblocks &
-#discord --start-minimized &
 telegram-desktop -startintray &
+#discord --start-minimized &
 #slack -startintray &
 #blueman-applet &
 slock &
