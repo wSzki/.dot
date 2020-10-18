@@ -51,6 +51,8 @@ wifi-menu
 - valgrind
 - gdb
 
+
+- acpilight // remove xorg-backlight with acpilight -- sudo usermod -aG video wsz; reboot
 - base-devel // raspi base utils
 - nmap // local ip ifnder
 - fasd
