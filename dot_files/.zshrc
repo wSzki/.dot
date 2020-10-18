@@ -59,6 +59,10 @@ source $ZSH/oh-my-zsh.sh
 alias back="~/.dot/backup.sh"
 alias autopush="git add .; git status; git commit -m "autopush"; git push"
 
+### GIT
+alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" | grep -o 'git@[^\"]*'"
+
+
 ### C
 alias gccc="gcc -Wall -Werror -Wextra"
 alias gccf="gcc -fsanitize=address -Wall -Werror -Wextra"

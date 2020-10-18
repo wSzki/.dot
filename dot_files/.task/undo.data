@@ -499,3 +499,21 @@ time 1602783644
 old [description:"due 31122359 NEW YEAR" entry:"1602783635" modified:"1602783635" status:"pending" uuid:"722844db-bb74-4c51-bb6b-a72c5a2f9f86"]
 new [description:"due 31122359 NEW YEAR" end:"1602783642" entry:"1602783635" modified:"1602783644" status:"deleted" uuid:"722844db-bb74-4c51-bb6b-a72c5a2f9f86"]
 ---
+time 1602935830
+new [description:"Finish lists" entry:"1602935830" modified:"1602935830" project:"42" status:"pending" uuid:"2249ad20-58ea-4d4d-bab4-523bc4de1c9b"]
+---
+time 1602935831
+new [description:"Finish lists" entry:"1602935831" modified:"1602935831" project:"42" status:"pending" uuid:"869703eb-e3c0-4804-8297-a72f1d0eab0f"]
+---
+time 1602935839
+old [description:"Finish lists" entry:"1602935831" modified:"1602935831" project:"42" status:"pending" uuid:"869703eb-e3c0-4804-8297-a72f1d0eab0f"]
+new [description:"Finish lists" end:"1602935837" entry:"1602935831" modified:"1602935839" project:"42" status:"deleted" uuid:"869703eb-e3c0-4804-8297-a72f1d0eab0f"]
+---
+time 1602935884
+old [description:"POLE EMPLOI 42 KAIROS" entry:"1602783490" modified:"1602783490" project:"todo" status:"pending" uuid:"2071785b-530d-43ce-bff0-8b9d6b4807c3"]
+new [description:"POLE EMPLOI 42 KAIROS" entry:"1602783490" modified:"1602935884" project:"URGENT" status:"pending" uuid:"2071785b-530d-43ce-bff0-8b9d6b4807c3"]
+---
+time 1602935905
+old [description:"IMPOTS DECLARATION" entry:"1602091462" modified:"1602091536" project:"todo" status:"pending" uuid:"87a5657a-b790-49a4-9267-e67d3b00cb91"]
+new [description:"IMPOTS DECLARATION" entry:"1602091462" modified:"1602935905" project:"URGENT" status:"pending" uuid:"87a5657a-b790-49a4-9267-e67d3b00cb91"]
+---

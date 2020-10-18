@@ -17,7 +17,7 @@ fi
 
 # Launch the session, commands below this line will be ignored
 
-xbacklight -set 70 &
+xbacklight -set 62 &
 xbindkeys &
 xgamma -gamma 1.3 &
 redshift -P -O 3725 &
