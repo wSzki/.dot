@@ -22,15 +22,19 @@ convert file.{jpg, png}
 
 # [WIFI]
 
-sudo ip link set wlan0 down
-sudo systemctl stop NetworkManager.service
-sudo systemctl disable NetworkManager.service
-sudo systemctl enable netctl-auto@wlan0.service
-Set priority in config file /etc/netctl/wlan0-...
 wifi-menu
 - dialog
 - netctl
 - openresolv
+
+sudo ip link set wlan0 down
+sudo systemctl stop NetworkManager.service
+sudo systemctl disable NetworkManager.service
+sudo systemctl enable netctl-auto@wlan0.service
+
+sudo systemctl start netctl-auto@wlan0.service
+Set priority in config file /etc/netctl/wlan0-...
+
 
 # [AUR]
 

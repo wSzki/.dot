@@ -205,11 +205,12 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'ericbn/vim-relativize'
 Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
-Plug 'wSzki/vim-smooth-scroll'
+Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
 
 "Plug 'dense-analysis/ale'
 "Plug 'ycm-core/YouCompleteMe'
+
 " ###### "
 " Neovim "
 " ###### "
@@ -237,13 +238,14 @@ Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 "Plug 'puremourning/vimspector'
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'gelguy/wilder.nvim'
-"Plug 'cskeeters/vim-smooth-scroll'
 "Plug 'gko/vim-coloresque'
 "Plug 'junegunn/vim-easy-align'
 "Plug 'yuttie/comfortable-motion.vim'
 "Plug 'c0r73x/colorizer'
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'chrisbra/Colorizer'
+"Plug 'lucasicf/vim-smooth-scroll'
+"Plug 'cskeeters/vim-smooth-scroll'
 "Plug 'terryma/vim-smooth-scroll'
 "Plug 'severin-lemaignan/vim-minimap'
 "Plug 'wfxr/minimap.vim'

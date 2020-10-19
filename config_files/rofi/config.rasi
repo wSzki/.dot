@@ -1,5 +1,4 @@
 configuration {
-/*theme: "/home/wsz/.local/share/rofi/themes/slate.rasi";*/
 modi: "window,run,ssh";
 /*modi: "window,drun,run,ssh,keys,combi";*/
 /*	width: 50;*/
@@ -57,7 +56,7 @@ modi: "window,run,ssh";
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "/home/wsz/.local/share/rofi/themes/slate.rasi";
+	theme: "~/.config/rofi/themes/slate.rasi";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/

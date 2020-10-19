@@ -517,3 +517,17 @@ time 1602935905
 old [description:"IMPOTS DECLARATION" entry:"1602091462" modified:"1602091536" project:"todo" status:"pending" uuid:"87a5657a-b790-49a4-9267-e67d3b00cb91"]
 new [description:"IMPOTS DECLARATION" entry:"1602091462" modified:"1602935905" project:"URGENT" status:"pending" uuid:"87a5657a-b790-49a4-9267-e67d3b00cb91"]
 ---
+time 1603023517
+old [description:"WATER" due:"1603028608" entry:"1602769408" modified:"1602769408" status:"pending" uuid:"84451e4c-baec-4f8e-8e7f-d21810ee9bbf"]
+new [description:"WATER" due:"1603028608" end:"1603023517" entry:"1602769408" modified:"1603023517" status:"completed" uuid:"84451e4c-baec-4f8e-8e7f-d21810ee9bbf"]
+---
+time 1603023531
+new [description:"due+3days WATER" entry:"1603023531" modified:"1603023531" status:"pending" uuid:"0d3d5549-55df-4a5c-96bb-18f441b19cb3"]
+---
+time 1603023548
+new [description:"WATER" due:"1603282748" entry:"1603023548" modified:"1603023548" status:"pending" uuid:"d5d734f9-5434-43ff-be8a-b6a7a33821d7"]
+---
+time 1603023567
+old [description:"due+3days WATER" entry:"1603023531" modified:"1603023531" status:"pending" uuid:"0d3d5549-55df-4a5c-96bb-18f441b19cb3"]
+new [description:"due+3days WATER" end:"1603023566" entry:"1603023531" modified:"1603023567" status:"deleted" uuid:"0d3d5549-55df-4a5c-96bb-18f441b19cb3"]
+---

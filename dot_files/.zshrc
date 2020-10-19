@@ -108,11 +108,11 @@ alias vim="nvim"
 alias v="vim -o \`fzf\`"
 
 ### NOTES
-alias n0="vim $DOT/notes.md"
-alias n1="vim $POD/todo.md"
-alias n2="vim $POD/todo2.md"
-alias n9="vim $POD/urgent.md"
-alias n3="vim $POD/cnb.md"
+alias n0="vim $DOT/_NOTES/notes.md"
+alias n1="vim $POD/_NOTES/todo.md"
+alias n2="vim $POD/_NOTES/todo2.md"
+alias n9="vim $POD/_NOTES/urgent.md"
+alias n3="vim $POD/_NOTES/cnb.md"
 
 ### MPV
 alias mpyt="mpv --playlist=/home/wsz/.playlist --shuffle --no-video"
