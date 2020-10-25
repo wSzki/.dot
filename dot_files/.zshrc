@@ -108,7 +108,7 @@ alias vim="nvim"
 alias v="vim -o \`fzf\`"
 
 ### NOTES
-alias n0="vim $DOT/_NOTES/notes.md"
+alias n0="vim $DOT/notes.md"
 alias n1="vim $POD/_NOTES/todo.md"
 alias n2="vim $POD/_NOTES/todo2.md"
 alias n9="vim $POD/_NOTES/urgent.md"

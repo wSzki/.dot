@@ -26,7 +26,7 @@ setxkbmap -option compose:prsc -option caps:hyper &
 xset r rate 250 50 &
 xsetroot -solid '#1d2021' &
 xset s 180 180 &
-xautolock -time 8 -locker "systemctl suspend" &
+xautolock -time 8 -locker "systemctl suspend" -detectsleep &
 telegram-desktop -startintray &
 slock &
 exec i3
