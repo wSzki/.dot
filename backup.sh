@@ -10,7 +10,7 @@ cp ~/.profile	  ~/.dot/dot_files
 cp ~/.taskrc	  ~/.dot/dot_files
 
 # i3 Configuration
-cp ~/.config/i3/* ~/.dot/i3_config
+cp ~/.config/i3/* ~/.dot/config_files/i3
 
 # Task Files
 cp -r ~/.task	 	  ~/.dot/dot_files
