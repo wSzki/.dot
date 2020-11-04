@@ -24,9 +24,11 @@ redshift -P -O 3725 &
 unclutter -idle 1 -jitter 1 -root &
 setxkbmap -option compose:prsc -option caps:hyper &
 xset r rate 250 50 &
-xsetroot -solid '#1d2021' &
+#xsetroot -solid '#1d2021' &
+xsetroot -solid '#191d20' &
 xset s 180 180 &
 xautolock -time 8 -locker "systemctl suspend" -detectsleep &
+#barrier -f --name wszki 192.168.0.14 &
 telegram-desktop -startintray &
 slock &
 exec i3

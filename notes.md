@@ -20,6 +20,10 @@ convert file.{jpg, png}
 - xev : keystroke monitor
 - xprop : window properties
 
+# [MISC]
+
+nohup = no hang up, don't kill process if terminal dies
+
 # [WIFI]
 
 wifi-menu

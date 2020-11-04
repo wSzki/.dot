@@ -614,3 +614,160 @@ new [description:"WATER" due:"1603576800" end:"1603646405" entry:"1603277494" mo
 time 1603646415
 new [description:"WATER" due:"1603905615" entry:"1603646415" modified:"1603646415" status:"pending" uuid:"a631c413-f607-49f3-bf8d-af03a4f3b6f2"]
 ---
+time 1603716752
+new [description:"DOCTOR" due:"1604675700" entry:"1603716752" modified:"1603716752" status:"pending" uuid:"ad90cee4-cfb0-4463-9df4-fb84c738a8b0"]
+---
+time 1603716775
+old [description:"opth" due:"1603709700" entry:"1603574736" modified:"1603574736" status:"pending" uuid:"69af4bd1-2b9f-41cd-b8db-b19d10b7b8da"]
+new [description:"opth" due:"1603709700" end:"1603716775" entry:"1603574736" modified:"1603716775" status:"completed" uuid:"69af4bd1-2b9f-41cd-b8db-b19d10b7b8da"]
+---
+time 1603716851
+old [description:"IMPOTS CALL 01 55 38 14 20" due:"1603666800" entry:"1603206518" modified:"1603371294" status:"pending" uuid:"56e6c385-156c-475b-ba4b-24baa08221ee"]
+new [description:"IMPOTS CALL 01 55 38 14 20" due:"1603753200" entry:"1603206518" modified:"1603716851" status:"pending" uuid:"56e6c385-156c-475b-ba4b-24baa08221ee"]
+---
+time 1603716872
+new [description:"CHECK REFUND" due:"1604321672" entry:"1603716872" modified:"1603716872" status:"pending" uuid:"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"]
+---
+time 1603721545
+new [description:"SEND OLD CONTRACT + CERTIFICATE NO TV" due:"1603980745" entry:"1603721545" modified:"1603721545" status:"pending" uuid:"72eaa694-426e-434d-a1ab-23ff03b44af6"]
+---
+time 1603721607
+old [description:"IMPOTS CALL 01 55 38 14 20" due:"1603753200" entry:"1603206518" modified:"1603716851" status:"pending" uuid:"56e6c385-156c-475b-ba4b-24baa08221ee"]
+new [description:"IMPOTS CALL 01 55 38 14 20" due:"1603753200" end:"1603721607" entry:"1603206518" modified:"1603721607" status:"completed" uuid:"56e6c385-156c-475b-ba4b-24baa08221ee"]
+---
+time 1603721738
+new [description:"DATE LIMITE TAXE TV" due:"1605524400" entry:"1603721738" modified:"1603721738" status:"pending" uuid:"944b51c9-5945-4a18-8402-4137f5b07b3d"]
+---
+time 1603721762
+old [description:"POLE EMPLOI 42 KAIROS" entry:"1602783490" modified:"1602935884" project:"URGENT" status:"pending" uuid:"2071785b-530d-43ce-bff0-8b9d6b4807c3"]
+new [description:"POLE EMPLOI 42 KAIROS" end:"1603721762" entry:"1602783490" modified:"1603721762" project:"URGENT" status:"completed" uuid:"2071785b-530d-43ce-bff0-8b9d6b4807c3"]
+---
+time 1603721769
+old [description:"FREE CHANGEMENT NUMERO" entry:"1602091511" modified:"1602091536" project:"todo" status:"pending" uuid:"8a42e9f8-9441-491d-ab12-b02ce41049bf"]
+new [description:"FREE CHANGEMENT NUMERO" end:"1603721769" entry:"1602091511" modified:"1603721769" project:"todo" status:"completed" uuid:"8a42e9f8-9441-491d-ab12-b02ce41049bf"]
+---
+time 1603721787
+old [description:"Journee citoyennete" entry:"1603217181" modified:"1603217181" project:"URGENT" status:"pending" uuid:"97909392-e128-4828-9d29-78e89c735284"]
+new [description:"Journee citoyennete" end:"1603721787" entry:"1603217181" modified:"1603721787" project:"URGENT" status:"completed" uuid:"97909392-e128-4828-9d29-78e89c735284"]
+---
+time 1603721796
+old [description:"Finish lists" entry:"1602935830" modified:"1602935830" project:"42" status:"pending" uuid:"2249ad20-58ea-4d4d-bab4-523bc4de1c9b"]
+new [description:"Finish lists" end:"1603721796" entry:"1602935830" modified:"1603721796" project:"42" status:"completed" uuid:"2249ad20-58ea-4d4d-bab4-523bc4de1c9b"]
+---
+time 1603722643
+new [description:"duw:28101800 POLE EMPLOI" entry:"1603722643" modified:"1603722643" status:"pending" uuid:"29879a03-5fc1-4540-a416-dcaf1207951f"]
+---
+time 1603722669
+new [description:"duw:28101800 POLE EMPLOI" entry:"1603722669" modified:"1603722669" status:"pending" uuid:"1b4c677e-8551-453c-8174-ccc8c120a803"]
+---
+time 1603722682
+old [description:"duw:28101800 POLE EMPLOI" entry:"1603722643" modified:"1603722643" status:"pending" uuid:"29879a03-5fc1-4540-a416-dcaf1207951f"]
+new [description:"duw:28101800 POLE EMPLOI" end:"1603722680" entry:"1603722643" modified:"1603722682" status:"deleted" uuid:"29879a03-5fc1-4540-a416-dcaf1207951f"]
+---
+time 1603722682
+old [description:"duw:28101800 POLE EMPLOI" entry:"1603722669" modified:"1603722669" status:"pending" uuid:"1b4c677e-8551-453c-8174-ccc8c120a803"]
+new [description:"duw:28101800 POLE EMPLOI" end:"1603722682" entry:"1603722669" modified:"1603722682" status:"deleted" uuid:"1b4c677e-8551-453c-8174-ccc8c120a803"]
+---
+time 1603722687
+new [description:"POLE EMPLOI" due:"1603904400" entry:"1603722687" modified:"1603722687" status:"pending" uuid:"bbddf121-2765-4b24-a2cc-fb70031c0de1"]
+---
+time 1603723580
+new [description:"ATTAL DENTIST" due:"1605020400" entry:"1603723580" modified:"1603723580" status:"pending" uuid:"7956fd56-2d35-4a83-9472-f547090aca8e"]
+---
+time 1603723711
+new [description:"MOM ODEON" due:"1603807200" entry:"1603723711" modified:"1603723711" status:"pending" uuid:"d53f21c3-8f08-432c-96af-06a22ec192ab"]
+---
+time 1603723943
+new [description:"FLO" due:"1603896743" entry:"1603723943" modified:"1603723943" status:"pending" uuid:"28a12446-8466-4033-95b8-4701cc21c51f"]
+---
+time 1603723950
+old [description:"Call Flo" entry:"1602431777" modified:"1602431777" project:"todo" status:"pending" uuid:"e4893cc2-c151-42e1-b15a-36784e35b68b"]
+new [description:"Call Flo" end:"1603723950" entry:"1602431777" modified:"1603723950" project:"todo" status:"completed" uuid:"e4893cc2-c151-42e1-b15a-36784e35b68b"]
+---
+time 1603725353
+new [description:"Generaliste" due:"1604592900" entry:"1603725353" modified:"1603725353" status:"pending" uuid:"8a521792-0f4d-4f84-9d59-d61b09823d52"]
+---
+time 1603725405
+old [description:"DOCTOR" due:"1604675700" entry:"1603716752" modified:"1603716752" status:"pending" uuid:"ad90cee4-cfb0-4463-9df4-fb84c738a8b0"]
+new [description:"Podologue" due:"1604675700" entry:"1603716752" modified:"1603725405" status:"pending" uuid:"ad90cee4-cfb0-4463-9df4-fb84c738a8b0"]
+---
+time 1603803696
+new [description:"SEEDLINGS" due:"1603933296" entry:"1603803696" modified:"1603803696" status:"pending" uuid:"dfe5cfc5-cb86-4176-9ae2-211a80a6b0c9"]
+---
+time 1603820578
+old [description:"MOM ODEON" due:"1603807200" entry:"1603723711" modified:"1603723711" status:"pending" uuid:"d53f21c3-8f08-432c-96af-06a22ec192ab"]
+new [description:"MOM ODEON" due:"1603807200" end:"1603820578" entry:"1603723711" modified:"1603820578" status:"completed" uuid:"d53f21c3-8f08-432c-96af-06a22ec192ab"]
+---
+time 1603840924
+old [description:"POLE EMPLOI" due:"1603904400" entry:"1603722687" modified:"1603722687" status:"pending" uuid:"bbddf121-2765-4b24-a2cc-fb70031c0de1"]
+new [description:"POLE EMPLOI" due:"1603904400" end:"1603840924" entry:"1603722687" modified:"1603840924" status:"completed" uuid:"bbddf121-2765-4b24-a2cc-fb70031c0de1"]
+---
+time 1603903255
+old [description:"FLO" due:"1603896743" entry:"1603723943" modified:"1603723943" status:"pending" uuid:"28a12446-8466-4033-95b8-4701cc21c51f"]
+new [description:"FLO" due:"1603896743" end:"1603903255" entry:"1603723943" modified:"1603903255" status:"completed" uuid:"28a12446-8466-4033-95b8-4701cc21c51f"]
+---
+time 1603903271
+old [description:"WATER" due:"1603905615" entry:"1603646415" modified:"1603646415" status:"pending" uuid:"a631c413-f607-49f3-bf8d-af03a4f3b6f2"]
+new [description:"WATER" due:"1603926000" entry:"1603646415" modified:"1603903271" status:"pending" uuid:"a631c413-f607-49f3-bf8d-af03a4f3b6f2"]
+---
+time 1603903283
+old [description:"SEEDLINGS" due:"1603933296" entry:"1603803696" modified:"1603803696" status:"pending" uuid:"dfe5cfc5-cb86-4176-9ae2-211a80a6b0c9"]
+new [description:"SEEDLINGS" due:"1603933296" end:"1603903283" entry:"1603803696" modified:"1603903283" status:"completed" uuid:"dfe5cfc5-cb86-4176-9ae2-211a80a6b0c9"]
+---
+time 1603918326
+old [description:"Perrine Canap" due:"1603897200" entry:"1602072912" modified:"1602083439" status:"pending" uuid:"e7e374ac-63ac-42cc-b029-ae9ff5b01a93"]
+new [description:"Perrine Canap" due:"1603897200" end:"1603918326" entry:"1602072912" modified:"1603918326" status:"completed" uuid:"e7e374ac-63ac-42cc-b029-ae9ff5b01a93"]
+---
+time 1604001575
+old [description:"WATER" due:"1603926000" entry:"1603646415" modified:"1603903271" status:"pending" uuid:"a631c413-f607-49f3-bf8d-af03a4f3b6f2"]
+new [description:"WATER" due:"1603926000" end:"1604001575" entry:"1603646415" modified:"1604001575" status:"completed" uuid:"a631c413-f607-49f3-bf8d-af03a4f3b6f2"]
+---
+time 1604225707
+new [description:"Pay the rent" due:"1606777199" entry:"1604225707" imask:"1" modified:"1602071860" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"0b5843af-1686-45e1-b4a8-a4d10c8084d1"]
+---
+time 1604225707
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"-" modified:"1602071860" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"--" modified:"1604225707" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
+time 1604314266
+new [description:"Vegetative Stage" due:"1605523866" entry:"1604314266" modified:"1604314266" status:"pending" uuid:"402de4d6-bca9-4e33-9512-ed61889379a8"]
+---
+time 1604314278
+new [description:"WATER" due:"1604400678" entry:"1604314278" modified:"1604314278" status:"pending" uuid:"e7cd2734-13c7-49e8-8b72-4955780cc195"]
+---
+time 1604314306
+old [description:"CHECK REFUND" due:"1604321672" entry:"1603716872" modified:"1603716872" status:"pending" uuid:"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"]
+new [description:"CHECK REFUND" due:"1604919106" entry:"1603716872" modified:"1604314306" status:"pending" uuid:"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"]
+---
+time 1604314320
+old [description:"Pay the rent" due:"1604185199" entry:"1602071860" imask:"0" modified:"1602071856" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"3d8505a7-002b-4b1d-9f5a-edb98f1a9044"]
+new [description:"Pay the rent" due:"1604400720" entry:"1602071860" imask:"0" modified:"1604314320" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"3d8505a7-002b-4b1d-9f5a-edb98f1a9044"]
+---
+time 1604314345
+old [description:"SEND OLD CONTRACT + CERTIFICATE NO TV" due:"1603980745" entry:"1603721545" modified:"1603721545" status:"pending" uuid:"72eaa694-426e-434d-a1ab-23ff03b44af6"]
+new [description:"SEND OLD CONTRACT + CERTIFICATE NO TV" due:"1604573545" entry:"1603721545" modified:"1604314345" status:"pending" uuid:"72eaa694-426e-434d-a1ab-23ff03b44af6"]
+---
+time 1604314353
+old [description:"Pre-Rentree 42" due:"1603962000" entry:"1602072968" modified:"1602515746" status:"pending" uuid:"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"]
+new [description:"Pre-Rentree 42" due:"1604573553" entry:"1602072968" modified:"1604314353" status:"pending" uuid:"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"]
+---
+time 1604401495
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"--" modified:"1604225707" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+-" modified:"1604401495" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
+time 1604401495
+old [description:"Pay the rent" due:"1604400720" entry:"1602071860" imask:"0" modified:"1604314320" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"3d8505a7-002b-4b1d-9f5a-edb98f1a9044"]
+new [description:"Pay the rent" due:"1604400720" end:"1604401495" entry:"1602071860" imask:"0" modified:"1604401495" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"completed" uuid:"3d8505a7-002b-4b1d-9f5a-edb98f1a9044"]
+---
+time 1604409721
+old [description:"WATER" due:"1604400678" entry:"1604314278" modified:"1604314278" status:"pending" uuid:"e7cd2734-13c7-49e8-8b72-4955780cc195"]
+new [description:"WATER" due:"1604668921" entry:"1604314278" modified:"1604409721" status:"pending" uuid:"e7cd2734-13c7-49e8-8b72-4955780cc195"]
+---
+time 1604522203
+old [description:"CHECK REFUND" due:"1604919106" entry:"1603716872" modified:"1604314306" status:"pending" uuid:"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"]
+new [description:"CHECK REFUND" due:"1604919106" end:"1604522203" entry:"1603716872" modified:"1604522203" status:"completed" uuid:"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"]
+---
+time 1604522228
+old [description:"Pre-Rentree 42" due:"1604573553" entry:"1602072968" modified:"1604314353" status:"pending" uuid:"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"]
+new [description:"Pre-Rentree 42" due:"1604573553" end:"1604522228" entry:"1602072968" modified:"1604522228" status:"completed" uuid:"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"]
+---

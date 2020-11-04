@@ -62,6 +62,8 @@ alias autopush="git add .; git status; git commit -m "autopush"; git push"
 ### GIT
 alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" | grep -o 'git@[^\"]*'"
 
+### IP SCAN
+alias nmapscan="nmap -sn 192.168.0.0/24"
 
 ### C
 alias gccc="gcc -Wall -Werror -Wextra"
@@ -172,7 +174,10 @@ alias ack="ack --color-match=yellow --color-lineno=magenta --color-filename=blue
 alias veille="systemctl suspend && slock"
 alias services="systemctl --type=service"
 #alias is="vim ~/Tree/Suckless/installScript/installScript.sh"
-alias hdmi="xrandr --output HDMI-2 --auto --above eDP-1"
+alias hdmion="xrandr --output HDMI-2 --auto --above eDP-1"
+alias hdmioff="xrandr --output HDMI-2 --off"
+alias vgaon="xrandr --output DP-1 --auto --above eDP-1"
+alias vgaoff="xrandr --output DP-1 --off"
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 

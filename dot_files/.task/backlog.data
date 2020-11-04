@@ -172,3 +172,46 @@
 {"description":"WATER","due":"20201024T220000Z","entry":"20201021T105134Z","modified":"20201024T212910Z","status":"pending","uuid":"22e104b7-3861-4c48-9e5f-1a93ac464160"}
 {"description":"WATER","due":"20201024T220000Z","end":"20201025T172005Z","entry":"20201021T105134Z","modified":"20201025T172005Z","status":"completed","uuid":"22e104b7-3861-4c48-9e5f-1a93ac464160"}
 {"description":"WATER","due":"20201028T172015Z","entry":"20201025T172015Z","modified":"20201025T172015Z","status":"pending","uuid":"a631c413-f607-49f3-bf8d-af03a4f3b6f2"}
+{"description":"DOCTOR","due":"20201106T151500Z","entry":"20201026T125232Z","modified":"20201026T125232Z","status":"pending","uuid":"ad90cee4-cfb0-4463-9df4-fb84c738a8b0"}
+{"description":"opth","due":"20201026T105500Z","end":"20201026T125255Z","entry":"20201024T212536Z","modified":"20201026T125255Z","status":"completed","uuid":"69af4bd1-2b9f-41cd-b8db-b19d10b7b8da"}
+{"description":"IMPOTS CALL 01 55 38 14 20","due":"20201026T230000Z","entry":"20201020T150838Z","modified":"20201026T125411Z","status":"pending","uuid":"56e6c385-156c-475b-ba4b-24baa08221ee"}
+{"description":"CHECK REFUND","due":"20201102T125432Z","entry":"20201026T125432Z","modified":"20201026T125432Z","status":"pending","uuid":"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"}
+{"description":"SEND OLD CONTRACT + CERTIFICATE NO TV","due":"20201029T141225Z","entry":"20201026T141225Z","modified":"20201026T141225Z","status":"pending","uuid":"72eaa694-426e-434d-a1ab-23ff03b44af6"}
+{"description":"IMPOTS CALL 01 55 38 14 20","due":"20201026T230000Z","end":"20201026T141327Z","entry":"20201020T150838Z","modified":"20201026T141327Z","status":"completed","uuid":"56e6c385-156c-475b-ba4b-24baa08221ee"}
+{"description":"DATE LIMITE TAXE TV","due":"20201116T110000Z","entry":"20201026T141538Z","modified":"20201026T141538Z","status":"pending","uuid":"944b51c9-5945-4a18-8402-4137f5b07b3d"}
+{"description":"POLE EMPLOI 42 KAIROS","end":"20201026T141602Z","entry":"20201015T173810Z","modified":"20201026T141602Z","project":"URGENT","status":"completed","uuid":"2071785b-530d-43ce-bff0-8b9d6b4807c3"}
+{"description":"FREE CHANGEMENT NUMERO","end":"20201026T141609Z","entry":"20201007T172511Z","modified":"20201026T141609Z","project":"todo","status":"completed","uuid":"8a42e9f8-9441-491d-ab12-b02ce41049bf"}
+{"description":"Journee citoyennete","end":"20201026T141627Z","entry":"20201020T180621Z","modified":"20201026T141627Z","project":"URGENT","status":"completed","uuid":"97909392-e128-4828-9d29-78e89c735284"}
+{"description":"Finish lists","end":"20201026T141636Z","entry":"20201017T115710Z","modified":"20201026T141636Z","project":"42","status":"completed","uuid":"2249ad20-58ea-4d4d-bab4-523bc4de1c9b"}
+{"description":"duw:28101800 POLE EMPLOI","entry":"20201026T143043Z","modified":"20201026T143043Z","status":"pending","uuid":"29879a03-5fc1-4540-a416-dcaf1207951f"}
+{"description":"duw:28101800 POLE EMPLOI","entry":"20201026T143109Z","modified":"20201026T143109Z","status":"pending","uuid":"1b4c677e-8551-453c-8174-ccc8c120a803"}
+{"description":"duw:28101800 POLE EMPLOI","end":"20201026T143120Z","entry":"20201026T143043Z","modified":"20201026T143122Z","status":"deleted","uuid":"29879a03-5fc1-4540-a416-dcaf1207951f"}
+{"description":"duw:28101800 POLE EMPLOI","end":"20201026T143122Z","entry":"20201026T143109Z","modified":"20201026T143122Z","status":"deleted","uuid":"1b4c677e-8551-453c-8174-ccc8c120a803"}
+{"description":"POLE EMPLOI","due":"20201028T170000Z","entry":"20201026T143127Z","modified":"20201026T143127Z","status":"pending","uuid":"bbddf121-2765-4b24-a2cc-fb70031c0de1"}
+{"description":"ATTAL DENTIST","due":"20201110T150000Z","entry":"20201026T144620Z","modified":"20201026T144620Z","status":"pending","uuid":"7956fd56-2d35-4a83-9472-f547090aca8e"}
+{"description":"MOM ODEON","due":"20201027T140000Z","entry":"20201026T144831Z","modified":"20201026T144831Z","status":"pending","uuid":"d53f21c3-8f08-432c-96af-06a22ec192ab"}
+{"description":"FLO","due":"20201028T145223Z","entry":"20201026T145223Z","modified":"20201026T145223Z","status":"pending","uuid":"28a12446-8466-4033-95b8-4701cc21c51f"}
+{"description":"Call Flo","end":"20201026T145230Z","entry":"20201011T155617Z","modified":"20201026T145230Z","project":"todo","status":"completed","uuid":"e4893cc2-c151-42e1-b15a-36784e35b68b"}
+{"description":"Generaliste","due":"20201105T161500Z","entry":"20201026T151553Z","modified":"20201026T151553Z","status":"pending","uuid":"8a521792-0f4d-4f84-9d59-d61b09823d52"}
+{"description":"Podologue","due":"20201106T151500Z","entry":"20201026T125232Z","modified":"20201026T151645Z","status":"pending","uuid":"ad90cee4-cfb0-4463-9df4-fb84c738a8b0"}
+{"description":"SEEDLINGS","due":"20201029T010136Z","entry":"20201027T130136Z","modified":"20201027T130136Z","status":"pending","uuid":"dfe5cfc5-cb86-4176-9ae2-211a80a6b0c9"}
+{"description":"MOM ODEON","due":"20201027T140000Z","end":"20201027T174258Z","entry":"20201026T144831Z","modified":"20201027T174258Z","status":"completed","uuid":"d53f21c3-8f08-432c-96af-06a22ec192ab"}
+{"description":"POLE EMPLOI","due":"20201028T170000Z","end":"20201027T232204Z","entry":"20201026T143127Z","modified":"20201027T232204Z","status":"completed","uuid":"bbddf121-2765-4b24-a2cc-fb70031c0de1"}
+{"description":"FLO","due":"20201028T145223Z","end":"20201028T164055Z","entry":"20201026T145223Z","modified":"20201028T164055Z","status":"completed","uuid":"28a12446-8466-4033-95b8-4701cc21c51f"}
+{"description":"WATER","due":"20201028T230000Z","entry":"20201025T172015Z","modified":"20201028T164111Z","status":"pending","uuid":"a631c413-f607-49f3-bf8d-af03a4f3b6f2"}
+{"description":"SEEDLINGS","due":"20201029T010136Z","end":"20201028T164123Z","entry":"20201027T130136Z","modified":"20201028T164123Z","status":"completed","uuid":"dfe5cfc5-cb86-4176-9ae2-211a80a6b0c9"}
+{"description":"Perrine Canap","due":"20201028T150000Z","end":"20201028T205206Z","entry":"20201007T121512Z","modified":"20201028T205206Z","status":"completed","uuid":"e7e374ac-63ac-42cc-b029-ae9ff5b01a93"}
+{"description":"WATER","due":"20201028T230000Z","end":"20201029T195935Z","entry":"20201025T172015Z","modified":"20201029T195935Z","status":"completed","uuid":"a631c413-f607-49f3-bf8d-af03a4f3b6f2"}
+{"description":"Pay the rent","due":"20201130T225959Z","entry":"20201101T101507Z","imask":1,"modified":"20201007T115740Z","parent":"49090cb4-7e88-4e2e-895b-d7ace8162540","recur":"monthly","status":"pending","uuid":"0b5843af-1686-45e1-b4a8-a4d10c8084d1"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115736Z","mask":"--","modified":"20201101T101507Z","recur":"monthly","status":"recurring","uuid":"49090cb4-7e88-4e2e-895b-d7ace8162540"}
+{"description":"Vegetative Stage","due":"20201116T105106Z","entry":"20201102T105106Z","modified":"20201102T105106Z","status":"pending","uuid":"402de4d6-bca9-4e33-9512-ed61889379a8"}
+{"description":"WATER","due":"20201103T105118Z","entry":"20201102T105118Z","modified":"20201102T105118Z","status":"pending","uuid":"e7cd2734-13c7-49e8-8b72-4955780cc195"}
+{"description":"CHECK REFUND","due":"20201109T105146Z","entry":"20201026T125432Z","modified":"20201102T105146Z","status":"pending","uuid":"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"}
+{"description":"Pay the rent","due":"20201103T105200Z","entry":"20201007T115740Z","imask":0,"modified":"20201102T105200Z","parent":"49090cb4-7e88-4e2e-895b-d7ace8162540","recur":"monthly","status":"pending","uuid":"3d8505a7-002b-4b1d-9f5a-edb98f1a9044"}
+{"description":"SEND OLD CONTRACT + CERTIFICATE NO TV","due":"20201105T105225Z","entry":"20201026T141225Z","modified":"20201102T105225Z","status":"pending","uuid":"72eaa694-426e-434d-a1ab-23ff03b44af6"}
+{"description":"Pre-Rentree 42","due":"20201105T105233Z","entry":"20201007T121608Z","modified":"20201102T105233Z","status":"pending","uuid":"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115736Z","mask":"+-","modified":"20201103T110455Z","recur":"monthly","status":"recurring","uuid":"49090cb4-7e88-4e2e-895b-d7ace8162540"}
+{"description":"Pay the rent","due":"20201103T105200Z","end":"20201103T110455Z","entry":"20201007T115740Z","imask":0,"modified":"20201103T110455Z","parent":"49090cb4-7e88-4e2e-895b-d7ace8162540","recur":"monthly","status":"completed","uuid":"3d8505a7-002b-4b1d-9f5a-edb98f1a9044"}
+{"description":"WATER","due":"20201106T132201Z","entry":"20201102T105118Z","modified":"20201103T132201Z","status":"pending","uuid":"e7cd2734-13c7-49e8-8b72-4955780cc195"}
+{"description":"CHECK REFUND","due":"20201109T105146Z","end":"20201104T203643Z","entry":"20201026T125432Z","modified":"20201104T203643Z","status":"completed","uuid":"a48e87df-08df-4528-8d2c-9ddf3ebb5dc9"}
+{"description":"Pre-Rentree 42","due":"20201105T105233Z","end":"20201104T203708Z","entry":"20201007T121608Z","modified":"20201104T203708Z","status":"completed","uuid":"729ab3ed-6bb2-4ce9-baa3-550f2e42e126"}
