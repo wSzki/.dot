@@ -66,6 +66,7 @@ alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" |
 alias nmapscan="nmap -sn 192.168.0.0/24"
 
 ### C
+alias gcc="clang"
 alias gccc="gcc -Wall -Werror -Wextra"
 alias gccf="gcc -fsanitize=address -Wall -Werror -Wextra"
 alias norminette="~/.norminette/norminette.rb"
@@ -115,7 +116,7 @@ alias n1="vim $POD/_NOTES/todo.md"
 alias n2="vim $POD/_NOTES/todo2.md"
 alias n9="vim $POD/_NOTES/urgent.md"
 alias n3="vim $POD/_NOTES/cnb.md"
-
+alias n42="vim ~/42_rentree/README.md"
 ### MPV
 alias mpyt="mpv --playlist=/home/wsz/.playlist --shuffle --no-video"
 alias playlist="vim ~/.playlist"
@@ -188,7 +189,7 @@ alias autoWifiOn="sudo systemctl enable netctl-auto@wlan0.service && sudo system
 alias autoWifiOff="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
 alias wifi="sudo wifi-menu"
 alias nmap_local="sudo nmap -sn 192.168.0.0/24"
-
+alias wifirestart="sudo systemctl restart netctl-auto@wlan0.service"
 #alias p="ping google.fr"
 
 ###     BLUETOOTH
