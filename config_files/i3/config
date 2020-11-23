@@ -41,22 +41,30 @@ bindsym $mod+0 scratchpad show
 
 # Autistici
 #for_window [class="Chromium" instance="2.webmail.autistici.org"] move window to scratchpad
-bindsym $winmod+m [class="Chromium" instance="2.webmail.autistici.org"] scratchpad show
+#bindsym $winmod+m [class="Chromium" instance="2.webmail.autistici.org"] scratchpad show
 #
 ## Telegram
-#for_window [class="TelegramDesktop"] floating enable
-bindsym $winmod+t [class="TelegramDesktop"] scratchpad show
+for_window [class="TelegramDesktop"] focus
+#bindsym $winmod+t [class="TelegramDesktop"] scratchpad show
 #
 ## Chromium
 #for_window [class="Chromium" instance="chromium"] move scratchpad scratchpad show
-bindsym $winmod+i [class="Chromium" instance="chromium"] scratchpad show
+#bindsym $winmod+i [class="Chromium" instance="chromium"] scratchpad show
 #
 ## Youtube
 #for_window  [class="Chromium" instance="youtube"] move scratchpad scratchpad show
-bindsym $winmod+y [class="Chromium" instance="youtube"] scratchpad show
+#bindsym $winmod+y [class="Chromium" instance="youtube"] scratchpad show
 
 #for_window [floating] move scratchpad scratchpad show
 #for_window [class="Chromium" instance="chromium"] resize set 1900 1000
+
+## Telegram
+
+assign [class="TelegramDesktop" instance="telegram-desktop"] t
+assign [class="Slack" instance="slack"] s
+assign [class="discord" instance="discord"] d
+assign [class="Chromium" instance="mail.google.com__mail_u_0"] g
+assign [class="Chromium" instance="2.webmail.autistici.org"] a
 
 ## Raindrop
 for_window [class="Chromium" instance="crx_ldgfbffkinooeloadekpmfoklnobpien"] floating enable resize set 400 400
@@ -175,59 +183,99 @@ bindsym $mod+Shift+8 floating disable move container to workspace number $ws8
 bindsym $mod+Shift+9 floating disable move container to workspace number $ws9
 #bindsym $mod+Shift+0 move container to workspace number $ws10
 
-#bindsym $winmod+a workspace "a"
-#bindsym $winmod+b workspace "b"
-#bindsym $winmod+c workspace "c"
-#bindsym $winmod+d workspace "d"
-#bindsym $winmod+e workspace "e"
-#bindsym $winmod+f workspace "f"
-#bindsym $winmod+g workspace "g"
-#bindsym $winmod+h workspace "h"
-#bindsym $winmod+i workspace "i"
-#bindsym $winmod+j workspace "j"
-#bindsym $winmod+k workspace "k"
-#bindsym $winmod+l workspace "l"
-#bindsym $winmod+m workspace "m"
-#bindsym $winmod+n workspace "n"
-#bindsym $winmod+o workspace "o"
-#bindsym $winmod+p workspace "p"
-#bindsym $winmod+q workspace "q"
-#bindsym $winmod+r workspace "r"
-#bindsym $winmod+s workspace "s"
-#bindsym $winmod+t workspace "t"
-#bindsym $winmod+u workspace "u"
-#bindsym $winmod+v workspace "v"
-#bindsym $winmod+w workspace "w"
-#bindsym $winmod+x workspace "x"
-#bindsym $winmod+y workspace "y"
-#bindsym $winmod+z workspace "z"
+bindsym $winmod+a workspace "a"
+bindsym $winmod+b workspace "b"
+bindsym $winmod+c workspace "c"
+bindsym $winmod+d workspace "d"
+bindsym $winmod+e workspace "e"
+bindsym $winmod+f workspace "f"
+bindsym $winmod+g workspace "g"
+bindsym $winmod+h workspace "h"
+bindsym $winmod+i workspace "i"
+bindsym $winmod+j workspace "j"
+bindsym $winmod+k workspace "k"
+bindsym $winmod+l workspace "l"
+bindsym $winmod+m workspace "m"
+bindsym $winmod+n workspace "n"
+bindsym $winmod+o workspace "o"
+bindsym $winmod+p workspace "p"
+bindsym $winmod+q workspace "q"
+bindsym $winmod+r workspace "r"
+bindsym $winmod+s workspace "s"
+bindsym $winmod+t workspace "t"
+bindsym $winmod+u workspace "u"
+bindsym $winmod+v workspace "v"
+bindsym $winmod+w workspace "w"
+bindsym $winmod+x workspace "x"
+bindsym $winmod+y workspace "y"
+bindsym $winmod+z workspace "z"
 
-#bindsym $winmod+Shift+a move container to workspace "a"
-#bindsym $winmod+Shift+b move container to workspace "b"
-#bindsym $winmod+Shift+c move container to workspace "c"
-#bindsym $winmod+Shift+d move container to workspace "d"
-#bindsym $winmod+Shift+e move container to workspace "e"
-#bindsym $winmod+Shift+f move container to workspace "f"
-#bindsym $winmod+Shift+g move container to workspace "g"
-#bindsym $winmod+Shift+h move container to workspace "h"
-#bindsym $winmod+Shift+i move container to workspace "i"
-#bindsym $winmod+Shift+j move container to workspace "j"
-#bindsym $winmod+Shift+k move container to workspace "k"
-#bindsym $winmod+Shift+l move container to workspace "l"
-#bindsym $winmod+Shift+m move container to workspace "m"
-#bindsym $winmod+Shift+n move container to workspace "n"
-#bindsym $winmod+Shift+o move container to workspace "o"
-#bindsym $winmod+Shift+p move container to workspace "p"
-#bindsym $winmod+Shift+q move container to workspace "q"
-#bindsym $winmod+Shift+r move container to workspace "r"
-#bindsym $winmod+Shift+s move container to workspace "s"
-#bindsym $winmod+Shift+t move container to workspace "t"
-#bindsym $winmod+Shift+u move container to workspace "u"
-#bindsym $winmod+Shift+v move container to workspace "v"
-#bindsym $winmod+Shift+w move container to workspace "w"
-#bindsym $winmod+Shift+x move container to workspace "x"
-#bindsym $winmod+Shift+y move container to workspace "y"
-#bindsym $winmod+Shift+z move container to workspace "z"
+bindsym $winmod+Shift+a move container to workspace "a"
+bindsym $winmod+Shift+b move container to workspace "b"
+bindsym $winmod+Shift+c move container to workspace "c"
+bindsym $winmod+Shift+d move container to workspace "d"
+bindsym $winmod+Shift+e move container to workspace "e"
+bindsym $winmod+Shift+f move container to workspace "f"
+bindsym $winmod+Shift+g move container to workspace "g"
+bindsym $winmod+Shift+h move container to workspace "h"
+bindsym $winmod+Shift+i move container to workspace "i"
+bindsym $winmod+Shift+j move container to workspace "j"
+bindsym $winmod+Shift+k move container to workspace "k"
+bindsym $winmod+Shift+l move container to workspace "l"
+bindsym $winmod+Shift+m move container to workspace "m"
+bindsym $winmod+Shift+n move container to workspace "n"
+bindsym $winmod+Shift+o move container to workspace "o"
+bindsym $winmod+Shift+p move container to workspace "p"
+bindsym $winmod+Shift+q move container to workspace "q"
+bindsym $winmod+Shift+r move container to workspace "r"
+bindsym $winmod+Shift+s move container to workspace "s"
+bindsym $winmod+Shift+t move container to workspace "t"
+bindsym $winmod+Shift+u move container to workspace "u"
+bindsym $winmod+Shift+v move container to workspace "v"
+bindsym $winmod+Shift+w move container to workspace "w"
+bindsym $winmod+Shift+x move container to workspace "x"
+bindsym $winmod+Shift+y move container to workspace "y"
+bindsym $winmod+Shift+z move container to workspace "z"
+
+set $monitor DP-1
+workspace a output $monitor
+workspace b output $monitor
+workspace c output $monitor
+workspace d output $monitor
+workspace e output $monitor
+workspace f output $monitor
+workspace g output $monitor
+workspace h output $monitor
+workspace i output $monitor
+workspace j output $monitor
+workspace k output $monitor
+workspace l output $monitor
+workspace m output $monitor
+workspace n output $monitor
+workspace o output $monitor
+workspace p output $monitor
+workspace q output $monitor
+workspace r output $monitor
+workspace s output $monitor
+workspace t output $monitor
+workspace u output $monitor
+workspace v output $monitor
+workspace w output $monitor
+workspace x output $monitor
+workspace y output $monitor
+workspace z output $monitor
+
+set $screen eDP-1
+workspace 1 output $screen
+workspace 2 output $screen
+workspace 3 output $screen
+workspace 4 output $screen
+workspace 5 output $screen
+workspace 6 output $screen
+workspace 7 output $screen
+workspace 8 output $screen
+workspace 9 output $screen
+workspace 0 output $screen
 
 ###################################
 ### RESIZE

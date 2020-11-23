@@ -130,6 +130,7 @@ alias 42="cd ~/42_libft/"
 alias bookmarks="cd ~/.dot/bin/bookmarks"
 alias dbin="cd ~/.dot/bin/"
 alias j="autojump"
+alias music="cd ~/.cache/ytmdl"
 #alias cdd="cd ~/Tree "
 
 ### YOUTUBLE DL
@@ -181,6 +182,7 @@ alias vgaon="xrandr --output DP-1 --auto --above eDP-1"
 alias vgaoff="xrandr --output DP-1 --off"
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
+alias persist="nohup"
 
 ######  SERVICES
 ###     WIFI
