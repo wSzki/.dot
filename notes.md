@@ -42,6 +42,14 @@ Set priority in config file /etc/netctl/wlan0-...
 
 # [AUR]
 
+
+## [Virtualbox]
+
+- linux-zen-headers
+- linux-lts-headers
+- dkms
+- virtualbox-host-modules
+
 - curl cheat.sh
 
 - sysstat -> mpstat
@@ -59,6 +67,7 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+- mosh // SSH alternative
 - gping
 - ytmdl // BETTER YTDL
 - acpilight // remove xorg-backlight with acpilight -- sudo usermod -aG video wsz; reboot
