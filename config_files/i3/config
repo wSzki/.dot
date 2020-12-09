@@ -1,4 +1,4 @@
-
+# i3 config file (v4)
 ###################################
  ### SETTINGS
 ###################################
@@ -18,6 +18,14 @@ client.focused          #191d20 #fabd2f #000000 #fabd2f
 client.focused_inactive #191d20 #191d20 #d5c4a1 #191d20
 client.unfocused        #191d20 #191d20 #d5c4a1 #191d20
 client.urgent           #7c6f64 #fabd2f #3c3836 #fabd2f
+
+#I3IPC SCRIPT
+#https://github.com/giuseppe-dandrea/i3-switch-if-workspace-empty
+exec_always ~/.config/i3-switch-if-workspace-empty/i3-switch-if-workspace-empty
+#exec_always ~/i3ipc-gjs/examples/max-windows-on-ws.js
+
+#automake & autoconf
+#exec_always ~/i3ipc-gjs/examples/max-windows-on-ws.js
 
 exec --no-startup-id i3-msg "workspace 1"
 

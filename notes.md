@@ -46,9 +46,10 @@ Set priority in config file /etc/netctl/wlan0-...
 ## [Virtualbox]
 
 - linux-zen-headers
-- linux-lts-headers
 - dkms
-- virtualbox-host-modules
+- virtualbox-host-modules (arch is for og linux only)
+- sudo modprobe vboxdrv
+- yay -S virtualbox-ext-oracle
 
 - curl cheat.sh
 

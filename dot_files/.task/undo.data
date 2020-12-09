@@ -811,3 +811,24 @@ time 1605541085
 old [description:"DATE LIMITE TAXE TV" due:"1605524400" entry:"1603721738" modified:"1603721738" status:"pending" uuid:"944b51c9-5945-4a18-8402-4137f5b07b3d"]
 new [description:"DATE LIMITE TAXE TV" due:"1605567600" entry:"1603721738" modified:"1605541085" status:"pending" uuid:"944b51c9-5945-4a18-8402-4137f5b07b3d"]
 ---
+time 1606786984
+new [description:"Pay the rent" due:"1609369199" entry:"1606786984" imask:"2" modified:"1604401495" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"2a3cc04c-6d2a-4d56-90dd-ca3109617e9c"]
+---
+time 1606786984
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+-" modified:"1604401495" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+--" modified:"1606786984" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
+time 1606786984
+new [description:"Pay the rent" due:"1609369199" entry:"1606786984" imask:"2" modified:"1604401495" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"b0951d8e-5c5c-472b-b9a9-9af172fe7743"]
+---
+time 1606786984
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+-" modified:"1604401495" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+--" modified:"1606786984" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
+time 1606786984
+new [description:"Pay the rent" due:"1609369199" entry:"1606786984" imask:"2" modified:"1604401495" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"252c29e4-0153-4996-83ab-71079b5d5b6d"]
+---
+time 1606786984
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+-" modified:"1604401495" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+--" modified:"1606786984" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
