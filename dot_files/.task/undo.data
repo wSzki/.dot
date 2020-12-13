@@ -832,3 +832,55 @@ time 1606786984
 old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+-" modified:"1604401495" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
 new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+--" modified:"1606786984" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
 ---
+time 1607530981
+old [description:"SEND OLD CONTRACT + CERTIFICATE NO TV" due:"1605567600" entry:"1603721545" modified:"1605541060" status:"pending" uuid:"72eaa694-426e-434d-a1ab-23ff03b44af6"]
+new [description:"SEND OLD CONTRACT + CERTIFICATE NO TV" due:"1605567600" end:"1607530981" entry:"1603721545" modified:"1607530981" status:"completed" uuid:"72eaa694-426e-434d-a1ab-23ff03b44af6"]
+---
+time 1607530989
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+--" modified:"1606786984" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+-+" modified:"1607530989" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
+time 1607530989
+old [description:"Pay the rent" due:"1609369199" entry:"1606786984" imask:"2" modified:"1604401495" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"252c29e4-0153-4996-83ab-71079b5d5b6d"]
+new [description:"Pay the rent" due:"1609369199" end:"1607530989" entry:"1606786984" imask:"2" modified:"1607530989" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"completed" uuid:"252c29e4-0153-4996-83ab-71079b5d5b6d"]
+---
+time 1607530996
+old [description:"DATE LIMITE TAXE TV" due:"1605567600" entry:"1603721738" modified:"1605541085" status:"pending" uuid:"944b51c9-5945-4a18-8402-4137f5b07b3d"]
+new [description:"DATE LIMITE TAXE TV" due:"1605567600" end:"1607530996" entry:"1603721738" modified:"1607530996" status:"completed" uuid:"944b51c9-5945-4a18-8402-4137f5b07b3d"]
+---
+time 1607530999
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+-+" modified:"1607530989" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+++" modified:"1607530999" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
+time 1607530999
+old [description:"Pay the rent" due:"1606777199" entry:"1604225707" imask:"1" modified:"1602071860" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"0b5843af-1686-45e1-b4a8-a4d10c8084d1"]
+new [description:"Pay the rent" due:"1606777199" end:"1607530999" entry:"1604225707" imask:"1" modified:"1607530999" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"completed" uuid:"0b5843af-1686-45e1-b4a8-a4d10c8084d1"]
+---
+time 1607531004
+old [description:"MOM BDAY" due:"1607425200" entry:"1602783582" modified:"1602783582" status:"pending" uuid:"99372c5d-2819-4278-97fe-cc30e4130bd8"]
+new [description:"MOM BDAY" due:"1607425200" end:"1607531004" entry:"1602783582" modified:"1607531004" status:"completed" uuid:"99372c5d-2819-4278-97fe-cc30e4130bd8"]
+---
+time 1607531022
+old [description:"XMAS" due:"1608894000" entry:"1602783605" modified:"1602783605" status:"pending" uuid:"26ec997c-a662-43c0-9b85-083e33663790"]
+new [description:"XMAS" due:"1608894000" end:"1607531022" entry:"1602783605" modified:"1607531022" status:"completed" uuid:"26ec997c-a662-43c0-9b85-083e33663790"]
+---
+time 1607531024
+old [description:"NEW YEAR" due:"1609455540" entry:"1602783638" modified:"1602783638" status:"pending" uuid:"344840c7-7f47-4d61-9715-7a84b5ade9e3"]
+new [description:"NEW YEAR" due:"1609455540" end:"1607531024" entry:"1602783638" modified:"1607531024" status:"completed" uuid:"344840c7-7f47-4d61-9715-7a84b5ade9e3"]
+---
+time 1607531030
+old [description:"Call Ella" entry:"1602431770" modified:"1602431770" project:"todo" status:"pending" uuid:"0650d3b4-aac2-4b22-9dbe-bf77ac80d7b8"]
+new [description:"Call Ella" end:"1607531030" entry:"1602431770" modified:"1607531030" project:"todo" status:"completed" uuid:"0650d3b4-aac2-4b22-9dbe-bf77ac80d7b8"]
+---
+time 1607531036
+old [description:"IMPOTS DECLARATION" entry:"1602091462" modified:"1602935905" project:"URGENT" status:"pending" uuid:"87a5657a-b790-49a4-9267-e67d3b00cb91"]
+new [description:"IMPOTS DECLARATION" end:"1607531036" entry:"1602091462" modified:"1607531036" project:"URGENT" status:"completed" uuid:"87a5657a-b790-49a4-9267-e67d3b00cb91"]
+---
+time 1607531039
+old [description:"Change Bank" entry:"1602431804" modified:"1602431804" project:"todo" status:"pending" uuid:"52e923ec-d7a4-416e-be12-a35a756c116e"]
+new [description:"Change Bank" end:"1607531039" entry:"1602431804" modified:"1607531039" project:"todo" status:"completed" uuid:"52e923ec-d7a4-416e-be12-a35a756c116e"]
+---
+time 1607531042
+old [description:"Respond Marie Boucaud" entry:"1602783367" modified:"1602783367" project:"todo" status:"pending" uuid:"fe286424-1284-4fd3-9227-003e828a37bc"]
+new [description:"Respond Marie Boucaud" end:"1607531042" entry:"1602783367" modified:"1607531042" project:"todo" status:"completed" uuid:"fe286424-1284-4fd3-9227-003e828a37bc"]
+---

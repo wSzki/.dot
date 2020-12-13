@@ -13,6 +13,8 @@ sudo !!
 ctrl a = begin
 ctrl e = end
 
+/home/wsz/.vscode-oss/extensions/sainnhe.gruvbox-material-6.3.4/themes
+
 convert file.{jpg, png}
 
 `
