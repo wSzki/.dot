@@ -73,7 +73,7 @@ alias norminette="~/.norminette/norminette.rb"
 alias norme="norminette -R CheckForbiddenSourceHeader"
 alias grademe="~/42/Libftest/grademe.sh -n"
 alias deepthought="vim ~/42/Libftest/deepthought"
-alias gnl="cd ~/42/get_next_line"
+alias gnl="cd ~/42/gnl"
 
 ### TASK
 alias ,t="task"
@@ -165,6 +165,7 @@ alias gdb="gdb -q"
 alias ka="k -a"
 alias kk="k -Ah"
 alias l="k"
+alias la="ka";
 
 ### XCLIP
 alias pbc="xclip -selection clipboard"
@@ -184,7 +185,7 @@ alias vgaoff="xrandr --output DP-1 --off"
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 alias persist="nohup"
-
+alias showssh="cat ~/.ssh/id_rsa.pub"
 ######  SERVICES
 ###     WIFI
 alias ipinfo="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
