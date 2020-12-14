@@ -164,8 +164,10 @@ alias gdb="gdb -q"
 ### K IS LS
 alias ka="k -a"
 alias kk="k -Ah"
-alias l="k"
-alias la="ka";
+alias ls="k"
+alias l="k -a"
+alias lsa="k -a"
+
 
 ### XCLIP
 alias pbc="xclip -selection clipboard"
