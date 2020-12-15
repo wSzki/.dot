@@ -39,9 +39,12 @@ exec --no-startup-id i3-msg "workspace 1"
 ###################################
 ### FIBONACCI TILING
 ###################################
-#exec_always --no-startup-id ~/.local/bin/autotiling
+#yay -S autotiling
+exec_always --no-startup-id /usr/bin/autotiling
+
 
 title_align center
+
 #mouse_warping none
 workspace_auto_back_and_forth no
 
@@ -70,15 +73,14 @@ for_window [class="TelegramDesktop"] focus
 #for_window [floating] move scratchpad scratchpad show
 #for_window [class="Chromium" instance="chromium"] resize set 1900 1000
 
-## Telegram
-
+# Chrome
 assign [class="TelegramDesktop" instance="telegram-desktop"] t
 assign [class="Slack" instance="slack"] s
 assign [class="discord" instance="discord"] d
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] g
 assign [class="Chromium" instance="2.webmail.autistici.org"] a
 
-## Raindrop
+# Raindrop
 for_window [class="Chromium" instance="crx_ldgfbffkinooeloadekpmfoklnobpien"] floating enable resize set 400 400
 
 ###################################
