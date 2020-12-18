@@ -54,11 +54,18 @@ set foldmethod=manual
 "set signcolumn=number
 
 " Folding - remember
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
+"augroup remember_folds
+"  autocmd!
+"  autocmd BufWinLeave * mkview
+"  autocmd BufWinEnter * silent! loadview
+"augroup END
+
+"augroup SaveManualFolds
+"    autocmd!
+"    au BufWinLeave, BufLeave ?* silent! mkview
+"    au BufWinEnter           ?* silent! loadview
+"augroup END
+
 
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>
@@ -219,6 +226,7 @@ Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
+Plug 'vim-scripts/restore_view.vim'
 
 "Plug 'dense-analysis/ale'
 "Plug 'ycm-core/YouCompleteMe'
@@ -259,6 +267,7 @@ Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 "Plug 'lucasicf/vim-smooth-scroll'
 "Plug 'cskeeters/vim-smooth-scroll'
 "Plug 'terryma/vim-smooth-scroll'
+"Plug 'lucasicf/vim-smooth-scroll'
 "Plug 'severin-lemaignan/vim-minimap'
 "Plug 'wfxr/minimap.vim'
 "Plug 'majutsushi/tagbar'

@@ -76,6 +76,7 @@ for_window [class="TelegramDesktop"] focus
 # Chrome
 assign [class="TelegramDesktop" instance="telegram-desktop"] t
 assign [class="Slack" instance="slack"] s
+#for_window [class="Slack" instance="slack"] mark "alpha", move scratchpad, scratchpad sho
 assign [class="discord" instance="discord"] d
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] g
 assign [class="Chromium" instance="2.webmail.autistici.org"] a
@@ -216,6 +217,7 @@ bindsym $winmod+p workspace "p"
 bindsym $winmod+q workspace "q"
 bindsym $winmod+r workspace "r"
 bindsym $winmod+s workspace "s"
+#bindsym $winmod+s [con_mark="alpha"] scratchpad show
 bindsym $winmod+t workspace "t"
 bindsym $winmod+u workspace "u"
 bindsym $winmod+v workspace "v"

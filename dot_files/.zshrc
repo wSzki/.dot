@@ -117,7 +117,7 @@ alias n1="vim $POD/_NOTES/todo.md"
 alias n2="vim $POD/_NOTES/todo2.md"
 alias n9="vim $POD/_NOTES/urgent.md"
 alias n3="vim $POD/_NOTES/cnb.md"
-alias n42="vim ~/42_rentree/README.md"
+alias n42="vim ~/42/notes.md"
 ### MPV
 alias mpyt="mpv --playlist=/home/wsz/.playlist --shuffle --no-video"
 alias playlist="vim ~/.playlist"
@@ -188,6 +188,14 @@ alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 alias persist="nohup"
 alias showssh="cat ~/.ssh/id_rsa.pub"
+
+# xinput --list | grep TouchPad
+# TID=$(xinput list | grep -iPo 'touchpad.*id=\K\d+')
+alias reloadtouchpad="xinput disable 11 && xinput enable 11"
+
+
+
+
 ######  SERVICES
 ###     WIFI
 alias ipinfo="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
