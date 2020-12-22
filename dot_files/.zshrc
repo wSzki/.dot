@@ -68,12 +68,13 @@ alias nmapscan="nmap -sn 192.168.0.0/24"
 ### C
 alias gcc="clang"
 alias gccc="gcc -Wall -Werror -Wextra"
-alias gccf="gcc -fsanitize=address -Wall -Werror -Wextra"
+alias gccf="gcc -g -fsanitize=address -Wall -Werror -Wextra"
 alias norminette="~/.norminette/norminette.rb"
 alias norme="norminette -R CheckForbiddenSourceHeader"
 alias grademe="~/42/Libftest/grademe.sh -n"
 alias deepthought="vim ~/42/Libftest/deepthought"
 alias gnl="cd ~/42/gnl"
+alias valgrind="~/.local/bin/colour-valgrind"
 
 ### TASK
 alias ,t="task"

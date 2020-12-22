@@ -51,6 +51,7 @@ workspace_auto_back_and_forth no
 ###################################
 ### SCRATCHPAD
 ###################################
+#https://www.reddit.com/r/i3wm/comments/2hqd7w/marks_scratchpad_awesome/
 bindsym Shift+$mod+0 move scratchpad
 bindsym $mod+0 scratchpad show
 
@@ -59,7 +60,7 @@ bindsym $mod+0 scratchpad show
 #bindsym $winmod+m [class="Chromium" instance="2.webmail.autistici.org"] scratchpad show
 #
 ## Telegram
-for_window [class="TelegramDesktop"] focus
+#for_window [class="TelegramDesktop"] focus
 #bindsym $winmod+t [class="TelegramDesktop"] scratchpad show
 #
 ## Chromium
@@ -76,10 +77,14 @@ for_window [class="TelegramDesktop"] focus
 # Chrome
 assign [class="TelegramDesktop" instance="telegram-desktop"] t
 assign [class="Slack" instance="slack"] s
-#for_window [class="Slack" instance="slack"] mark "alpha", move scratchpad, scratchpad sho
 assign [class="discord" instance="discord"] d
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] g
 assign [class="Chromium" instance="2.webmail.autistici.org"] a
+#for_window [class="TelegramDesktop" instance="telegram-desktop"], move scratchpad
+#for_window [class="Slack" instance="slack"] mark "alpha", move scratchpad
+#for_window [class="discord" instance="discord"], move scratchpad
+#for_window [class="Chromium" instance="mail.google.com__mail_u_0"], move scratchpad
+#for_window [class="Chromium" instance="2.webmail.autistici.org"], move scratchpad
 
 # Raindrop
 for_window [class="Chromium" instance="crx_ldgfbffkinooeloadekpmfoklnobpien"] floating enable resize set 400 400
