@@ -66,9 +66,11 @@ alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" |
 alias nmapscan="nmap -sn 192.168.0.0/24"
 
 ### C
-alias gcc="clang"
+#alias gcc="clang"
 alias gccc="gcc -Wall -Werror -Wextra"
+alias clangc="gcc -Wall -Werror -Wextra"
 alias gccf="gcc -g -fsanitize=address -Wall -Werror -Wextra"
+alias clangf="gcc -g -fsanitize=address -Wall -Werror -Wextra"
 alias norminette="~/.norminette/norminette.rb"
 alias norme="norminette -R CheckForbiddenSourceHeader"
 alias grademe="~/42/Libftest/grademe.sh -n"
@@ -125,6 +127,7 @@ alias playlist="vim ~/.playlist"
 
 ### CD
 alias cddl="cd ~/.dl"
+alias tmp="cd ~/.tmp"
 alias cdt="cd /tmp"
 alias dot="cd ~/.dot"
 alias pod="cd ~/.pod"
@@ -189,7 +192,7 @@ alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 alias persist="nohup"
 alias showssh="cat ~/.ssh/id_rsa.pub"
-
+alias yank="xclip -sel clip"
 # xinput --list | grep TouchPad
 # TID=$(xinput list | grep -iPo 'touchpad.*id=\K\d+')
 alias reloadtouchpad="xinput disable 11 && xinput enable 11"

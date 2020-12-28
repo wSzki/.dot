@@ -80,7 +80,7 @@ assign [class="Slack" instance="slack"] s
 assign [class="discord" instance="discord"] d
 assign [class="Chromium" instance="mail.google.com__mail_u_0"] g
 assign [class="Chromium" instance="2.webmail.autistici.org"] a
-#for_window [class="TelegramDesktop" instance="telegram-desktop"], move scratchpad
+for_window [class="TelegramDesktop" instance="telegram-desktop"] focus
 #for_window [class="Slack" instance="slack"] mark "alpha", move scratchpad
 #for_window [class="discord" instance="discord"], move scratchpad
 #for_window [class="Chromium" instance="mail.google.com__mail_u_0"], move scratchpad

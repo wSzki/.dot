@@ -31,6 +31,7 @@ xautolock -time 8 -locker "systemctl suspend" -detectsleep &
 #barrier -f --name wszki 192.168.0.14 &
 telegram-desktop -startintray &
 slock &
+rm -rf ~/.tmp/*
 exec i3
 
 ####################################################################
