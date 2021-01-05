@@ -188,6 +188,8 @@ alias hdmion="xrandr --output HDMI-2 --auto --above eDP-1"
 alias hdmioff="xrandr --output HDMI-2 --off"
 alias vgaon="xrandr --output DP-1 --auto --right-of eDP-1"
 alias vgaoff="xrandr --output DP-1 --off"
+alias dualon="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 2025x1440 --rotate normal --output DP-1 --mode 1920x1080 --pos 1060x360 --rotate normal --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 2980x0 --rotate normal"
+
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 alias persist="nohup"

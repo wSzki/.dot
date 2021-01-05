@@ -119,8 +119,10 @@ floating_modifier $mod
 
 # Executables
 bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Shift+Return exec kitty;
-bindsym $mod+Return split v exec kitty;
+#bindsym $mod+Shift+Return exec kitty;
+#bindsym $mod+Return split v exec kitty;
+bindsym $mod+Shift+Return exec st;
+bindsym $mod+Return split v exec st;
 bindsym $mod+p exec rofi -show run
 bindsym $mod+i exec chromiumm
 bindsym $mod+Shift+i split v exec chromiumm

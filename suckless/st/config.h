@@ -7,7 +7,7 @@
  */
 static char *font = "mono:pixelsize=11:antialias=true:autohint=true";
 static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
-static int borderpx = 2;
+static int borderpx = 7;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -89,7 +89,8 @@ float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	//"#282828", [> hard contrast: #1d2021 / soft contrast: #32302f <]
+	"#3B4252",
 	"#BF616A",
 	"#EBCB8B",
 //	"#A3BE8C",
@@ -143,12 +144,14 @@ static const char *colorname[] = {
 	//#8ec07c,
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#191d20",   /* 256 -> bg */
+	//"#323845",   [> 256 -> bg <]
+	"#191d20",   /*[> 256 -> bg <]*/
 //	"#1d2021",   /* 256 -> bg */
 	//	"#282828",   /* 256 -> bg */
 	//	"#ebdbb2",   /* 257 -> fg */
 	"#fdf9ef",   /* 257 -> fg */
-	"#add8e6", /* 258 -> cursor */
+	//"#add8e6", [> 258 -> cursor <]
+	"#fdf9ef", /* 258 -> cursor */
 };
 
 

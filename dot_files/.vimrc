@@ -179,6 +179,7 @@ noremap <Leader>libft i#include "libft.h"<CR><ESC>
 noremap <Leader>stdlib i#include <stdlib.h><CR><ESC>
 noremap <Leader>stdio i#include <stdio.h><CR><ESC>
 noremap <Leader>unistd i#include <unistd.h><CR><ESC>
+noremap <Leader>stdarg i#include <stdarg.h><CR><ESC>
 
 " Misc
 noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
@@ -226,7 +227,6 @@ Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
-Plug 'vim-scripts/restore_view.vim'
 
 "Plug 'dense-analysis/ale'
 "Plug 'ycm-core/YouCompleteMe'
@@ -252,6 +252,7 @@ Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 " Archive "
 " ####### "
 
+"Plug 'vim-scripts/restore_view.vim'" bugged
 "Plug 'vim-syntastic/syntastic'
 "Plug 'sheerun/vim-polyglot'
 "Plug 'coldfix/hexhighlight'

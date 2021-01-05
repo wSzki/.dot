@@ -1,13 +1,13 @@
 * {
-  background-color: #1d2021;
-  border-color: #2e343f;
-  text-color: #8ca0aa;
+  background-color: #191d20;
+  border-color: #ebcb8b;
+  text-color: #fdf9e9;
   spacing: 0;
-  width: 512px;
+  width: 712px;
 }
 
 inputbar {
-  border: 0 0 0 0;
+  border: 1 1 0 1;
   children: [prompt,entry];
 }
 
@@ -25,12 +25,14 @@ textbox {
 
 entry {
   padding: 16px;
+  border: 0 0 0 0;
 }
 
 listview {
   cycle: false;
-  margin: 0 0 -1px 0;
+  margin: 0 0 0 0;
   scrollbar: false;
+  border: 0 1 1 1;
 }
 
 element {
