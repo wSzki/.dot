@@ -260,33 +260,33 @@ bindsym $winmod+Shift+x move container to workspace "x"
 bindsym $winmod+Shift+y move container to workspace "y"
 bindsym $winmod+Shift+z move container to workspace "z"
 
-set $monitor DP-1
-workspace a output $monitor
-workspace b output $monitor
-workspace c output $monitor
-workspace d output $monitor
-workspace e output $monitor
-workspace f output $monitor
-workspace g output $monitor
-workspace h output $monitor
-workspace i output $monitor
-workspace j output $monitor
-workspace k output $monitor
-workspace l output $monitor
-workspace m output $monitor
-workspace n output $monitor
-workspace o output $monitor
-workspace p output $monitor
-workspace q output $monitor
-workspace r output $monitor
-workspace s output $monitor
-workspace t output $monitor
-workspace u output $monitor
-workspace v output $monitor
-workspace w output $monitor
-workspace x output $monitor
-workspace y output $monitor
-workspace z output $monitor
+set $vgamonitor DP-1
+workspace a output $vgamonitor
+workspace b output $vgamonitor
+workspace c output $vgamonitor
+workspace d output $vgamonitor
+workspace e output $vgamonitor
+workspace f output $vgamonitor
+workspace g output $vgamonitor
+workspace h output $vgamonitor
+workspace i output $vgamonitor
+workspace j output $vgamonitor
+workspace k output $vgamonitor
+workspace l output $vgamonitor
+workspace m output $vgamonitor
+workspace n output $vgamonitor
+workspace o output $vgamonitor
+workspace p output $vgamonitor
+workspace q output $vgamonitor
+workspace r output $vgamonitor
+workspace s output $vgamonitor
+workspace t output $vgamonitor
+workspace u output $vgamonitor
+workspace v output $vgamonitor
+workspace w output $vgamonitor
+workspace x output $vgamonitor
+workspace y output $vgamonitor
+workspace z output $vgamonitor
 
 set $screen eDP-1
 workspace 1 output $screen
@@ -299,6 +299,38 @@ workspace 7 output $screen
 workspace 8 output $screen
 workspace 9 output $screen
 workspace 0 output $screen
+
+set $hdmimonitor HDMI-2
+
+bindsym $winmod+1 workspace "11"
+bindsym $winmod+2 workspace "12"
+bindsym $winmod+3 workspace "13"
+bindsym $winmod+4 workspace "14"
+bindsym $winmod+5 workspace "15"
+bindsym $winmod+6 workspace "16"
+bindsym $winmod+7 workspace "17"
+bindsym $winmod+8 workspace "18"
+bindsym $winmod+9 workspace "19"
+
+workspace 11 output $hdmimonitor
+workspace 12 output $hdmimonitor
+workspace 13 output $hdmimonitor
+workspace 14 output $hdmimonitor
+workspace 15 output $hdmimonitor
+workspace 16 output $hdmimonitor
+workspace 17 output $hdmimonitor
+workspace 18 output $hdmimonitor
+workspace 19 output $hdmimonitor
+
+bindsym $winmod+Shift+11 move container to workspace "11"
+bindsym $winmod+Shift+12 move container to workspace "12"
+bindsym $winmod+Shift+13 move container to workspace "13"
+bindsym $winmod+Shift+14 move container to workspace "14"
+bindsym $winmod+Shift+15 move container to workspace "15"
+bindsym $winmod+Shift+16 move container to workspace "16"
+bindsym $winmod+Shift+17 move container to workspace "17"
+bindsym $winmod+Shift+18 move container to workspace "18"
+bindsym $winmod+Shift+19 move container to workspace "19"
 
 ###################################
 ### RESIZE

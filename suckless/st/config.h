@@ -243,6 +243,7 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
+#define CTRLKEY ControlMask
 #define TERMMOD (Mod1Mask|ShiftMask)
 
 MouseKey mkeys[] = {
@@ -271,8 +272,10 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +2} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -2} },
+	//{ TERMMOD,              XK_Prior,       zoom,           {.f = +2} },
+	//{ TERMMOD,              XK_Next,        zoom,           {.f = -2} },
+	{ CTRLKEY,              XK_minus,       zoom,           {.f = -2} },
+	{ CTRLKEY,              XK_equal,       zoom,           {.f = +2} },
 	{ MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
 	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
 	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
@@ -281,8 +284,8 @@ static Shortcut shortcuts[] = {
 	//	{ MODKEY,               XK_p,           selpaste,       {.i =  0} },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
 	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i =  20} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i =  20} },
+	{ TERMMOD,            XK_Page_Up,     kscrollup,        {.i =  10} },
+	{ TERMMOD,            XK_Page_Down,   kscrolldown,      {.i =  10} },
 	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i =  1} },
 	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i =  1} },
 	//{ MODKEY,               XK_k,           kscrollup,      {.i =  -1} },
