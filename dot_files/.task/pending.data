@@ -1,1 +1,2 @@
-[description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+++" modified:"1607530999" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+[description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+++-" modified:"1609387385" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+[description:"Pay the rent" due:"1612047599" entry:"1609387385" imask:"3" modified:"1607530999" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"f21deef7-4770-4ba4-865f-5ffc6c76dde7"]

@@ -884,3 +884,17 @@ time 1607531042
 old [description:"Respond Marie Boucaud" entry:"1602783367" modified:"1602783367" project:"todo" status:"pending" uuid:"fe286424-1284-4fd3-9227-003e828a37bc"]
 new [description:"Respond Marie Boucaud" end:"1607531042" entry:"1602783367" modified:"1607531042" project:"todo" status:"completed" uuid:"fe286424-1284-4fd3-9227-003e828a37bc"]
 ---
+time 1609387385
+new [description:"Pay the rent" due:"1612047599" entry:"1609387385" imask:"3" modified:"1607530999" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"9c7fd9ab-508b-4513-b7cb-e0dc39c83725"]
+---
+time 1609387385
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+++" modified:"1607530999" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+++-" modified:"1609387385" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---
+time 1609387385
+new [description:"Pay the rent" due:"1612047599" entry:"1609387385" imask:"3" modified:"1607530999" parent:"49090cb4-7e88-4e2e-895b-d7ace8162540" recur:"monthly" status:"pending" uuid:"f21deef7-4770-4ba4-865f-5ffc6c76dde7"]
+---
+time 1609387385
+old [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+++" modified:"1607530999" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+new [description:"Pay the rent" due:"1604185199" entry:"1602071856" mask:"+++-" modified:"1609387385" recur:"monthly" status:"recurring" uuid:"49090cb4-7e88-4e2e-895b-d7ace8162540"]
+---

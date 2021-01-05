@@ -29,9 +29,10 @@ xsetroot -solid '#191d20' &
 xset s 180 180 &
 xautolock -time 8 -locker "systemctl suspend" -detectsleep &
 #barrier -f --name wszki 192.168.0.14 &
-telegram-desktop -startintray &
+#telegram-desktop -startintray &
 slock &
-rm -rf ~/.tmp/*
+rm -rf ~/.tmp/* &
+rm -rf ~/Desktop/ &
 exec i3
 
 ####################################################################

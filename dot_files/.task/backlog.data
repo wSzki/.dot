@@ -244,3 +244,7 @@
 {"description":"IMPOTS DECLARATION","end":"20201209T162356Z","entry":"20201007T172422Z","modified":"20201209T162356Z","project":"URGENT","status":"completed","uuid":"87a5657a-b790-49a4-9267-e67d3b00cb91"}
 {"description":"Change Bank","end":"20201209T162359Z","entry":"20201011T155644Z","modified":"20201209T162359Z","project":"todo","status":"completed","uuid":"52e923ec-d7a4-416e-be12-a35a756c116e"}
 {"description":"Respond Marie Boucaud","end":"20201209T162402Z","entry":"20201015T173607Z","modified":"20201209T162402Z","project":"todo","status":"completed","uuid":"fe286424-1284-4fd3-9227-003e828a37bc"}
+{"description":"Pay the rent","due":"20210130T225959Z","entry":"20201231T040305Z","imask":3,"modified":"20201209T162319Z","parent":"49090cb4-7e88-4e2e-895b-d7ace8162540","recur":"monthly","status":"pending","uuid":"9c7fd9ab-508b-4513-b7cb-e0dc39c83725"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115736Z","mask":"+++-","modified":"20201231T040305Z","recur":"monthly","status":"recurring","uuid":"49090cb4-7e88-4e2e-895b-d7ace8162540"}
+{"description":"Pay the rent","due":"20210130T225959Z","entry":"20201231T040305Z","imask":3,"modified":"20201209T162319Z","parent":"49090cb4-7e88-4e2e-895b-d7ace8162540","recur":"monthly","status":"pending","uuid":"f21deef7-4770-4ba4-865f-5ffc6c76dde7"}
+{"description":"Pay the rent","due":"20201031T225959Z","entry":"20201007T115736Z","mask":"+++-","modified":"20201231T040305Z","recur":"monthly","status":"recurring","uuid":"49090cb4-7e88-4e2e-895b-d7ace8162540"}
