@@ -75,6 +75,7 @@ bindsym $mod+0 scratchpad show
 #for_window [class="Chromium" instance="chromium"] resize set 1900 1000
 
 # Chrome
+assign [class="Chromium" instance="reservation.42network.org"] r
 assign [class="TelegramDesktop" instance="telegram-desktop"] t
 assign [class="Slack" instance="slack"] s
 assign [class="discord" instance="discord"] d

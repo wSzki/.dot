@@ -227,7 +227,7 @@ Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
-
+"Plug 'ervandew/supertab'
 "Plug 'dense-analysis/ale'
 "Plug 'ycm-core/YouCompleteMe'
 
@@ -236,7 +236,7 @@ Plug 'tommcdo/vim-exchange'
 " ###### "
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+"Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'josa42/coc-sh'
 "Plug 'tjdevries/coc-zsh'
 "Plug 'nvim-treesitter/nvim-treesitter'
@@ -305,10 +305,19 @@ noremap <Leader>sc :SCNvimStart<CR><ESC>
 "################################################ "
 "### NCOC ### "
 "################################################ "
-
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
+"inoremap <silent><expr> <TAB>
+      "\ pumvisible() ? "\<C-n>" :
+      "\ <SID>check_back_space() ? "\<TAB>" :
+      "\ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 "################################################ "
 "### SCROLLBAR ### "
 "################################################ "
