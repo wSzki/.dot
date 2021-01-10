@@ -120,13 +120,13 @@ floating_modifier $mod
 
 # Executables
 bindsym $mod+Tab workspace back_and_forth
-#bindsym $mod+Shift+Return exec kitty;
+bindsym $mod+Shift+Return exec kitty;
 #bindsym $mod+Return split v exec kitty;
-bindsym $mod+Shift+Return exec st;
-bindsym $mod+Return split v exec st;
+#bindsym $mod+Shift+Return exec st;
+#bindsym $mod+Return split v exec st;
 bindsym $mod+p exec rofi -show run
-bindsym $mod+i exec chromiumm
-bindsym $mod+Shift+i split v exec chromiumm
+bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
+#bindsym $mod+Shift+i split v exec "chromium --app='https://duck.com'"
 
 # i3
 bindsym $mod+Shift+r reload

@@ -1,4 +1,5 @@
-########################### PLUGINS ############################
+########################### PLUGINS ##################################
+
 source ~/.zplug/init.zsh
 
 zplug "laggardkernel/zsh-thefuck", defer:2
@@ -13,7 +14,8 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 zplug load #--verbose
 
-# Syntax highlighting
+########################## SYNTAX HIGHLIGHTING #######################
+
 ZSH_HIGHLIGHT_STYLES[path]='fg=gray, italic'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow, bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow, bold'
@@ -24,11 +26,13 @@ ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=magenta'
 
+########################## APOLLO THEME SETTINGS ######################
 
 #zstyle ':apollo:*:core:modules:left' modules "vi_mode" "status" "dir"
 #zstyle ':apollo:*:core:modules:right' modules "git"
 
 ########################## TTY COLORS #################################
+
 if [ "$TERM" = "linux" ]; then
 	echo -en "\e]P0191d20" #black
 	echo -en "\e]P82B2B2B" #darkgrey
@@ -52,12 +56,10 @@ fi
 ########################### SHELL SETTINGS ############################
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-#export PATH=$HOME/.dot/bin:$PATH
-#export PATH=/home/wsz/.dot/bin/scripts:$PATH
-#export PATH=/home/wsz/.dot/bin/bookmarks:$PATH
-# Global Variables
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# OTHER PATHS
 export POD="$HOME/.pod"
 export DOT="$HOME/.dot"
 export PATH=$DOT/bin/scripts:$PATH
