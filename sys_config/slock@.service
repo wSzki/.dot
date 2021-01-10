@@ -7,7 +7,7 @@ Before=sleep.target
 User=wsz
 Environment=DISPLAY=:0
 ExecStartPre=/usr/bin/xset dpms force suspend
-ExecStart=/usr/bin/slock
+ExecStart=/usr/local/bin/slock
 
 [Install]
 WantedBy=sleep.target
