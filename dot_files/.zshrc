@@ -138,7 +138,7 @@ alias config="cd ~/.config"
 alias krc="vim ~/.config/kitty/kitty.conf"
 
 ### VIM
-alias vim="nvim"
+#alias vim="nvim"
 alias v="vim -o \`fzf\`"
 
 ### NOTES

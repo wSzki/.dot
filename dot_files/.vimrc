@@ -40,12 +40,12 @@ endif
 "augroup END
 
 " General settings
+set clipboard=unnamedplus
 set nu
 syntax on
 set scrolloff=5
 set relativenumber
 set laststatus=2
-set clipboard=unnamedplus
 set background=dark
 set encoding=utf-8
 set history=1000
@@ -235,7 +235,7 @@ Plug 'tommcdo/vim-exchange'
 " Neovim "
 " ###### "
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'josa42/coc-sh'
 "Plug 'tjdevries/coc-zsh'

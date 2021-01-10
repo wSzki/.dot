@@ -4,10 +4,10 @@ sudo pacman -S --noconfirm acpi
 sudo pacman -S --noconfirm acpid
 sudo cp ./99-lowbat.rules /etc/udev/rules.d/
 sudo cp ./40-touchpad.conf /etc/X11/xorg.conf.d/
-sudo cp ./loader.conf /boot/loader
-sudo cp ./logind.conf /etc/systemd/
+sudo cp ./loader.conf /boot/loader # 5 sec timeout
+sudo cp ./logind.conf /etc/systemd/ # Suspend when lid close
 sudo cp ./slock@.service /etc/systemd/system
-sudo cp ./powertop /etc/systemd/system
+sudo cp ./powertop.service /etc/systemd/system
 sudo cp ./handler.sh /etc/acpi/
 
 sudo systemctl enable slock@wsz.service

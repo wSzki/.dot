@@ -159,6 +159,11 @@ sudo systemctl restart named
 sudo systemctl restart dnsmasq
 - openresolv
 
+# AUDIO
+pulseaudio
+alsa-tools
+alsa-utils
+
 # POWERTOP
 etc/default/cpupower -> set default governor
 
