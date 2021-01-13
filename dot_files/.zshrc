@@ -60,10 +60,10 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # OTHER PATHS
-export POD="$HOME/.pod"
-export DOT="$HOME/.dot"
-export PATH="$DOT/bin/scripts:$PATH"
-export PATH="$DOT/bin/bookmarks:$PATH"
+#export POD="$HOME/.pod"
+#export DOT="$HOME/.dot"
+#export PATH="$DOT/bin/scripts:$PATH"
+#export PATH="$DOT/bin/bookmarks:$PATH"
 
 # Native Plugins
 plugins=(colorize git colored-man-pages fzf)
@@ -73,7 +73,13 @@ plugins=(colorize git colored-man-pages fzf)
 bindkey "^f" fzf-file-widget
 
 # Sources
-source ~/.oh-my-zsh/themes/geometry/geometry.zsh
+if [ -e ~/.oh-my-zsh/themes/geometry/geometry.zsh ]
+then
+	source ~/.oh-my-zsh/themes/geometry/geometry.zsh
+else
+	~/.dot/downloaders/geo.sh
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # Autojump
