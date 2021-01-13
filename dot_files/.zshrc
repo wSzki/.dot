@@ -62,8 +62,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # OTHER PATHS
 export POD="$HOME/.pod"
 export DOT="$HOME/.dot"
-export PATH=$DOT/bin/scripts:$PATH
-export PATH=$DOT/bin/bookmarks:$PATH
+export PATH="$DOT/bin/scripts:$PATH"
+export PATH="$DOT/bin/bookmarks:$PATH"
 
 # Native Plugins
 plugins=(colorize git colored-man-pages fzf)
@@ -361,5 +361,6 @@ ENABLE_CORRECTION="true"
 export NVM_DIR="$HOME/.config"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 
 eval $(thefuck --alias)

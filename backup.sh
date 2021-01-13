@@ -6,7 +6,7 @@ cp ~/.vimrc 	  ~/.dot/dot_files
 cp ~/.xinitrc 	  ~/.dot/dot_files
 cp ~/.zshrc 	  ~/.dot/dot_files
 cp ~/.xbindkeysrc ~/.dot/dot_files
-#cp ~/.profile	  ~/.dot/dot_files
+cp ~/.zprofile	  ~/.dot/dot_files
 #cp ~/.taskrc	  ~/.dot/dot_files
 
 # i3 Configuration
