@@ -69,7 +69,7 @@ set foldmethod=manual
 
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>
-map gg gg=G''
+map gg gg=G''zt
 "map gg gg=G``
 "map <C-r> :redo<CR>``
 
@@ -78,6 +78,12 @@ filetype indent on
 set autoindent
 set cindent
 set smartindent
+
+" Autoindent on save
+augroup autoindent
+	au!
+	autocmd BufWritePre * :normal migg=G`i
+augroup End
 
 " Lines, rulers, anti word wrap
 set linebreak
@@ -248,13 +254,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " #############
 " SUPERCOLLIDER
 " #############
-Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
+"Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 
 " ####### "
 " Archive "
 " ####### "
 
 "Plug 'vim-scripts/restore_view.vim'" bugged
+"Plug 'psliwka/vim-smoothie'
 "Plug 'vim-syntastic/syntastic'
 "Plug 'sheerun/vim-polyglot'
 "Plug 'coldfix/hexhighlight'
@@ -448,15 +455,16 @@ augroup END
 "### SMOOTH SCROLL ### "
 "################################################ "
 
-noremap <silent> <PageUp> :call smooth_scroll#up(25, 3, 1)<CR>
-noremap <silent> <PageDown> :call smooth_scroll#down(25, 3, 1)<CR>
-inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(25, 3, 1)<CR>i
-inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>i
+"noremap <silent> <PageUp> :call smooth_scroll#up(25, 3, 1)<CR>
+"noremap <silent> <PageDown> :call smooth_scroll#down(25, 3, 1)<CR>
+"inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(25, 3, 1)<CR>
+"inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>
 
-"noremap <silent> <PageUp> 20kzz
-"noremap <silent> <PageDown> 20jzz
-"inoremap <silent> <PageUp> <ESC> 20kzzi
-"inoremap <silent> <PageDown> <ESC> 20jzzi
+
+noremap <silent> <PageUp> 20kzb
+noremap <silent> <PageDown> 20jzb
+inoremap <silent> <PageUp> <ESC> 20kzbi
+inoremap <silent> <PageDown> <ESC> 20jzbi
 "inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
 "inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
 "let g:comfortable_motion_no_default_key_mappings = 1
