@@ -20,9 +20,9 @@
 "################################################ "
 
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 "################################################ "
@@ -235,7 +235,9 @@ Plug 'tommcdo/vim-exchange'
 " Neovim "
 " ###### "
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+":CocInstall coc-clangd coc-cmake coc-fzf* -- install clang
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'josa42/coc-sh'
 "Plug 'tjdevries/coc-zsh'
@@ -308,15 +310,15 @@ noremap <Leader>sc :SCNvimStart<CR><ESC>
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
 "inoremap <silent><expr> <TAB>
-      "\ pumvisible() ? "\<C-n>" :
-      "\ <SID>check_back_space() ? "\<TAB>" :
-      "\ coc#refresh()
+			"\ pumvisible() ? "\<C-n>" :
+			"\ <SID>check_back_space() ? "\<TAB>" :
+			"\ coc#refresh()
 "inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+	let col = col('.') - 1
+	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 "################################################ "
 "### SCROLLBAR ### "

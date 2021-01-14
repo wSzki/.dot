@@ -79,12 +79,11 @@ then
 else
 	~/.dot/downloaders/geo.sh
 fi
-
 source $ZSH/oh-my-zsh.sh
 
 # Autojump
-[[ -s /home/wsz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wsz/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
+#[[ -s /home/wsz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wsz/.autojump/etc/profile.d/autojump.sh
+#autoload -U compinit && compinit -u
 
 
 ########################### ALIASES ############################
@@ -144,7 +143,8 @@ alias config="cd ~/.config"
 alias krc="vim ~/.config/kitty/kitty.conf"
 
 ### VIM
-#alias vim="nvim"
+FILE="/etc/passwd"
+if [ -f /bin/nvim ];then alias vim="nvim" ; fi
 alias v="vim -o \`fzf\`"
 
 ### NOTES

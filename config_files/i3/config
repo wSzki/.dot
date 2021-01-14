@@ -323,15 +323,15 @@ workspace 17 output $hdmimonitor
 workspace 18 output $hdmimonitor
 workspace 19 output $hdmimonitor
 
-bindsym $winmod+Shift+11 move container to workspace "11"
-bindsym $winmod+Shift+12 move container to workspace "12"
-bindsym $winmod+Shift+13 move container to workspace "13"
-bindsym $winmod+Shift+14 move container to workspace "14"
-bindsym $winmod+Shift+15 move container to workspace "15"
-bindsym $winmod+Shift+16 move container to workspace "16"
-bindsym $winmod+Shift+17 move container to workspace "17"
-bindsym $winmod+Shift+18 move container to workspace "18"
-bindsym $winmod+Shift+19 move container to workspace "19"
+bindsym $winmod+Shift+1 move container to workspace "11"
+bindsym $winmod+Shift+2 move container to workspace "12"
+bindsym $winmod+Shift+3 move container to workspace "13"
+bindsym $winmod+Shift+4 move container to workspace "14"
+bindsym $winmod+Shift+5 move container to workspace "15"
+bindsym $winmod+Shift+6 move container to workspace "16"
+bindsym $winmod+Shift+7 move container to workspace "17"
+bindsym $winmod+Shift+8 move container to workspace "18"
+bindsym $winmod+Shift+9 move container to workspace "19"
 
 ###################################
 ### RESIZE
