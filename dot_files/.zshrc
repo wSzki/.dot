@@ -66,8 +66,10 @@ export ZSH="$HOME/.oh-my-zsh"
 #export PATH="$DOT/bin/bookmarks:$PATH"
 
 # Native Plugins
-plugins=(colorize git colored-man-pages fzf)
+plugins=(autojump colorize git colored-man-pages fzf)
 #plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
+
+export ZSH="$HOME/.oh-my-zsh"
 
 # Bindkeys
 bindkey "^f" fzf-file-widget
@@ -82,8 +84,8 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Autojump
-#[[ -s /home/wsz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wsz/.autojump/etc/profile.d/autojump.sh
-#autoload -U compinit && compinit -u
+[[ -s /home/wsz/.autojump/etc/profile.d/autojump.sh ]] && source /home/wsz/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
 
 ########################### ALIASES ############################
@@ -223,6 +225,7 @@ alias vgaon="xrandr --output DP-1 --auto --right-of eDP-1"
 alias vgaoff="xrandr --output DP-1 --off"
 alias dualon="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 2025x1440 --rotate normal --output DP-1 --mode 1920x1080 --pos 1060x360 --rotate normal --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 2980x0 --rotate normal"
 alias dualon2="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 366x1920 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 1080x480 --rotate normal"
+alias toweron1="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1080x1440 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 1080x0 --rotate normal"
 alias ethernet="sudo systemctl start dhcpcd@enp0s31f6"
 #alias vcv="cd ~/Tree/Rack/ && ./Rack"
 alias persist="nohup"

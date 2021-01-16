@@ -23,41 +23,41 @@ def create_argparse():
 
     parser = argparse.ArgumentParser(description='Check for pacman updates')
     parser.add_argument(
-        '-b',
-        '--base_color',
-        default = _default('BASE_COLOR', 'green'),
-        help='base color of the output(default=green)'
-    )
+            '-b',
+            '--base_color',
+            default = _default('BASE_COLOR', 'yellow'),
+            help='base color of the output(default=green)'
+            )
     parser.add_argument(
-        '-u',
-        '--updates_available_color',
-        default = _default('UPDATE_COLOR', 'yellow'),
-        help='color of the output, when updates are available(default=yellow)'
-    )
+            '-u',
+            '--updates_available_color',
+            default = _default('UPDATE_COLOR', 'yellow'),
+            help='color of the output, when updates are available(default=yellow)'
+            )
     parser.add_argument(
-        '-a',
-        '--aur',
-        action = 'store_const',
-        const = True,
-        default = _default('AUR', 'False', strbool),
-        help='Include AUR packages. Attn: Yaourt must be installed'
-    )
+            '-a',
+            '--aur',
+            action = 'store_const',
+            const = True,
+            default = _default('AUR', 'False', strbool),
+            help='Include AUR packages. Attn: Yaourt must be installed'
+            )
     parser.add_argument(
-        '-q',
-        '--quiet',
-        action = 'store_const',
-        const = True,
-        default = _default('QUIET', 'False', strbool),
-        help = 'Do not produce output when system is up to date'
-    )
+            '-q',
+            '--quiet',
+            action = 'store_const',
+            const = True,
+            default = _default('QUIET', 'False', strbool),
+            help = 'Do not produce output when system is up to date'
+            )
     parser.add_argument(
-        '-w',
-        '--watch',
-        nargs='*',
-        default = _default('WATCH', arg_type=strlist),
-        help='Explicitly watch for specified packages. '
-        'Listed elements are treated as regular expressions for matching.'
-    )
+            '-w',
+            '--watch',
+            nargs='*',
+            default = _default('WATCH', arg_type=strlist),
+            help='Explicitly watch for specified packages. '
+            'Listed elements are treated as regular expressions for matching.'
+            )
     return parser.parse_args()
 
 
@@ -67,8 +67,8 @@ def get_updates():
         return []
 
     updates = [line.split(' ')[0]
-               for line in output.split('\n')
-               if line]
+            for line in output.split('\n')
+            if line]
 
     return updates
 
@@ -86,8 +86,8 @@ def get_aur_updates():
         return []
 
     aur_updates = [line.split(' ')[0]
-                   for line in output.split('\n')
-                   if line.startswith('aur/')]
+            for line in output.split('\n')
+            if line.startswith('aur/')]
 
     return aur_updates
 
@@ -103,7 +103,8 @@ def matching_updates(updates, watch_list):
 
 
 label = os.environ.get("LABEL","")
-message = "{0}<span color='{1}'>{2}</span>"
+message = "{2}"
+# message = "{0}<span color='{1}'>{2}</span>"
 args = create_argparse()
 
 updates = get_updates()
@@ -112,7 +113,7 @@ if args.aur:
 
 update_count = len(updates)
 if update_count > 0:
-    info = str(update_count) + ' updates available'
+    info = ' ' + str(update_count) + ''
     short_info = str(update_count) + ' updates'
     matches = matching_updates(updates, args.watch)
     if matches:

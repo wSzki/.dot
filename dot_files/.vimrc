@@ -69,7 +69,7 @@ set foldmethod=manual
 
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>
-map gg gg=G''zt
+map gg gg=G''zz
 "map gg gg=G``
 "map <C-r> :redo<CR>``
 
@@ -80,10 +80,10 @@ set cindent
 set smartindent
 
 " Autoindent on save
-augroup autoindent
-	au!
-	autocmd BufWritePre * :normal migg=G`i
-augroup End
+"augroup autoindent
+"au!
+"autocmd BufWritePre * :normal migg=G`i
+"augroup End
 
 " Lines, rulers, anti word wrap
 set linebreak
@@ -170,8 +170,8 @@ endfunction
 "noremap <Leader>pi :so% <CR> :PlugInstall<CR><ESC>
 noremap <Leader>wso :w <CR>:so % <CR><ESC>
 
-nnoremap <C-w> <ESC><ESC>:w<CR>
-inoremap <C-w> <ESC><ESC>:w<CR>i
+nnoremap <C-w> <ESC><ESC><ESC>:w<CR><ESC>
+inoremap <C-w> <ESC><ESC>:w<CR><ESC>i
 
 " Remap visual block
 nnoremap <C-e> <C-q>
@@ -455,16 +455,16 @@ augroup END
 "### SMOOTH SCROLL ### "
 "################################################ "
 
-"noremap <silent> <PageUp> :call smooth_scroll#up(25, 3, 1)<CR>
-"noremap <silent> <PageDown> :call smooth_scroll#down(25, 3, 1)<CR>
-"inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(25, 3, 1)<CR>
-"inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>
+noremap <silent> <PageUp> :call smooth_scroll#up(25, 3, 1)<CR>
+noremap <silent> <PageDown> :call smooth_scroll#down(25, 3, 1)<CR>
+inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(25, 3, 1)<CR>
+inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>
 
 
-noremap <silent> <PageUp> 20kzb
-noremap <silent> <PageDown> 20jzb
-inoremap <silent> <PageUp> <ESC> 20kzbi
-inoremap <silent> <PageDown> <ESC> 20jzbi
+"noremap <silent> <PageUp> 20kzb
+"noremap <silent> <PageDown> 20jzb
+"inoremap <silent> <PageUp> <ESC> 20kzbi
+"inoremap <silent> <PageDown> <ESC> 20jzbi
 "inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
 "inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
 "let g:comfortable_motion_no_default_key_mappings = 1
