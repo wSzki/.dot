@@ -95,7 +95,7 @@ for pkg in installed_version.keys():
 
 n_updates = len(updates)
 if n_updates > 0:
-    msg = "'{0}'> {1}"
+    msg = " {1}"
     # msg = "<span color='{0}'> {1}</span>"
     print(msg.format(args.update_color, n_updates))
 elif not args.quiet:
