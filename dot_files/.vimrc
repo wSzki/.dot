@@ -254,7 +254,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " #############
 " SUPERCOLLIDER
 " #############
-"Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
+Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
 
 " ####### "
 " Archive "
