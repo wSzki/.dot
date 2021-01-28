@@ -216,6 +216,9 @@ alias pbp="xclip -selection clipboard -o"
 ### MISC
 #alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
 #alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
+
+alias orca="~/.orca/build/orca"
+
 alias ack="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
 alias veille="systemctl suspend && slock"
 alias services="systemctl --type=service"

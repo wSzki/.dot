@@ -1,5 +1,4 @@
-# i3 config file (v4)
-###################################
+
  ### SETTINGS
 ###################################
 workspace_auto_back_and_forth yes
@@ -22,6 +21,7 @@ client.urgent           #7c6f64 #fabd2f #3c3836 #fabd2f
 #I3IPC SCRIPT
 #https://github.com/giuseppe-dandrea/i3-switch-if-workspace-empty
 exec_always ~/.config/i3-switch-if-workspace-empty/i3-switch-if-workspace-empty
+#exec_always ~/i3ipc-python/examples/workspace_renumber.py
 #exec_always ~/i3ipc-gjs/examples/max-windows-on-ws.js
 
 #automake & autoconf

@@ -19,6 +19,10 @@ convert file.{jpg, png}
 
 `
 
+# add user to video group for backlight control
+# acpi backlight
+# install alsamixer pactl alsatools utils for audio
+
 - xev : keystroke monitor
 - xprop : window properties
 
