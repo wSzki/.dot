@@ -233,6 +233,8 @@ Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
 
 if has (!('nvim'))
 	Plug 'ervandew/supertab'
@@ -260,6 +262,38 @@ endif
 " #############
 if has ('nvim')
 	Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
+	"let g:scnvim_scdoc = 1
+	"let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
+	let g:scnvim_postwin_orientation = 'h'
+	let g:scnvim_postwin_size = 18
+	"lt g:scnvim_postwin_auto_toggle = 1
+"function! s:set_sclang_statusline()
+"		setlocal stl=
+"		setlocal stl+=%f
+"		setlocal stl+=%=
+"		setlocal stl+=%(%l,%c%)
+"		setlocal stl+=\ \|
+"		setlocal stl+=%24.24{scnvim#statusline#server_status()}
+"	endfunction
+"
+"	augroup scnvim_stl
+"		autocmd!
+"		autocmd FileType supercollider call <SID>set_sclang_statusline()
+"	augroup END
+"	" lightline.vim example
+"	let g:lightline = {}
+"	let g:lightline.component_function = {
+"				\ 'server_status': 'scnvim#statusline#server_status',
+"				\ }
+"
+"	let g:lightline.active = {
+"				\ 'left':  [ [ 'mode', 'paste' ],
+"				\          [ 'readonly', 'filename', 'modified' ] ],
+"				\ 'right': [ [ 'lineinfo' ],
+"				\            [ 'percent' ],
+"				\            [ 'server_status'] ]
+"				\ }
+"
 endif
 " ####### "
 " Archive "
@@ -510,7 +544,7 @@ nmap <F2>			<ESC>:ColorToggle<CR>
 "### 42 HEADER ### "
 "################################################ "
 
-nmap <f12> :FortyTwoHeader<CR>
+nmap <F12> :FortyTwoHeader<CR>
 let b:fortytwoheader_user="wszurkow"
 let b:fortytwoheader_mail="wszurkow@student.42.fr"
 
