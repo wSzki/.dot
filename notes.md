@@ -21,8 +21,6 @@ convert file.{jpg, png}
 /home/wsz/.local/share/SuperCollider/Extensions
 tar xjvf  SuperCollider-3.11.2-Source.tar.bz2
 
-
-
 `
 
 # add user to video group for backlight control
