@@ -99,6 +99,9 @@ alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" |
 ### IP SCAN
 alias nmapscan="nmap -sn 192.168.0.0/24"
 
+### SUPERCOLLIDER
+alias collider="vim -c "SCNvimStart" ~/.dot/supercollider/main.sc"
+
 ### C
 #alias gcc="clang"
 alias gccc="gcc -Wall -Werror -Wextra"

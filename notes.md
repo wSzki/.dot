@@ -17,11 +17,18 @@ ctrl e = end
 
 convert file.{jpg, png}
 
+# SuperCollider
+/home/wsz/.local/share/SuperCollider/Extensions
+tar xjvf  SuperCollider-3.11.2-Source.tar.bz2
+
+
+
 `
 
 # add user to video group for backlight control
 # acpi backlight
-# install alsamixer pactl alsatools utils for audio
+# install alsamixer pactl utils for audio
+# pavucontrol pulseaudio control GUI
 
 - xev : keystroke monitor
 - xprop : window properties

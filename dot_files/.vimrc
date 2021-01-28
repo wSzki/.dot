@@ -233,8 +233,11 @@ Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
-"Plug 'ervandew/supertab'
-"Plug 'dense-analysis/ale'
+
+if has (!('nvim'))
+	Plug 'ervandew/supertab'
+	Plug 'dense-analysis/ale'
+endif
 "Plug 'ycm-core/YouCompleteMe'
 
 " ###### "
@@ -242,8 +245,9 @@ Plug 'tommcdo/vim-exchange'
 " ###### "
 
 ":CocInstall coc-clangd coc-cmake coc-fzf* -- install clang
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+if has ('nvim')
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 "Plug 'josa42/coc-sh'
 "Plug 'tjdevries/coc-zsh'
@@ -254,8 +258,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " #############
 " SUPERCOLLIDER
 " #############
-Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
-
+if has ('nvim')
+	Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
+endif
 " ####### "
 " Archive "
 " ####### "
