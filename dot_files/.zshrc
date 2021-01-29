@@ -100,7 +100,8 @@ alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" |
 alias nmapscan="nmap -sn 192.168.0.0/24"
 
 ### SUPERCOLLIDER
-alias collider="pulseaudio -k && vim -c "SCNvimStart" ~/.dot/supercollider/main.sc"
+#alias startjack="pasuspender -- jackd ; jackd -r -d alsa &> /dev/null &"
+alias collider="pasuspender -- jackd ; jackd -r -d alsa &> /dev/null & vim -c "SCNvimStart" ~/.dot/supercollider/main.sc && killall jackd"
 #alias collider="vim  ~/.dot/supercollider/main.sc"
 
 ### C
