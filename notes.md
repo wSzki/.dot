@@ -1,5 +1,8 @@
 https://kkovacs.eu/cool-but-obscure-unix-tools
 
+#Raspberry
+startx in /etc/profile
+
 # [TIPS]
 
 `

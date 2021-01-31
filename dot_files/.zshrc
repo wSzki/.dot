@@ -1,5 +1,8 @@
 ########################### PLUGINS ##################################
-
+#printf '\n%.0s' {1..100}
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 source ~/.zplug/init.zsh
 
 zplug "laggardkernel/zsh-thefuck", defer:2
@@ -74,13 +77,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # Bindkeys
 bindkey "^f" fzf-file-widget
 
-# Sources
+ #Sources
 if [ -e ~/.oh-my-zsh/themes/geometry/geometry.zsh ]
 then
 	source ~/.oh-my-zsh/themes/geometry/geometry.zsh
 else
 	~/.dot/downloaders/geo.sh
 fi
+#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH/oh-my-zsh.sh
 
 # Autojump
@@ -97,7 +101,7 @@ alias autopush="git add .; git status; git commit -m "autopush"; git push"
 alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" | grep -o 'git@[^\"]*'"
 
 ### IP SCAN
-alias nmapscan="nmap -sn 192.168.0.0/24"
+alias nmap_scan="nmap -sn 192.168.0.0/24"
 
 ### SUPERCOLLIDER
 #alias startjack="pasuspender -- jackd ; jackd -r -d alsa &> /dev/null &"
@@ -132,9 +136,9 @@ alias autotune="sudo powertop --auto-tune"
 
 
 ### SERVER
-alias serverstart="sudo systemctl start mariadb.service; sudo systemctl start httpd.service"
-alias serverstop="sudo systemctl stop mariadb.service; sudo systemctl stop httpd.service"
-alias serverrestart="sudo systemctl restart mariadb.service; sudo systemctl restart httpd.service"
+alias server_start="sudo systemctl start mariadb.service; sudo systemctl start httpd.service"
+alias server_stop="sudo systemctl stop mariadb.service; sudo systemctl stop httpd.service"
+alias server_restart="sudo systemctl restart mariadb.service; sudo systemctl restart httpd.service"
 
 ### RENAULT
 #alias renault="cd /home/wsz/Renault/wszki.github.io/Renault"
@@ -230,8 +234,8 @@ alias services="systemctl --type=service"
 #alias is="vim ~/Tree/Suckless/installScript/installScript.sh"
 alias hdmion="xrandr --output HDMI-2 --auto --above eDP-1"
 alias hdmioff="xrandr --output HDMI-2 --off"
-alias vgaon="xrandr --output DP-1 --auto --right-of eDP-1"
-alias vgaoff="xrandr --output DP-1 --off"
+alias vga_1="xrandr --output DP-1 --auto --above eDP-1"
+alias vga_off="xrandr --output DP-1 --off"
 alias dualon="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 2025x1440 --rotate normal --output DP-1 --mode 1920x1080 --pos 1060x360 --rotate normal --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 2980x0 --rotate normal"
 alias dualon2="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 366x1920 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 1080x480 --rotate normal"
 alias toweron1="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1080x1440 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 1080x0 --rotate normal"
@@ -250,12 +254,12 @@ alias reloadtouchpad="xinput disable 11 && xinput enable 11"
 
 ######  SERVICES
 ###     WIFI
-alias ipinfo="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
-alias autoWifiOn="sudo systemctl enable netctl-auto@wlan0.service && sudo systemctl start netctl-auto@wlan0.service"
-alias autoWifiOff="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
+alias ip_info="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
+alias wifi_auto_on="sudo systemctl enable netctl-auto@wlan0.service && sudo systemctl start netctl-auto@wlan0.service"
+alias wifi_auto_off="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
 alias wifi="sudo wifi-menu"
 alias nmap_local="sudo nmap -sn 192.168.0.0/24"
-alias wifirestart="sudo systemctl restart netctl-auto@wlan0.service"
+alias wifi_restart="sudo systemctl restart netctl-auto@wlan0.service"
 #alias p="ping google.fr"
 
 ###     BLUETOOTH
@@ -264,11 +268,11 @@ alias bluestop="sudo systemctl disable bluetooth.service && sudo systemctl stop 
 
 ###     PERFORMANCE
 #alias governor-list="cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
-alias governor-performance="sudo cpupower frequency-set -g performance"
-alias governor-powersave="sudo cpupower frequency-set -g powersave"
-alias governor-ondemand="sudo cpupower frequency-set -g ondemand"
-alias governor-conservative="sudo cpupower frequency-set -g conservative"
-alias powerreport="sudo powertop --html=powerreport.html"
+alias governor_performance="sudo cpupower frequency-set -g performance"
+alias governor_powersave="sudo cpupower frequency-set -g powersave"
+alias governor_ondemand="sudo cpupower frequency-set -g ondemand"
+alias governor_conservative="sudo cpupower frequency-set -g conservative"
+alias powertop_report="sudo powertop --html=powerreport.html"
 
 ###     LOGIND.CONF
 alias nosleep="sudo vim /etc/systemd/logind.conf"
