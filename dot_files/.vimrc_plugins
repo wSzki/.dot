@@ -1,0 +1,146 @@
+"################################################ "
+"### PLUG ###"
+"################################################ "
+" PlugInstall, PlugClean
+call plug#begin('~/.vim/plugged')
+"###############################"
+
+" ####### "
+"   Vim   "
+" ####### "
+
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'frazrepo/vim-rainbow'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'pandark/42header.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'mbbill/undotree'
+Plug 'mg979/vim-visual-multi'
+Plug 'airblade/vim-gitgutter'
+Plug 'thirtythreeforty/lessspace.vim'
+Plug 'mileszs/ack.vim'
+Plug 'junegunn/vim-peekaboo'
+Plug 'ericbn/vim-relativize'
+Plug 'chrisbra/colorizer'
+Plug 'raimondi/delimitmate'
+Plug 'wszki/vim-smooth-scroll'
+Plug 'tommcdo/vim-exchange'
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
+
+
+
+" Track the engine.
+Plug 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
+
+
+
+
+
+
+
+if has (!('nvim'))
+	Plug 'ervandew/supertab'
+	Plug 'dense-analysis/ale'
+endif
+"Plug 'ycm-core/YouCompleteMe'
+
+" ###### "
+" Neovim "
+" ###### "
+
+":CocInstall coc-clangd coc-cmake coc-fzf* -- install clang
+if has ('nvim')
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
+"Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+"Plug 'josa42/coc-sh'
+"Plug 'tjdevries/coc-zsh'
+"Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'Xuyuanp/scrollbar.nvim'
+"Plug 'cpiger/NeoDebug'
+
+" #############
+" SUPERCOLLIDER
+" #############
+if has ('nvim')
+	Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
+	let g:scnvim_scdoc = 1
+	"let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
+	let g:scnvim_postwin_orientation = 'h'
+	let g:scnvim_postwin_size = 18
+	"lt g:scnvim_postwin_auto_toggle = 1
+"function! s:set_sclang_statusline()
+"		setlocal stl=
+"		setlocal stl+=%f
+"		setlocal stl+=%=
+"		setlocal stl+=%(%l,%c%)
+"		setlocal stl+=\ \|
+
+"		setlocal stl+=%24.24{scnvim#statusline#server_status()}
+"	endfunction
+"
+"	augroup scnvim_stl
+"		autocmd!
+"		autocmd FileType supercollider call <SID>set_sclang_statusline()
+"	augroup END
+"	" lightline.vim example
+"	let g:lightline = {}
+"	let g:lightline.component_function = {
+"				\ 'server_status': 'scnvim#statusline#server_status',
+"				\ }
+"
+"	let g:lightline.active = {
+"				\ 'left':  [ [ 'mode', 'paste' ],
+"				\          [ 'readonly', 'filename', 'modified' ] ],
+"				\ 'right': [ [ 'lineinfo' ],
+"				\            [ 'percent' ],
+"				\            [ 'server_status'] ]
+"				\ }
+"
+endif
+
+" ####### "
+" Archive "
+" ####### "
+
+"Plug 'vim-scripts/restore_view.vim'" bugged
+"Plug 'psliwka/vim-smoothie'
+"Plug 'vim-syntastic/syntastic'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'coldfix/hexhighlight'
+"Plug 'puremourning/vimspector'
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'gelguy/wilder.nvim'
+"Plug 'gko/vim-coloresque'
+"Plug 'junegunn/vim-easy-align'
+"Plug 'yuttie/comfortable-motion.vim'
+"Plug 'c0r73x/colorizer'
+"Plug 'jiangmiao/auto-pairs'
+"Plug 'chrisbra/Colorizer'
+"Plug 'lucasicf/vim-smooth-scroll'
+"Plug 'cskeeters/vim-smooth-scroll'
+"Plug 'terryma/vim-smooth-scroll'
+"Plug 'lucasicf/vim-smooth-scroll'
+"Plug 'severin-lemaignan/vim-minimap'
+"Plug 'wfxr/minimap.vim'
+"Plug 'majutsushi/tagbar'
+
+"###############################"
+call plug#end()
+

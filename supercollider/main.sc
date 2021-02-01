@@ -12,7 +12,41 @@ s.boot();
 s.quit();
 Server.default.boot;
 
-( // PLAITS
+(
+{
+	//some synthesis code
+}.scope
+)
+
+
+// AMPLITUDE
+(
+{SinOsc.ar(440,0.0,0.1)}.scope			//provide freq and mul arguments directly
+{SinOsc.ar(mul:0.1)}.scope			//provide just the multiplier argument explicitly
+{0.1*SinOsc.ar}.scope					//multiply the SinOsc UGen by a constant
+{SinOsc.ar(440, mul: -20.dbamp)}.scope   //use dBs! The conversion calculation is done just once at the
+									    			     //initialisation of the UGen
+)
+// FILTER EXAMPLES
+(
+{LPF.ar(WhiteNoise.ar(0.1),1000)}.scope
+Line.kr(10000,1000,10)
+{LPF.ar(WhiteNoise.ar(0.1),Line.kr(000,10000,10))}.scope
+{Resonz.ar(LFNoise0.ar(400),1000,0.1)}.scope
+)
+// SIMPLE FILTERED NOISE STRUCTURE
+(
+{
+var source, line, filter; 	//local variables to hold objects as we build the patch up
+source=LFNoise0.ar(400);
+line=Line.kr(10000,1000,10);
+filter=Resonz.ar(source,line,0.1); //the filtered output is the input source filtered by Resonz with a line control for the resonant frequency
+filter // last thing is returned from function in curly brackets, i.e. this is the final sound we hear
+}.scope;
+)
+// PLAITS
+(
+{
 	var plaits;
 	var plaits2;
 	var pitch = 60;
@@ -22,8 +56,19 @@ Server.default.boot;
 	var morph = 0.6;
 	var trigger = 0;
 	plaits = {MiPlaits.ar(pitch, engine, harm, timbre, morph, trigger)}.play;
-	plaits2 = {MiPlaits.ar(60, 11, 0.4, 0.3, morph, trigger)}.scope;
+	{MiPlaits.ar([58, 67, 71], 11, 0.4, 0.3, 0.6)}.play;
+	//plaits2 = {MiPlaits.ar(60, 11, 0.4, 0.3, morph, trigger)}.scope;
+}.scope
 )
+
+{SinOsc.ar(400,0,0.1) + SinOsc.ar(660,0,0.1)}.scope
+// equivalent to
+{SinOsc.ar([400,660],0,0.1)}.scope
+{Pan2.ar(WhiteNoise.ar(0.1), MouseX.kr(-1,1))}.scope
+//range pan from -1 to 1
+
+
+
 ( // MIDI
 	// we initialise the MIDI client and the post window will output your devices
 	MIDIClient.init;

@@ -29,7 +29,6 @@ endif
 "### NATIVE ## "
 "################################################ "
 
-
 "nmap <F7> <Plug>(scnvim-send-block)
 "Centering Cursor
 
@@ -38,6 +37,8 @@ endif
 "  au BufEnter,WinEnter,WinNew,VimResized *,*.*
 "        \ let &scrolloff=winheight(win_getid())/2
 "augroup END
+
+
 
 " General settings
 set clipboard=unnamedplus
@@ -55,15 +56,15 @@ set foldmethod=manual
 
 " Folding - remember
 augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
+	autocmd!
+	autocmd BufWinLeave * mkview
+	autocmd BufWinEnter * silent! loadview
 augroup END
 
 augroup SaveManualFolds
-    autocmd!
-    au BufWinLeave, BufLeave ?* silent! mkview
-    au BufWinEnter           ?* silent! loadview
+	autocmd!
+	au BufWinLeave, BufLeave ?* silent! mkview
+	au BufWinEnter           ?* silent! loadview
 augroup END
 
 
@@ -213,6 +214,11 @@ call plug#begin('~/.vim/plugged')
 "   Vim   "
 " ####### "
 
+if has (!('nvim'))
+	Plug 'ervandew/supertab'
+	Plug 'dense-analysis/ale'
+	Plug 'ycm-core/YouCompleteMe'
+endif
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
@@ -233,72 +239,25 @@ Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
 
-if has (!('nvim'))
-	Plug 'ervandew/supertab'
-	Plug 'dense-analysis/ale'
-endif
-"Plug 'ycm-core/YouCompleteMe'
 
 " ###### "
 " Neovim "
 " ###### "
-
-":CocInstall coc-clangd coc-cmake coc-fzf* -- install clang
 if has ('nvim')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
-"Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
-"Plug 'josa42/coc-sh'
-"Plug 'tjdevries/coc-zsh'
-"Plug 'nvim-treesitter/nvim-treesitter'
-"Plug 'Xuyuanp/scrollbar.nvim'
-"Plug 'cpiger/NeoDebug'
-
-" #############
-" SUPERCOLLIDER
-" #############
-if has ('nvim')
 	Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
-	"let g:scnvim_scdoc = 1
-	"let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
-	let g:scnvim_postwin_orientation = 'h'
-	let g:scnvim_postwin_size = 18
-	"lt g:scnvim_postwin_auto_toggle = 1
-"function! s:set_sclang_statusline()
-"		setlocal stl=
-"		setlocal stl+=%f
-"		setlocal stl+=%=
-"		setlocal stl+=%(%l,%c%)
-"		setlocal stl+=\ \|
-"		setlocal stl+=%24.24{scnvim#statusline#server_status()}
-"	endfunction
-"
-"	augroup scnvim_stl
-"		autocmd!
-"		autocmd FileType supercollider call <SID>set_sclang_statusline()
-"	augroup END
-"	" lightline.vim example
-"	let g:lightline = {}
-"	let g:lightline.component_function = {
-"				\ 'server_status': 'scnvim#statusline#server_status',
-"				\ }
-"
-"	let g:lightline.active = {
-"				\ 'left':  [ [ 'mode', 'paste' ],
-"				\          [ 'readonly', 'filename', 'modified' ] ],
-"				\ 'right': [ [ 'lineinfo' ],
-"				\            [ 'percent' ],
-"				\            [ 'server_status'] ]
-"				\ }
-"
 endif
+
+
 " ####### "
 " Archive "
 " ####### "
-
+" -------- VIM --------
 "Plug 'vim-scripts/restore_view.vim'" bugged
 "Plug 'psliwka/vim-smoothie'
 "Plug 'vim-syntastic/syntastic'
@@ -321,6 +280,14 @@ endif
 "Plug 'wfxr/minimap.vim'
 "Plug 'majutsushi/tagbar'
 
+" ------- NVIM --------
+"Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+"Plug 'josa42/coc-sh'
+"Plug 'tjdevries/coc-zsh'
+"Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'Xuyuanp/scrollbar.nvim'
+"Plug 'cpiger/NeoDebug'
+"
 "###############################"
 call plug#end()
 
@@ -328,31 +295,56 @@ call plug#end()
 " #############
 " SUPERCOLLIDER
 " #############
-noremap <Leader>sc :SCNvimStart<CR><ESC>
-
+if has ('nvim')
+	noremap <Leader>sc :SCNvimStart<CR><ESC>
+	let g:scnvim_scdoc = 1
+	let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
+	let g:scnvim_postwin_orientation = 'h'
+	let g:scnvim_postwin_size = 18
+	"lt g:scnvim_postwin_auto_toggle = 1
+	"function! s:set_sclang_statusline()
+	"		setlocal stl=
+	"		setlocal stl+=%f
+	"		setlocal stl+=%=
+	"		setlocal stl+=%(%l,%c%)
+	"		setlocal stl+=\ \|
+	"		setlocal stl+=%24.24{scnvim#statusline#server_status()}
+	"	endfunction
+	"
+	"	augroup scnvim_stl
+	"		autocmd!
+	"		autocmd FileType supercollider call <SID>set_sclang_statusline()
+	"	augroup END
+	"	" lightline.vim example
+	"	let g:lightline = {}
+	"	let g:lightline.component_function = {
+	"				\ 'server_status': 'scnvim#statusline#server_status',
+	"				\ }
+	"	let g:lightline.active = {
+	"				\ 'left':  [ [ 'mode', 'paste' ],
+	"				\          [ 'readonly', 'filename', 'modified' ] ],
+	"				\ 'right': [ [ 'lineinfo' ],
+	"				\            [ 'percent' ],
+	"				\            [ 'server_status'] ]
+	"				\ }
+endif
 
 "################################################ "
-"### WILDMENU  ### "
+"### UTILSNIPS ###
 "################################################ "
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
 
-"call wilder#enable_cmdline_enter()
-"set wildcharm=<Tab>
-"cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
-"cmap <expr> <S-Tab> wilder#in_context() ? wilder#previous() : "\<S-Tab>"
-""" only / and ? is enabled by default
-"call wilder#set_option('modes', ['/', '?', ':'])
-
-"################################################ "
-"### VIMSPECTOR ### "
-"################################################ "
-
-"packadd! vimspector
-"let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
-"let g:vimspector_enable_mappings = 'HUMAN'
 
 "################################################ "
 "### NCOC ### "
 "################################################ "
+":CocInstall coc-clangd coc-cmake coc-fzf* -- install clang
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
 "inoremap <silent><expr> <TAB>
@@ -360,42 +352,15 @@ nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
 			"\ <SID>check_back_space() ? "\<TAB>" :
 			"\ coc#refresh()
 "inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-
 function! s:check_back_space() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-"################################################ "
-"### SCROLLBAR ### "
-"################################################ "
 
-"augroup ScrollbarInit
-"  autocmd!
-"  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-"  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-"  autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
-"augroup end
 
 "################################################ "
-"### GRUVBOX ### "
+"### GRUVBOX MATERIAL ### "
 "################################################ "
-
-
-" Classic
-"let g:gruvbox_contrast_dark='hard'
-"let g:gruvbox_improved_warnings=1
-"let g:gruvbox_sign_color='none'
-"let g:gruvbox_improved_strings=1
-"colorscheme gruvbox
-
-" Airline
-let g:airline_theme='gruvbox_material'
-let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme='base16'
-"let g:airline#extensions#tabline#formatter = 'default'
-
-""" Material
 let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_menu_selection_background = 'yellow'
@@ -438,22 +403,18 @@ let g:gruvbox_material_palette = {
 colorscheme gruvbox-material
 
 "################################################ "
-"### SYNTASTIC ### "
+"### AIRLINE ### "
 "################################################ "
-
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
 "
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
-
+let g:airline_theme='gruvbox_material'
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_theme='base16'
+"let g:airline#extensions#tabline#formatter = 'default'
+"
 "################################################ "
 "### RAINBOW BRACKETS ### "
 "################################################ "
-
+"
 map <C-b> :RainbowToggle<CR>
 "let g:rainbow_active = 1
 
@@ -480,15 +441,6 @@ augroup vimrc_autocmd
 	nmap <C-p> :NERDTreeToggle<CR>
 augroup END
 
-"################################################ "
-"### Minimap ### "
-"################################################ "
-
-"let g:minimap_width = 1
-"let g:minimap_highlight = 'Keyword'
-"let g:minimap_auto_start = 1
-"autocmd VimEnter * Minimap
-"autocmd VimEnter * wincmd p
 
 "################################################ "
 "### SMOOTH SCROLL ### "
@@ -500,46 +452,6 @@ inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(25, 3, 1)<CR>
 inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(25, 3, 1)<CR>
 
 
-"noremap <silent> <PageUp> 20kzb
-"noremap <silent> <PageDown> 20jzb
-"inoremap <silent> <PageUp> <ESC> 20kzbi
-"inoremap <silent> <PageDown> <ESC> 20jzbi
-"inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
-"inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
-"let g:comfortable_motion_no_default_key_mappings = 1
-"let g:comfortable_motion_no_default_key_mappings = 1
-"let g:comfortable_motion_no_default_key_mappings = 1
-"let g:comfortable_motion_friction = 100.0
-"let g:comfortable_motion_air_interval = 600/60
-"let g:comfortable_motion_air_drag = 4.0
-"nnoremap <silent> <PageDown> :call comfortable_motion#flick(600)<CR>
-"nnoremap <silent> <PageUp> :call comfortable_motion#flick(-600)<CR>
-"noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
-"noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
-"noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 3, 1)<CR>
-"noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 3, 1)<CR>
-
-"################################################ "
-"### HEX HIGHLIGHT### "
-"################################################ "
-
-nmap <F2>			<ESC>:ColorToggle<CR>
-"nmap <F2>           <Plug>ToggleHexHighlight
-"nmap <leader><F2>   <Plug>ToggleSchemeHighlight
-
-"################################################ "
-"### YCM ### "
-"################################################ "
-
-" YcmRestartServer to reload
-"let g:ycm_auto_trigger = 0
-"let g:ycm_max_num_candidates = 15
-"let g:ycm_max_num_identifier_candidates = 15
-"let g:ycm_min_num_of_chars_for_completion = 2
-"nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
-"" turn off YCM
-"nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
-
 "################################################ "
 "### 42 HEADER ### "
 "################################################ "
@@ -549,54 +461,12 @@ let b:fortytwoheader_user="wszurkow"
 let b:fortytwoheader_mail="wszurkow@student.42.fr"
 
 "################################################ "
-"### PEEKABOO ### "
-"################################################ "
-"let g:peekaboo_compact=1
-
-"################################################ "
-"### ALE ### "
+"### HEX HIGHLIGHT### "
 "################################################ "
 
-"let g:ale_set_highlights = 1
-"let g:airline#extensions#ale#enabled = 1
-"let g:ale_lint_on_text_changed = 'never'
-"let g:ale_lint_on_insert_leave = 1
-"let g:ale_lint_on_enter = 1
-"let g:ale_hover_cursor = 1
-"let g:ale_set_balloons = 1
-"let g:ale_hover_to_preview = 1
-"let g:ale_cursor_details =1
-"let g:ale_sign_column_always = 1
-"let g:ale_sign_error = '✖✖'
-"let g:ale_sign_warning = '∙∙'
-"let g:ale_open_list = 0
-"let g:ale_change_sign_column_color = 1
-"let g:ale_list_vertical = 0
-"let g:ale_set_quickfix = 0
-"nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-"nmap <silent> <C-j> <Plug>(ale_next_wrap)
-""let g:ale_enabled = 1
-""let g:ale_lint_on_text_changed = 'always'
-"
-"" # Propreties #  "
-"" bold, underline, undercurl, strikethrough, reverse, italic, standout,  nocombine
-"highlight ALEError ctermfg=Red cterm=italic
-"highlight ALEWarning ctermfg=Yellow cterm=italic
-"highlight ALEStyleWarning ctermbg=none cterm=none
-"highlight ALEStyleError ctermbg=none cterm=none
-"
-"function! LinterStatus() abort
-"	let l:counts = ale#statusline#Count(bufnr(''))
-"	let l:all_errors = l:counts.error + l:counts.style_error
-"	let l:all_non_errors = l:counts.total - l:all_errors
-"
-"	return l:counts.total == 0 ? 'OK' : printf(
-"				\   '%dW %dE',
-"				\   all_non_errors,
-"				\   all_errors
-"				\)
-"endfunction
-"set statusline=%{LinterStatus()}
+nmap <F2>			<ESC>:ColorToggle<CR>
+"nmap <F2>           <Plug>ToggleHexHighlight
+"nmap <leader><F2>   <Plug>ToggleSchemeHighlight
 
 "################################################ "
 "### VISUAL-MULTIPLE-CURSORS ### "
@@ -644,6 +514,167 @@ endtry
 
 "################################################ "
 "################################################ "
+"################################################ "
+"################################################ "
+"################################################ "
+"
+"################################################ "
+"### GRUVBOX ### "
+"################################################ "
+
+
+" Classic
+"let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_improved_warnings=1
+"let g:gruvbox_sign_color='none'
+"let g:gruvbox_improved_strings=1
+"colorscheme gruvbox
+
+"################################################ "
+"### YCM ### "
+"################################################ "
+
+" YcmRestartServer to reload
+"let g:ycm_auto_trigger = 0
+"let g:ycm_max_num_candidates = 15
+"let g:ycm_max_num_identifier_candidates = 15
+"let g:ycm_min_num_of_chars_for_completion = 2
+"nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>
+"" turn off YCM
+"nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>
+"
+"################################################ "
+"### ALE ### "
+"################################################ "
+
+"let g:ale_set_highlights = 1
+"let g:airline#extensions#ale#enabled = 1
+"let g:ale_lint_on_text_changed = 'never'
+"let g:ale_lint_on_insert_leave = 1
+"let g:ale_lint_on_enter = 1
+"let g:ale_hover_cursor = 1
+"let g:ale_set_balloons = 1
+"let g:ale_hover_to_preview = 1
+"let g:ale_cursor_details =1
+"let g:ale_sign_column_always = 1
+"let g:ale_sign_error = '✖✖'
+"let g:ale_sign_warning = '∙∙'
+"let g:ale_open_list = 0
+"let g:ale_change_sign_column_color = 1
+"let g:ale_list_vertical = 0
+"let g:ale_set_quickfix = 0
+"nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+"nmap <silent> <C-j> <Plug>(ale_next_wrap)
+""let g:ale_enabled = 1
+""let g:ale_lint_on_text_changed = 'always'
+"
+"" # Propreties #  "
+"" bold, underline, undercurl, strikethrough, reverse, italic, standout,  nocombine
+"highlight ALEError ctermfg=Red cterm=italic
+"highlight ALEWarning ctermfg=Yellow cterm=italic
+"highlight ALEStyleWarning ctermbg=none cterm=none
+"highlight ALEStyleError ctermbg=none cterm=none
+"
+"function! LinterStatus() abort
+"	let l:counts = ale#statusline#Count(bufnr(''))
+"	let l:all_errors = l:counts.error + l:counts.style_error
+"	let l:all_non_errors = l:counts.total - l:all_errors
+"
+"	return l:counts.total == 0 ? 'OK' : printf(
+"				\   '%dW %dE',
+"				\   all_non_errors,
+"				\   all_errors
+"				\)
+"endfunction
+"set statusline=%{LinterStatus()}
+
+"################################################ "
+"### Minimap ### "
+"################################################ "
+
+"let g:minimap_width = 1
+"let g:minimap_highlight = 'Keyword'
+"let g:minimap_auto_start = 1
+"autocmd VimEnter * Minimap
+"autocmd VimEnter * wincmd p
+
+"################################################ "
+"### WILDMENU  ### "
+"################################################ "
+
+"call wilder#enable_cmdline_enter()
+"set wildcharm=<Tab>
+"cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
+"cmap <expr> <S-Tab> wilder#in_context() ? wilder#previous() : "\<S-Tab>"
+""" only / and ? is enabled by default
+"call wilder#set_option('modes', ['/', '?', ':'])
+
+"################################################ "
+"### VIMSPECTOR ### "
+"################################################ "
+
+"packadd! vimspector
+"let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
+"let g:vimspector_enable_mappings = 'HUMAN'
+
+
+"################################################ "
+"### PEEKABOO ### "
+"################################################ "
+"let g:peekaboo_compact=1
+
+
+"################################################ "
+"### SMOOTH SCROLL ### "
+"################################################ "
+"noremap <silent> <PageUp> 20kzb
+"noremap <silent> <PageDown> 20jzb
+"inoremap <silent> <PageUp> <ESC> 20kzbi
+"inoremap <silent> <PageDown> <ESC> 20jzbi
+"inoremap <silent> <PageUp> <ESC>:call smooth_scroll#up(&scroll*2, 1, 4)<CR>i
+"inoremap <silent> <PageDown> <ESC>:call smooth_scroll#down(&scroll*2, 1, 4)<CR>i
+"let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_friction = 100.0
+"let g:comfortable_motion_air_interval = 600/60
+"let g:comfortable_motion_air_drag = 4.0
+"nnoremap <silent> <PageDown> :call comfortable_motion#flick(600)<CR>
+"nnoremap <silent> <PageUp> :call comfortable_motion#flick(-600)<CR>
+"noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
+"noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
+"noremap <silent> <PageUp> :call smooth_scroll#up(&scroll, 3, 1)<CR>
+"noremap <silent> <PageDown> :call smooth_scroll#down(&scroll, 3, 1)<CR>
+
+
+"################################################ "
+"### SYNTASTIC ### "
+"################################################ "
+
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"################################################ "
+"### SCROLLBAR ### "
+"################################################ "
+
+"augroup ScrollbarInit
+"  autocmd!
+"  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+"  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+"  autocmd WinLeave,FocusLost             * silent! lua require('scrollbar').clear()
+"augroup end
+
+
+
+"################################################ "
+"
 " SCROLL BAR - not working
 "
 "func! STL()
