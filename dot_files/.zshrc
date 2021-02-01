@@ -247,7 +247,7 @@ alias showssh="cat ~/.ssh/id_rsa.pub"
 alias yank="xclip -sel clip"
 # xinput --list | grep TouchPad
 # TID=$(xinput list | grep -iPo 'touchpad.*id=\K\d+')
-alias reloadtouchpad="xinput disable 11 && xinput enable 11"
+alias touchpad_restart="xinput disable 11 && xinput enable 11"
 
 
 

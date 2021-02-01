@@ -54,17 +54,17 @@ set foldmethod=manual
 "set signcolumn=number
 
 " Folding - remember
-"augroup remember_folds
-"  autocmd!
-"  autocmd BufWinLeave * mkview
-"  autocmd BufWinEnter * silent! loadview
-"augroup END
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
-"augroup SaveManualFolds
-"    autocmd!
-"    au BufWinLeave, BufLeave ?* silent! mkview
-"    au BufWinEnter           ?* silent! loadview
-"augroup END
+augroup SaveManualFolds
+    autocmd!
+    au BufWinLeave, BufLeave ?* silent! mkview
+    au BufWinEnter           ?* silent! loadview
+augroup END
 
 
 " Key maps
