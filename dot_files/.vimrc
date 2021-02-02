@@ -38,8 +38,6 @@ endif
 "        \ let &scrolloff=winheight(win_getid())/2
 "augroup END
 
-
-
 " General settings
 set clipboard=unnamedplus
 set nu
@@ -372,7 +370,7 @@ let g:gruvbox_material_palette = {
 			\ 'bg3':              ['#3c3836',   '237'],
 			\ 'bg4':              ['#3c3836',   '237'],
 			\ 'bg5':              ['#504945',   '239'],
-			\ 'bg_statusline1':   ['#191d20',   '235'],
+			\ 'bg_statusline1':   ['#1f2428',   '235'],
 			\ 'bg_statusline2':   ['#32302f',   '235'],
 			\ 'bg_statusline3':   ['#504945',   '239'],
 			\ 'bg_diff_green':    ['#32361a',   '22'],

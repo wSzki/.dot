@@ -136,9 +136,9 @@ alias autotune="sudo powertop --auto-tune"
 
 
 ### SERVER
-alias server_start="sudo systemctl start mariadb.service; sudo systemctl start httpd.service"
-alias server_stop="sudo systemctl stop mariadb.service; sudo systemctl stop httpd.service"
-alias server_restart="sudo systemctl restart mariadb.service; sudo systemctl restart httpd.service"
+alias server-start="sudo systemctl start mariadb.service; sudo systemctl start httpd.service"
+alias server-stop="sudo systemctl stop mariadb.service; sudo systemctl stop httpd.service"
+alias server-restart="sudo systemctl restart mariadb.service; sudo systemctl restart httpd.service"
 
 ### RENAULT
 #alias renault="cd /home/wsz/Renault/wszki.github.io/Renault"
@@ -234,8 +234,9 @@ alias services="systemctl --type=service"
 #alias is="vim ~/Tree/Suckless/installScript/installScript.sh"
 alias hdmion="xrandr --output HDMI-2 --auto --above eDP-1"
 alias hdmioff="xrandr --output HDMI-2 --off"
-alias vga_1="xrandr --output DP-1 --auto --above eDP-1"
-alias vga_off="xrandr --output DP-1 --off"
+alias vga-1h="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off"
+alias vga-1v="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x1920 --rotate normal --output DP-1 --mode 1920x1080 --pos 840x0 --rotate left --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off"
+alias vga-off="xrandr --output DP-1 --off"
 alias dualon="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 2025x1440 --rotate normal --output DP-1 --mode 1920x1080 --pos 1060x360 --rotate normal --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 2980x0 --rotate normal"
 alias dualon2="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 366x1920 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 1080x480 --rotate normal"
 alias toweron1="xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1080x1440 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --mode 2560x1440 --pos 1080x0 --rotate normal"
@@ -254,12 +255,12 @@ alias touchpad_restart="xinput disable 11 && xinput enable 11"
 
 ######  SERVICES
 ###     WIFI
-alias ip_info="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
-alias wifi_auto_on="sudo systemctl enable netctl-auto@wlan0.service && sudo systemctl start netctl-auto@wlan0.service"
-alias wifi_auto_off="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
+alias ip-info="ifconfig | grep \"inet \" | grep -v 127.0.0.1"
+alias wifi-auto-on="sudo systemctl enable netctl-auto@wlan0.service && sudo systemctl start netctl-auto@wlan0.service"
+alias wifi-auto-off="sudo systemctl disable netctl-auto@wlan0.service && sudo systemctl stop netctl-auto@wlan0.service"
 alias wifi="sudo wifi-menu"
-alias nmap_local="sudo nmap -sn 192.168.0.0/24"
-alias wifi_restart="sudo systemctl restart netctl-auto@wlan0.service"
+alias nmap-local="sudo nmap -sn 192.168.0.0/24"
+alias wifi-restart="sudo systemctl restart netctl-auto@wlan0.service"
 #alias p="ping google.fr"
 
 ###     BLUETOOTH
@@ -268,11 +269,11 @@ alias bluestop="sudo systemctl disable bluetooth.service && sudo systemctl stop 
 
 ###     PERFORMANCE
 #alias governor-list="cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor"
-alias governor_performance="sudo cpupower frequency-set -g performance"
-alias governor_powersave="sudo cpupower frequency-set -g powersave"
-alias governor_ondemand="sudo cpupower frequency-set -g ondemand"
-alias governor_conservative="sudo cpupower frequency-set -g conservative"
-alias powertop_report="sudo powertop --html=powerreport.html"
+alias governor-performance="sudo cpupower frequency-set -g performance"
+alias governor-powersave="sudo cpupower frequency-set -g powersave"
+alias governor-ondemand="sudo cpupower frequency-set -g ondemand"
+alias governor-conservative="sudo cpupower frequency-set -g conservative"
+alias powertop-report="sudo powertop --html=powerreport.html"
 
 ###     LOGIND.CONF
 alias nosleep="sudo vim /etc/systemd/logind.conf"

@@ -11,6 +11,11 @@ MiRings.ar(in: 0, trig: 0, pit: 60.0, struct: 0.25, bright: 0.5, damp: 0.7, pos:
 s.boot();
 s.quit();
 Server.default.boot;
+(
+a = MiPlaits.ar(pitch: 60.0, engine: 0, harm: 0.1, timbre: 0.5, morph: 0.5, trigger: 0.0, level: 0, fm_mod: 0.0, timb_mod: 0.0, morph_mod: 0.0, decay: 0.5, lpg_colour: 0.5, mul: 1.0);
+{MiVerb.ar(a, time: 0.7, drywet: 0.5, damp: 0.5, hp: 0.05, freeze: 0, diff: 0.625, mul: 1.0, add: 0.0)}.play;
+)
+MiVerb.ar(pitch: 60.0, engine: 0, harm: 0.1, timbre: 0.5, morph: 0.5, trigger: 0.0, level: 0, fm_mod: 0.0, timb_mod: 0.0, morph_mod: 0.0, decay: 0.5, lpg_colour: 0.5, mul: 1.0)
 
 (
 {
