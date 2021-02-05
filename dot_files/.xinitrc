@@ -30,6 +30,7 @@ xset s 180 180 &
 xautolock -time 8 -locker "systemctl suspend" -detectsleep &
 #barrier -f --name wszki 192.168.0.14 &
 #telegram-desktop -startintray &
+#barrierc  -n wszk --enable-crypto --display :0 --debug INFO -f 192.168.0.44 &
 slock &
 rm -rf ~/.tmp/* &
 rm -rf ~/Desktop/ &

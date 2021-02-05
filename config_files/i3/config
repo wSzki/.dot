@@ -40,7 +40,7 @@ exec --no-startup-id i3-msg "workspace 1"
 ### FIBONACCI TILING
 ###################################
 #yay -S autotiling
-exec_always --no-startup-id /usr/bin/autotiling
+#exec_always --no-startup-id /usr/bin/autotiling
 
 
 title_align center
@@ -261,7 +261,8 @@ bindsym $winmod+Shift+x move container to workspace "x"
 bindsym $winmod+Shift+y move container to workspace "y"
 bindsym $winmod+Shift+z move container to workspace "z"
 
-set $vgamonitor DP-1
+set $vgamonitor DP-2-3
+#set $vgamonitor DP-1
 workspace a output $vgamonitor
 workspace b output $vgamonitor
 workspace c output $vgamonitor
@@ -289,6 +290,7 @@ workspace x output $vgamonitor
 workspace y output $vgamonitor
 workspace z output $vgamonitor
 
+
 set $screen eDP-1
 workspace 1 output $screen
 workspace 2 output $screen
@@ -301,8 +303,6 @@ workspace 8 output $screen
 workspace 9 output $screen
 workspace 0 output $screen
 
-set $hdmimonitor HDMI-2
-
 bindsym $winmod+1 workspace "11"
 bindsym $winmod+2 workspace "12"
 bindsym $winmod+3 workspace "13"
@@ -313,6 +313,8 @@ bindsym $winmod+7 workspace "17"
 bindsym $winmod+8 workspace "18"
 bindsym $winmod+9 workspace "19"
 
+#set $hdmimonitor HDMI-2
+set $hdmimonitor DP-2-1
 workspace 11 output $hdmimonitor
 workspace 12 output $hdmimonitor
 workspace 13 output $hdmimonitor

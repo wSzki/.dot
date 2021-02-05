@@ -239,9 +239,21 @@ Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'vim-pandoc/vim-pandoc'
-"Plug 'vim-pandoc/vim-pandoc-syntax'
 
+"WEB DEV
+Plug 'letientai299/vim-react-snippets', { 'branch': 'es6' }
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'neoclide/vim-jsx-improve'
+Plug 'gregsexton/matchtag'
+"Plug 'rstacruz/sparkup'
+"Plug 'ap/vim-css-color'
+
+if has (!('nvim'))
+	Plug 'ervandew/supertab'
+	Plug 'dense-analysis/ale'
+endif
 
 " ###### "
 " Neovim "
@@ -256,6 +268,8 @@ endif
 " Archive "
 " ####### "
 " -------- VIM --------
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'vim-scripts/restore_view.vim'" bugged
 "Plug 'psliwka/vim-smoothie'
 "Plug 'vim-syntastic/syntastic'
@@ -342,7 +356,7 @@ let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
 "################################################ "
 "### NCOC ### "
 "################################################ "
-":CocInstall coc-clangd coc-cmake coc-fzf* -- install clang
+":CocInstall coc- > clangd cmake fzf-preview sh snippets yank html css
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
 "inoremap <silent><expr> <TAB>
