@@ -42,6 +42,8 @@ exec --no-startup-id i3-msg "workspace 1"
 #yay -S autotiling
 #exec_always --no-startup-id /usr/bin/autotiling
 
+# THINKPAD DOCK not working
+ #exec --no-startup-id dockd --daemon
 
 title_align center
 
@@ -75,17 +77,19 @@ bindsym $mod+0 scratchpad show
 #for_window [class="Chromium" instance="chromium"] resize set 1900 1000
 
 # Chrome
-assign [class="Chromium" instance="reservation.42network.org"] r
-assign [class="TelegramDesktop" instance="telegram-desktop"] t
-assign [class="Slack" instance="slack"] s
-assign [class="discord" instance="discord"] d
-assign [class="Chromium" instance="mail.google.com__mail_u_0"] g
-assign [class="Chromium" instance="2.webmail.autistici.org"] a
-for_window [class="TelegramDesktop" instance="telegram-desktop"] focus
+#assign [class="Chromium" instance="reservation.42network.org"] r
+#assign [class="TelegramDesktop" instance="telegram-desktop"] z
+#assign [class="Slack" instance="slack"] s
+#assign [class="discord" instance="discord"] z
+#assign [class="Chromium" instance="mail.google.com__mail_u_0"] z
+#assign [class="Chromium" instance="2.webmail.autistici.org"] z
+#for_window [class="TelegramDesktop" instance="telegram-desktop"] focus
 #for_window [class="Slack" instance="slack"] mark "alpha", move scratchpad
 #for_window [class="discord" instance="discord"], move scratchpad
 #for_window [class="Chromium" instance="mail.google.com__mail_u_0"], move scratchpad
 #for_window [class="Chromium" instance="2.webmail.autistici.org"], move scratchpad
+for_window [class="TelegramDesktop" instance="telegram-desktop"] floating enable resize set 600 800
+for_window [class="discord" instance="discord"] floating enable resize set 600 800
 
 # Raindrop
 for_window [class="Chromium" instance="crx_ldgfbffkinooeloadekpmfoklnobpien"] floating enable resize set 400 400
@@ -206,134 +210,157 @@ bindsym $mod+Shift+8 floating disable move container to workspace number $ws8
 bindsym $mod+Shift+9 floating disable move container to workspace number $ws9
 #bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $winmod+a workspace "a"
-bindsym $winmod+b workspace "b"
-bindsym $winmod+c workspace "c"
-bindsym $winmod+d workspace "d"
-bindsym $winmod+e workspace "e"
-bindsym $winmod+f workspace "f"
-bindsym $winmod+g workspace "g"
-bindsym $winmod+h workspace "h"
-bindsym $winmod+i workspace "i"
-bindsym $winmod+j workspace "j"
-bindsym $winmod+k workspace "k"
-bindsym $winmod+l workspace "l"
-bindsym $winmod+m workspace "m"
-bindsym $winmod+n workspace "n"
-bindsym $winmod+o workspace "o"
-bindsym $winmod+p workspace "p"
-bindsym $winmod+q workspace "q"
-bindsym $winmod+r workspace "r"
-bindsym $winmod+s workspace "s"
-#bindsym $winmod+s [con_mark="alpha"] scratchpad show
-bindsym $winmod+t workspace "t"
-bindsym $winmod+u workspace "u"
-bindsym $winmod+v workspace "v"
-bindsym $winmod+w workspace "w"
-bindsym $winmod+x workspace "x"
-bindsym $winmod+y workspace "y"
-bindsym $winmod+z workspace "z"
-
-bindsym $winmod+Shift+a move container to workspace "a"
-bindsym $winmod+Shift+b move container to workspace "b"
-bindsym $winmod+Shift+c move container to workspace "c"
-bindsym $winmod+Shift+d move container to workspace "d"
-bindsym $winmod+Shift+e move container to workspace "e"
-bindsym $winmod+Shift+f move container to workspace "f"
-bindsym $winmod+Shift+g move container to workspace "g"
-bindsym $winmod+Shift+h move container to workspace "h"
-bindsym $winmod+Shift+i move container to workspace "i"
-bindsym $winmod+Shift+j move container to workspace "j"
-bindsym $winmod+Shift+k move container to workspace "k"
-bindsym $winmod+Shift+l move container to workspace "l"
-bindsym $winmod+Shift+m move container to workspace "m"
-bindsym $winmod+Shift+n move container to workspace "n"
-bindsym $winmod+Shift+o move container to workspace "o"
-bindsym $winmod+Shift+p move container to workspace "p"
-bindsym $winmod+Shift+q move container to workspace "q"
-bindsym $winmod+Shift+r move container to workspace "r"
-bindsym $winmod+Shift+s move container to workspace "s"
-bindsym $winmod+Shift+t move container to workspace "t"
-bindsym $winmod+Shift+u move container to workspace "u"
-bindsym $winmod+Shift+v move container to workspace "v"
-bindsym $winmod+Shift+w move container to workspace "w"
-bindsym $winmod+Shift+x move container to workspace "x"
-bindsym $winmod+Shift+y move container to workspace "y"
-bindsym $winmod+Shift+z move container to workspace "z"
-
-set $vgamonitor DP-2-3
-#set $vgamonitor DP-1
-workspace a output $vgamonitor
-workspace b output $vgamonitor
-workspace c output $vgamonitor
-workspace d output $vgamonitor
-workspace e output $vgamonitor
-workspace f output $vgamonitor
-workspace g output $vgamonitor
-workspace h output $vgamonitor
-workspace i output $vgamonitor
-workspace j output $vgamonitor
-workspace k output $vgamonitor
-workspace l output $vgamonitor
-workspace m output $vgamonitor
-workspace n output $vgamonitor
-workspace o output $vgamonitor
-workspace p output $vgamonitor
-workspace q output $vgamonitor
-workspace r output $vgamonitor
-workspace s output $vgamonitor
-workspace t output $vgamonitor
-workspace u output $vgamonitor
-workspace v output $vgamonitor
-workspace w output $vgamonitor
-workspace x output $vgamonitor
-workspace y output $vgamonitor
-workspace z output $vgamonitor
-
-
+set $vga DP-2-3
+set $hdmim DP-2-1
 set $screen eDP-1
 workspace 1 output $screen
-workspace 2 output $screen
-workspace 3 output $screen
+workspace 2 output $vga
+workspace 3 output $hdmi
 workspace 4 output $screen
 workspace 5 output $screen
 workspace 6 output $screen
 workspace 7 output $screen
 workspace 8 output $screen
 workspace 9 output $screen
-workspace 0 output $screen
-
-bindsym $winmod+1 workspace "11"
-bindsym $winmod+2 workspace "12"
-bindsym $winmod+3 workspace "13"
-bindsym $winmod+4 workspace "14"
-bindsym $winmod+5 workspace "15"
-bindsym $winmod+6 workspace "16"
-bindsym $winmod+7 workspace "17"
-bindsym $winmod+8 workspace "18"
-bindsym $winmod+9 workspace "19"
-
-#set $hdmimonitor HDMI-2
-set $hdmimonitor DP-2-1
-workspace 11 output $hdmimonitor
-workspace 12 output $hdmimonitor
-workspace 13 output $hdmimonitor
-workspace 14 output $hdmimonitor
-workspace 15 output $hdmimonitor
-workspace 16 output $hdmimonitor
-workspace 17 output $hdmimonitor
-workspace 18 output $hdmimonitor
-workspace 19 output $hdmimonitor
-
-bindsym $winmod+Shift+1 move container to workspace "11"
-bindsym $winmod+Shift+2 move container to workspace "12"
-bindsym $winmod+Shift+3 move container to workspace "13"
-bindsym $winmod+Shift+4 move container to workspace "14"
-bindsym $winmod+Shift+5 move container to workspace "15"
-bindsym $winmod+Shift+6 move container to workspace "16"
-bindsym $winmod+Shift+7 move container to workspace "17"
-bindsym $winmod+Shift+8 move container to workspace "18"
-bindsym $winmod+Shift+9 move container to workspace "19"
+#workspace 1 output $screen
+#workspace 2 output $screen
+#workspace 3 output $screen
+#workspace 4 output $hdmi
+#workspace 5 output $hdmi
+#workspace 6 output $hdmi
+#workspace 7 output $vga
+#workspace 8 output $vga
+#workspace 9 output $vga
+#workspace 0 output $screen
+#
+#bindsym $winmod+a workspace "a"
+#bindsym $winmod+b workspace "b"
+#bindsym $winmod+c workspace "c"
+#bindsym $winmod+d workspace "d"
+#bindsym $winmod+e workspace "e"
+#bindsym $winmod+f workspace "f"
+#bindsym $winmod+g workspace "g"
+#bindsym $winmod+h workspace "h"
+#bindsym $winmod+i workspace "i"
+#bindsym $winmod+j workspace "j"
+#bindsym $winmod+k workspace "k"
+#bindsym $winmod+l workspace "l"
+#bindsym $winmod+m workspace "m"
+#bindsym $winmod+n workspace "n"
+#bindsym $winmod+o workspace "o"
+#bindsym $winmod+p workspace "p"
+#bindsym $winmod+q workspace "q"
+#bindsym $winmod+r workspace "r"
+#bindsym $winmod+s workspace "s"
+#bindsym $winmod+t workspace "t"
+#bindsym $winmod+u workspace "u"
+#bindsym $winmod+v workspace "v"
+#bindsym $winmod+w workspace "w"
+#bindsym $winmod+x workspace "x"
+#bindsym $winmod+y workspace "y"
+#bindsym $winmod+z workspace "z"
+#
+#bindsym $winmod+Shift+a move container to workspace "a"
+#bindsym $winmod+Shift+b move container to workspace "b"
+#bindsym $winmod+Shift+c move container to workspace "c"
+#bindsym $winmod+Shift+d move container to workspace "d"
+#bindsym $winmod+Shift+e move container to workspace "e"
+#bindsym $winmod+Shift+f move container to workspace "f"
+#bindsym $winmod+Shift+g move container to workspace "g"
+#bindsym $winmod+Shift+h move container to workspace "h"
+#bindsym $winmod+Shift+i move container to workspace "i"
+#bindsym $winmod+Shift+j move container to workspace "j"
+#bindsym $winmod+Shift+k move container to workspace "k"
+#bindsym $winmod+Shift+l move container to workspace "l"
+#bindsym $winmod+Shift+m move container to workspace "m"
+#bindsym $winmod+Shift+n move container to workspace "n"
+#bindsym $winmod+Shift+o move container to workspace "o"
+#bindsym $winmod+Shift+p move container to workspace "p"
+#bindsym $winmod+Shift+q move container to workspace "q"
+#bindsym $winmod+Shift+r move container to workspace "r"
+#bindsym $winmod+Shift+s move container to workspace "s"
+#bindsym $winmod+Shift+t move container to workspace "t"
+#bindsym $winmod+Shift+u move container to workspace "u"
+#bindsym $winmod+Shift+v move container to workspace "v"
+#bindsym $winmod+Shift+w move container to workspace "w"
+#bindsym $winmod+Shift+x move container to workspace "x"
+#bindsym $winmod+Shift+y move container to workspace "y"
+#bindsym $winmod+Shift+z move container to workspace "z"
+#
+#set $vgamonitor DP-2-3
+##set $vgamonitor DP-1
+#workspace a output $vgamonitor
+#workspace b output $vgamonitor
+#workspace c output $vgamonitor
+#workspace d output $vgamonitor
+#workspace e output $vgamonitor
+#workspace f output $vgamonitor
+#workspace g output $vgamonitor
+#workspace h output $vgamonitor
+#workspace i output $vgamonitor
+#workspace j output $vgamonitor
+#workspace k output $vgamonitor
+#workspace l output $vgamonitor
+#workspace m output $vgamonitor
+#workspace n output $vgamonitor
+#workspace o output $vgamonitor
+#workspace p output $vgamonitor
+#workspace q output $vgamonitor
+#workspace r output $vgamonitor
+#workspace s output $vgamonitor
+#workspace t output $vgamonitor
+#workspace u output $vgamonitor
+#workspace v output $vgamonitor
+#workspace w output $vgamonitor
+#workspace x output $vgamonitor
+#workspace y output $vgamonitor
+#workspace z output $vgamonitor
+#
+#
+#set $screen eDP-1
+#workspace 1 output $screen
+#workspace 2 output $screen
+#workspace 3 output $screen
+#workspace 4 output $screen
+#workspace 5 output $screen
+#workspace 6 output $screen
+#workspace 7 output $screen
+#workspace 8 output $screen
+#workspace 9 output $screen
+#workspace 0 output $screen
+#
+#bindsym $winmod+1 workspace "11"
+#bindsym $winmod+2 workspace "12"
+#bindsym $winmod+3 workspace "13"
+#bindsym $winmod+4 workspace "14"
+#bindsym $winmod+5 workspace "15"
+#bindsym $winmod+6 workspace "16"
+#bindsym $winmod+7 workspace "17"
+#bindsym $winmod+8 workspace "18"
+#bindsym $winmod+9 workspace "19"
+#
+##set $hdmimonitor HDMI-2
+#set $vgamonitor DP-2-3
+#set $hdmimonitor DP-2-1
+#workspace 11 output $hdmimonitor
+#workspace 12 output $hdmimonitor
+#workspace 13 output $hdmimonitor
+#workspace 14 output $hdmimonitor
+#workspace 15 output $hdmimonitor
+#workspace 16 output $hdmimonitor
+#workspace 17 output $hdmimonitor
+#workspace 18 output $hdmimonitor
+#workspace 19 output $hdmimonitor
+#
+#bindsym $winmod+Shift+1 move container to workspace "11"
+#bindsym $winmod+Shift+2 move container to workspace "12"
+#bindsym $winmod+Shift+3 move container to workspace "13"
+#bindsym $winmod+Shift+4 move container to workspace "14"
+#bindsym $winmod+Shift+5 move container to workspace "15"
+#bindsym $winmod+Shift+6 move container to workspace "16"
+#bindsym $winmod+Shift+7 move container to workspace "17"
+#bindsym $winmod+Shift+8 move container to workspace "18"
+#bindsym $winmod+Shift+9 move container to workspace "19"
 
 ###################################
 ### RESIZE
