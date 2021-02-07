@@ -82,6 +82,10 @@ Set priority in config file /etc/netctl/wlan0-...
 - valgrind
 - gdb
 
+// Video streaming
+modprobe v4l2loopback
+
+
 - mosh // SSH alternative
 - gping
 - ytmdl // BETTER YTDL

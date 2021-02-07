@@ -191,9 +191,9 @@ alias ddlddl="cdyt; youtube-dl -xi --audio-format wav --no-playlist"
 
 ### PACMAN
 alias pac="sudo pacman -S"
-
+alias pac-orphans="pacman -Qtd"
 ### YAY
-alias yaycache="rm ~/.cache/yay/completion.cache"
+alias yay-cache-clear="rm ~/.cache/yay/completion.cache"
 
 ### RM LOCK
 #alias rm="rm -i"
@@ -281,8 +281,8 @@ alias powertop-report="sudo powertop --html=powerreport.html"
 alias nosleep="sudo vim /etc/systemd/logind.conf"
 
 ###     SLEEP
-alias sleepoff="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
-alias sleepon="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+alias sleep-off="sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target"
+alias sleep-on="sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target"
 
 ###     BATTERY
 alias battery-monitor="udevadm monitor --property"

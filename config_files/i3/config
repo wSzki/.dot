@@ -1,7 +1,9 @@
 
  ### SETTINGS
 ###################################
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
+#mouse_warping none
+title_align center
 focus_follows_mouse yes
 set $mod Mod1
 set $winmod Mod4
@@ -11,6 +13,8 @@ for_window [class=".*"] border pixel 1
 gaps inner 8
 gaps top -3
 gaps bottom -3
+exec --no-startup-id i3-msg "workspace 1"
+for_window [workspace="11"] floating enable resize set 600 800
 
 # Class                 border  backgr. text    indicator
 client.focused          #191d20 #fabd2f #000000 #fabd2f
@@ -20,14 +24,12 @@ client.urgent           #7c6f64 #fabd2f #3c3836 #fabd2f
 
 #I3IPC SCRIPT
 #https://github.com/giuseppe-dandrea/i3-switch-if-workspace-empty
-exec_always ~/.config/i3-switch-if-workspace-empty/i3-switch-if-workspace-empty
+#exec_always ~/.config/i3-switch-if-workspace-empty/i3-switch-if-workspace-empty
 #exec_always ~/i3ipc-python/examples/workspace_renumber.py
 #exec_always ~/i3ipc-gjs/examples/max-windows-on-ws.js
 
 #automake & autoconf
 #exec_always ~/i3ipc-gjs/examples/max-windows-on-ws.js
-
-exec --no-startup-id i3-msg "workspace 1"
 
 #default_orientation vertical
 #default_orientation horizontal
@@ -45,10 +47,7 @@ exec --no-startup-id i3-msg "workspace 1"
 # THINKPAD DOCK not working
  #exec --no-startup-id dockd --daemon
 
-title_align center
-
-#mouse_warping none
-workspace_auto_back_and_forth no
+#workspace_auto_back_and_forth no
 
 ###################################
 ### SCRATCHPAD
@@ -125,17 +124,19 @@ floating_modifier $mod
 # Executables
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Return exec kitty;
-#bindsym $mod+Return split v exec kitty;
+bindsym $mod+Return split v exec kitty;
 #bindsym $mod+Shift+Return exec st;
 #bindsym $mod+Return split v exec st;
 bindsym $mod+p exec rofi -show run
+bindsym $mod+space exec rofi -show run
 bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
-#bindsym $mod+Shift+i split v exec "chromium --app='https://duck.com'"
+bindsym $mod+grave exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
+bindsym $mod+Shift+i split v exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 
 # i3
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e restart
-bindsym $mod+Shift+q exec "i3-msg exit"
+bindsym $mod+Shift+Delete exec "i3-msg exit"
 
 # Focus
 bindsym $mod+Left focus left
@@ -156,7 +157,7 @@ bindsym $mod+slash split h
 # Layout
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+w fullscreen toggle
-bindsym $mod+space layout toggle tabbed split
+#bindsym $mod+space layout toggle tabbed split
 
 #bindsym $mod+Shift+Right move right ; split v
 #bindsym $mod+Shift+Return exec st;
@@ -182,6 +183,8 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
 
 # Switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -193,6 +196,8 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
+bindsym $mod+bracketleft workspace number $ws11
+bindsym $mod+bracketright workspace number $ws12
 #bindsym $mod+0 workspace number $ws10
 
 bindsym $mod+plus workspace next
@@ -208,20 +213,24 @@ bindsym $mod+Shift+6 floating disable move container to workspace number $ws6
 bindsym $mod+Shift+7 floating disable move container to workspace number $ws7
 bindsym $mod+Shift+8 floating disable move container to workspace number $ws8
 bindsym $mod+Shift+9 floating disable move container to workspace number $ws9
+bindsym $mod+Shift+bracketleft  floating enable move container to workspace number $ws11
+bindsym $mod+Shift+bracketright move container to workspace number $ws12
 #bindsym $mod+Shift+0 move container to workspace number $ws10
 
 set $vga DP-2-3
-set $hdmim DP-2-1
+set $hdmi DP-2-1
 set $screen eDP-1
 workspace 1 output $screen
-workspace 2 output $vga
-workspace 3 output $hdmi
+workspace 2 output $screen
+workspace 3 output $screen
 workspace 4 output $screen
 workspace 5 output $screen
 workspace 6 output $screen
 workspace 7 output $screen
 workspace 8 output $screen
 workspace 9 output $screen
+workspace 11 output $vga
+workspace 12 output $hdmi
 #workspace 1 output $screen
 #workspace 2 output $screen
 #workspace 3 output $screen

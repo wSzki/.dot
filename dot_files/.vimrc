@@ -476,7 +476,7 @@ let b:fortytwoheader_mail="wszurkow@student.42.fr"
 "### HEX HIGHLIGHT### "
 "################################################ "
 
-nmap <F2>			<ESC>:ColorToggle<CR>
+"nmap <F2>			<ESC>:ColorToggle<CR>
 "nmap <F2>           <Plug>ToggleHexHighlight
 "nmap <leader><F2>   <Plug>ToggleSchemeHighlight
 
