@@ -85,7 +85,8 @@ Set priority in config file /etc/netctl/wlan0-...
 // Video streaming
 modprobe v4l2loopback
 
-
+- testdrive
+- photorec // recovery pictures
 - mosh // SSH alternative
 - gping
 - ytmdl // BETTER YTDL

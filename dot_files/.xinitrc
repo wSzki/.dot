@@ -16,7 +16,6 @@ fi
 [ -r ~/.xprofile ] && . ~/.xprofile
 
 # Launch the session, commands below this line will be ignored
-
 xbacklight -set 62 &
 xbindkeys &
 xgamma -gamma 1.3 &
