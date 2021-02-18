@@ -309,7 +309,8 @@ call plug#end()
 " #############
 if has ('nvim')
 	noremap <Leader>sc :SCNvimStart<CR><ESC>
-	let g:scnvim_scdoc = 1
+	" View documentation in vim
+	"let g:scnvim_scdoc = 1
 	let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
 	let g:scnvim_postwin_orientation = 'h'
 	let g:scnvim_postwin_size = 18

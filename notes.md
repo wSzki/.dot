@@ -20,6 +20,10 @@ ctrl e = end
 
 convert file.{jpg, png}
 
+ parallel convert '{}' '{.}.jpg' ::: *.rw2
+
+
+
 # SuperCollider
 /home/wsz/.local/share/SuperCollider/Extensions
 tar xjvf  SuperCollider-3.11.2-Source.tar.bz2

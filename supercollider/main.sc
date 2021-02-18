@@ -9,6 +9,12 @@ MiRings.ar(in: 0, trig: 0, pit: 60.0, struct: 0.25, bright: 0.5, damp: 0.7, pos:
 */
 
 s.boot();
+
+(
+Server.load("./test.sc");
+"./test.sc".load;
+
+
 s.quit();
 Server.default.boot;
 (
