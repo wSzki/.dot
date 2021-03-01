@@ -41,7 +41,7 @@ tar xjvf  SuperCollider-3.11.2-Source.tar.bz2
 # [MISC]
 
 nohup = no hang up, don't kill process if terminal dies
-
+.zprofile contains rofi data., autostartx
 # [WIFI]
 
 wifi-menu
@@ -80,6 +80,8 @@ Set priority in config file /etc/netctl/wlan0-...
 - ttf-scientifica
 - pkg-utils
 - pkgconfig
+- libx11-dev // Xatom.h for st
+- libxft-dev
 - make
 - gcc
 - cpupower
@@ -194,3 +196,47 @@ sudo vim /etc/security/limits.d/99-realtime-privileges.conf
 @audio          -       rtprio          99
 sudo usermod -a -G realtime wsz
 
+
+
+
+Download supercollider from website to complie with source code
+/home/wsz/.local/share/SuperCollider/Extensions
+ ▲ share/SuperCollider/Extensions tree
+.
+├── MiBraids.so
+├── MiClouds.so
+├── MiElements.so
+├── MiMu.so
+├── MiOmi.so
+├── MiPlaits.so
+├── MiRings.so
+├── MiRipples.so
+├── MiTides.so
+├── MiVerb.so
+├── MiWarps.so
+├── sc
+│   ├── Classes
+│   │   ├── MiBraids.sc
+│   │   ├── MiClouds.sc
+│   │   ├── MiElements.sc
+│   │   ├── MiMu.sc
+│   │   ├── MiOmi.sc
+│   │   ├── MiPlaits.sc
+│   │   ├── MiRings.sc
+│   │   ├── MiRipples.sc
+│   │   ├── MiTides.sc
+│   │   ├── MiVerb.sc
+│   │   └── MiWarps.sc
+│   └── HelpSource
+│       └── Classes
+│           ├── MiBraids.schelp
+│           ├── MiClouds.schelp
+│           ├── MiElements.schelp
+│           ├── MiMu.schelp
+│           ├── MiOmi.schelp
+│           ├── MiPlaits.schelp
+│           ├── MiRings.schelp
+│           ├── MiRipples.schelp
+│           ├── MiTides.schelp
+│           └── MiVerb.schelp
+└── scide_scnvim -> /home/wsz/.vim/plugged/scnvim/scide_scnvim

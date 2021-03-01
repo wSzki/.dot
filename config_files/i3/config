@@ -42,7 +42,7 @@ client.urgent           #7c6f64 #fabd2f #3c3836 #fabd2f
 ### FIBONACCI TILING
 ###################################
 #yay -S autotiling
-exec_always --no-startup-id /usr/bin/autotiling
+#exec_always --no-startup-id /usr/bin/autotiling
 
 # THINKPAD DOCK not working
  #exec --no-startup-id dockd --daemon
@@ -130,7 +130,7 @@ bindsym $mod+Return split v exec kitty;
 bindsym $mod+p exec rofi -show run
 bindsym $mod+space exec rofi -show run
 bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
-bindsym $mod+grave exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
+#bindsym $mod+grave exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 bindsym $mod+Shift+i split v exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 
 # i3

@@ -13,7 +13,7 @@ s.boot();
 (
 Server.load("./test.sc");
 "./test.sc".load;
-
+)
 
 s.quit();
 Server.default.boot;
