@@ -108,6 +108,13 @@ alias nmap_scan="nmap -sn 192.168.0.0/24"
 alias collider="pasuspender -- jackd ; jackd -r -d alsa &> /dev/null & vim -c "SCNvimStart" ~/.dot/supercollider/main.sc && killall jackd"
 #alias collider="vim  ~/.dot/supercollider/main.sc"
 
+### RENOISE
+alias renoise="pasuspender -- jackd ; jackd -r -d alsa &> /dev/null & /usr/local/bin/renoise-3.3.1 && killall jackd"
+
+### DOCKER
+alias docker_start="sudo systemctl start docker.service"
+alias docker_stop="sudo systemctl stop docker.service"
+
 ### C
 #alias gcc="clang"
 alias gccc="gcc -Wall -Werror -Wextra"
@@ -121,7 +128,8 @@ alias deepthought="vim ~/42/Libftest/deepthought"
 alias gnl="cd ~/42/gnl"
 alias valgrind="~/.local/bin/colour-valgrind"
 alias bundle="~/.gem/ruby/2.7.0/bin/bundle"
-
+alias ftsrv="cd ~/42/ft_server"
+alias ddbuild="docker build -t server . && docker create -it server /bin/bash &&  "
 ### TASK
 alias ,t="task"
 alias t="clear & task summary ; task list rc.dateformat=a_d/m_H:N ; task calendar "

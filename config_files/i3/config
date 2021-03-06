@@ -122,6 +122,7 @@ floating_modifier $mod
 ###################################
 
 # Executables
+bindsym $mod+Shift+Escape exec systemctl suspend
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Return exec kitty;
 bindsym $mod+Return split v exec kitty;

@@ -33,6 +33,7 @@ xautolock -time 8 -locker "systemctl suspend" -detectsleep &
 slock &
 rm -rf ~/.tmp/* &
 rm -rf ~/Desktop/ &
+barrier &
 exec i3
 
 ####################################################################
