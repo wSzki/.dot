@@ -126,7 +126,7 @@ alias norme="norminette -R CheckForbiddenSourceHeader"
 alias grademe="~/42/Libftest/grademe.sh -n"
 alias deepthought="vim ~/42/Libftest/deepthought"
 alias gnl="cd ~/42/gnl"
-#alias valgrind="~/.local/bin/colour-valgrind"
+alias valgrind="~/.local/bin/colour-valgrind"
 alias bundle="~/.gem/ruby/2.7.0/bin/bundle"
 alias ftsrv="cd ~/42/ft_server"
 alias ddbuild="docker build -t server . && docker create -it server /bin/bash &&  "
@@ -136,6 +136,7 @@ alias t="clear & task summary ; task list rc.dateformat=a_d/m_H:N ; task calenda
 alias ,tdt="task due:tomorrowT12:00"
 alias ,tdl="task delete"
 alias ,tadd="task add"
+alias ddd="cd ~/42/cub3d"
 
 ### CUB3D
 alias man_mlx="man /usr/local/man/man3/mlx.1"
