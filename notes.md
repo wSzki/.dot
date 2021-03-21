@@ -22,6 +22,8 @@ convert file.{jpg, png}
 
  parallel convert '{}' '{.}.jpg' ::: *.rw2
 
+VIM PYTHON
+python3 -m pip install --user --upgrade pynvim
 
 
 # SuperCollider
