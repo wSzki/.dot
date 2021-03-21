@@ -126,7 +126,7 @@ alias norme="norminette -R CheckForbiddenSourceHeader"
 alias grademe="~/42/Libftest/grademe.sh -n"
 alias deepthought="vim ~/42/Libftest/deepthought"
 alias gnl="cd ~/42/gnl"
-alias valgrind="~/.local/bin/colour-valgrind"
+#alias valgrind="~/.local/bin/colour-valgrind"
 alias bundle="~/.gem/ruby/2.7.0/bin/bundle"
 alias ftsrv="cd ~/42/ft_server"
 alias ddbuild="docker build -t server . && docker create -it server /bin/bash &&  "
@@ -136,6 +136,15 @@ alias t="clear & task summary ; task list rc.dateformat=a_d/m_H:N ; task calenda
 alias ,tdt="task due:tomorrowT12:00"
 alias ,tdl="task delete"
 alias ,tadd="task add"
+
+### CUB3D
+alias man_mlx="man /usr/local/man/man3/mlx.1"
+alias man_mlx_loop="man /usr/local/man/man3/mlx_loop.1"
+alias man_mlx_new_image="man /usr/local/man/man3/mlx_new_image.1"
+alias man_mlx_pixel="man /usr/local/man/man3/mlx_pixel_put.1"
+alias man_mlx_window="man /usr/local/man/man3/mlx_new_window.1"
+alias c3d="cd ~/42/cub3d"
+alias gcc_mlx="gcc -I /usr/local/include/  main.c -L /usr/local/lib/ -lXext -lX11 -lmlx"
 # task add Pay rent due:28th recur:monthly until:now+1yr
 
 ### POWERTOP
