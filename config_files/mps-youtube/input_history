@@ -19,3 +19,20 @@ set player mpv
 1
 set player mplayer
 q
+h
+help config
+config
+h
+help basic
+q
+h
+help config
+config set
+set
+/bobby oroza
+1
+h
+h config
+set show_status
+set player mpv
+1

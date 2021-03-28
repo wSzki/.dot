@@ -18,6 +18,14 @@ ctrl e = end
 
 /home/wsz/.vscode-oss/extensions/sainnhe.gruvbox-material-6.3.4/themes
 
+// MOUSE FLICKER
+xrandr --output eDP-1 --auto --output HDMI-2 --auto --scale 2x2 --right-of eDP-1  # Simpler oneliner scaling
+xrandr --output eDP-1 --scale 0.9999x0.9999  # Stop flicker
+
+.Xresources < Xcursor.size: 12
+xf86-video-nouveau ?
+
+
 convert file.{jpg, png}
 
  parallel convert '{}' '{.}.jpg' ::: *.rw2
@@ -132,6 +140,8 @@ Set priority in config file /etc/netctl/wlan0-...
 // Video streaming
 modprobe v4l2loopback
 
+- fwupd  -  update firmware
+- ytfzf
 - testdrive
 - photorec // recovery pictures
 - mosh // SSH alternative

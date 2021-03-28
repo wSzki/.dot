@@ -15,6 +15,7 @@
 "check > vimawesome.com
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+
 "################################################ "
 "### VIMPLUG INSTALL ### "
 "################################################ "
@@ -152,7 +153,6 @@ function! XTermPasteBegin()
 	set paste
 	return ""
 endfunction
-
 " Unknown
 " set hidden
 " set noshowmode
@@ -237,16 +237,16 @@ Plug 'chrisbra/colorizer'
 Plug 'raimondi/delimitmate'
 Plug 'wszki/vim-smooth-scroll'
 Plug 'tommcdo/vim-exchange'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 
 "WEB DEV
-Plug 'letientai299/vim-react-snippets', { 'branch': 'es6' }
+"Plug 'letientai299/vim-react-snippets', { 'branch': 'es6' }
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'yuezk/vim-js'
+"Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'neoclide/vim-jsx-improve'
-Plug 'gregsexton/matchtag'
+"Plug 'gregsexton/matchtag'
 "Plug 'rstacruz/sparkup'
 "Plug 'ap/vim-css-color'
 
@@ -348,11 +348,10 @@ endif
 " Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
 " - https://github.com/Valloric/YouCompleteMe
 " - https://github.com/nvim-lua/completion-nvim
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
-
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
 
 "################################################ "
 "### NCOC ### "
@@ -360,16 +359,38 @@ let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
 ":CocInstall coc- > clangd cmake fzf-preview sh snippets yank html css
 nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
 nmap <silent>  <C-j> <Plug>(coc-diagnostic-next)
-"inoremap <silent><expr> <TAB>
-			"\ pumvisible() ? "\<C-n>" :
-			"\ <SID>check_back_space() ? "\<TAB>" :
-			"\ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+runtime! plugin/supertab.vim
+inoremap <s-tab> <tab>
 
+" COC-VIM TAB SETTINGS START
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+"inoremap <silent><expr> <TAB>
+"			\ pumvisible() ? "\<C-n>" :
+"			\ <SID>check_back_space() ? "\<TAB>" :
+"			\ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"function! s:check_back_space() abort
+"	let col = col('.') - 1
+"	return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"" Use <c-space> to trigger completion.
+"if has('nvim')
+"	inoremap <silent><expr> <c-space> coc#refresh()
+"else
+"	inoremap <silent><expr> <c-@> coc#refresh()
+"endif
+"
+"" Make <CR> auto-select the first completion item and notify coc.nvim to
+"" format on enter, <cr> could be remapped by other vim plugin
+"inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
+"			\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 "################################################ "
 "### GRUVBOX MATERIAL ### "
@@ -485,8 +506,8 @@ nmap <F2>			<ESC>:ColorToggle<CR>
 "### VISUAL-MULTIPLE-CURSORS ### "
 "################################################ "
 let g:VM_maps = {}
-let g:VM_maps['Find Under']                  = '<C-n>'
-let g:VM_maps['Find Subword Under']          = '<C-n>'
+"let g:VM_maps['Find Under']                  = '<C-n>'
+"let g:VM_maps['Find Subword Under']          = '<C-n>'
 let g:VM_maps["Select All"]                  = '\\A'
 let g:VM_maps["Start Regex Search"]          = '\\/'
 let g:VM_maps["Add Cursor Down"]             = '<C-Down>'

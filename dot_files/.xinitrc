@@ -4,9 +4,9 @@
 
 # default arch init scripts
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
-    for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
-        [ -x "$f" ] && . "$f"
-    done
+	for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+		[ -x "$f" ] && . "$f"
+	done
 fi
 
 # user init scripts and settings
@@ -34,6 +34,11 @@ slock &
 rm -rf ~/.tmp/* &
 rm -rf ~/Desktop/ &
 barrier &
+if [[ "$(xrandr | grep "DP-2-1 connected")" != "" ]]; then
+	if [[ "$(xrandr | grep "DP-2-2 connected")" != "" ]]; then
+		~/.screenlayout/mac_4.sh
+	fi
+fi
 exec i3
 
 ####################################################################

@@ -131,6 +131,7 @@ bindsym $mod+Return split v exec kitty;
 bindsym $mod+p exec rofi -show run
 bindsym $mod+space exec rofi -show run
 bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
+#bindsym $mod+i exec "firefox -new-window /home/wsz/.dot/suckless/tab/index.html"
 #bindsym $mod+grave exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 bindsym $mod+Shift+i split v exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 
@@ -219,8 +220,8 @@ bindsym $mod+Shift+bracketright floating disable move container to workspace num
 #bindsym $mod+Shift+0 move container to workspace number $ws10
 #for_window [class="Thunar"] floating enable move right 330px,move down 70px
 # for_window [instance="gsimplecal"] move absolute position 1600 px 920 px
-set $hdmi DP-2-2
-set $vga DP-2-1
+set $vga DP-2-2
+set $hdmi DP-2-1
 set $screen eDP-1
 workspace 1 output $screen
 workspace 2 output $screen

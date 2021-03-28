@@ -187,6 +187,7 @@ alias n42="vim ~/42/notes.md"
 ### MPV
 alias mpyt="mpv --playlist=/home/wsz/.playlist --shuffle --no-video"
 alias playlist="vim ~/.playlist"
+#alias mpsyt="~/.local/bin/mpsyt"
 
 ### CD
 alias cddl="cd ~/.dl"
