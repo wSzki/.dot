@@ -98,6 +98,7 @@ wifi-menu
 - netctl
 - openresolv
 
+- nmtui
 sudo ip link set wlan0 down
 sudo systemctl stop NetworkManager.service
 sudo systemctl disable NetworkManager.service

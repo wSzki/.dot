@@ -54,17 +54,17 @@ set foldmethod=manual
 "set signcolumn=number
 
 " Folding - remember
-augroup remember_folds
-	autocmd!
-	autocmd BufWinLeave * mkview
-	autocmd BufWinEnter * silent! loadview
-augroup END
-
-augroup SaveManualFolds
-	autocmd!
-	au BufWinLeave, BufLeave ?* silent! mkview
-	au BufWinEnter           ?* silent! loadview
-augroup END
+"augroup remember_folds
+"	autocmd!
+"	autocmd BufWinLeave * mkview
+"	autocmd BufWinEnter * silent! loadview
+"augroup END
+"
+"augroup SaveManualFolds
+"	autocmd!
+"	au BufWinLeave, BufLeave ?* silent! mkview
+"	au BufWinEnter           ?* silent! loadview
+"augroup END
 
 
 " Key maps
@@ -213,9 +213,9 @@ call plug#begin('~/.vim/plugged')
 " ####### "
 
 if has (!('nvim'))
-	Plug 'ervandew/supertab'
-	Plug 'dense-analysis/ale'
-	Plug 'ycm-core/YouCompleteMe'
+	"Plug 'ervandew/supertab'
+	"Plug 'dense-analysis/ale'
+	"Plug 'ycm-core/YouCompleteMe'
 endif
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
@@ -251,8 +251,8 @@ Plug 'gorodinskiy/vim-coloresque'
 "Plug 'ap/vim-css-color'
 
 if has (!('nvim'))
-	Plug 'ervandew/supertab'
-	Plug 'dense-analysis/ale'
+	"Plug 'ervandew/supertab'
+	"Plug 'dense-analysis/ale'
 endif
 
 " ###### "
