@@ -312,8 +312,8 @@ if has ('nvim')
 	" View documentation in vim
 	"let g:scnvim_scdoc = 1
 	let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'scnvim-data']
-	let g:scnvim_postwin_orientation = 'h'
-	let g:scnvim_postwin_size = 18
+	let g:scnvim_postwin_orientation = 'v'
+	let g:scnvim_postwin_size = 100
 	"lt g:scnvim_postwin_auto_toggle = 1
 	"function! s:set_sclang_statusline()
 	"		setlocal stl=

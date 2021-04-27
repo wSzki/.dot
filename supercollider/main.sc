@@ -1,7 +1,3 @@
-//<C-e> Send current block or line
-//<M-e> Send current line
-//<F12> Stop
-//<M-L> Clear buffer
 
 /*
 MiPlaits.ar(pitch: 60.0, engine: 0, harm: 0.1, timbre: 0.5, morph: 0.5, trigger: 0.0, level: 0, fm_mod: 0.0, timb_mod: 0.0, morph_mod: 0.0, decay: 0.5, lpg_colour: 0.5, mul: 1.0)
@@ -10,10 +6,10 @@ MiRings.ar(in: 0, trig: 0, pit: 60.0, struct: 0.25, bright: 0.5, damp: 0.7, pos:
 
 s.boot();
 
-(
-Server.load("./test.sc");
-"./test.sc".load;
-)
+//(
+//Server.load("./test.sc");
+//"./test.sc".load;
+//)
 
 s.quit();
 Server.default.boot;
@@ -61,13 +57,13 @@ filter // last thing is returned from function in curly brackets, i.e. this is t
 	var plaits;
 	var plaits2;
 	var pitch = 60;
-	var engine = 6;
-	var harm = 0.25;
-	var timbre = 0.4;
+	var engine = 2;
+	var harm = 0.50;
+	var timbre = 0.2;
 	var morph = 0.6;
-	var trigger = 0;
+	var trigger = 1;
 	plaits = {MiPlaits.ar(pitch, engine, harm, timbre, morph, trigger)}.play;
-	{MiPlaits.ar([58, 67, 71], 11, 0.4, 0.3, 0.6)}.play;
+	//{MiPlaits.ar([58, 67, 71], 11, 0.4, 0.3, 0.6)}.play;
 	//plaits2 = {MiPlaits.ar(60, 11, 0.4, 0.3, morph, trigger)}.scope;
 }.scope
 )
