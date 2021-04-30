@@ -244,7 +244,7 @@ alias pbp="xclip -selection clipboard -o"
 ### MISC
 #alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
 #alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
-
+alias play_music="cd ~/.dot && mpv --playlist=playlist --shuffle --no-video --loop-playlist &>/dev/null & disown"
 alias orca="~/.orca/build/orca"
 
 alias ack="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
