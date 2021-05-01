@@ -10,6 +10,7 @@ zplug "supercrabtree/k", defer:2
 zplug "zsh-users/zsh-autosuggestions"
 zplug "aloxaf/fzf-tab"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "subnixr/minimal"
 #zplug "mjrafferty/apollo-zsh-theme"
 #zplug "geometry-zsh/geometry"
 #zplug "wting/autojump", defer:2
@@ -60,8 +61,8 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
+#export ZSH="$HOME/.oh-my-zsh"
+MNML_PROMPT=(mnml_status mnml_cwd)
 # OTHER PATHS
 #export POD="$HOME/.pod"
 #export DOT="$HOME/.dot"
@@ -78,12 +79,12 @@ export ZSH="$HOME/.oh-my-zsh"
 bindkey "^f" fzf-file-widget
 
  #Sources
-if [ -e ~/.oh-my-zsh/themes/geometry/geometry.zsh ]
-then
-	source ~/.oh-my-zsh/themes/geometry/geometry.zsh
-else
-	~/.dot/downloaders/geo.sh
-fi
+#if [ -e ~/.oh-my-zsh/themes/geometry/geometry.zsh ]
+#then
+#	source ~/.oh-my-zsh/themes/geometry/geometry.zsh
+#else
+#	~/.dot/downloaders/geo.sh
+#fi
 #source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH/oh-my-zsh.sh
 
