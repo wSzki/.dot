@@ -140,6 +140,10 @@ Set priority in config file /etc/netctl/wlan0-...
 
 // Video streaming
 modprobe v4l2loopback
+
+
+- remind
+- birthday - reminder
 - rtv - reddit
 - fwupd  -  update firmware
 - ytfzf
@@ -292,3 +296,8 @@ Download supercollider from website to complie with source code
 │           ├── MiTides.schelp
 │           └── MiVerb.schelp
 └── scide_scnvim -> /home/wsz/.vim/plugged/scnvim/scide_scnvim
+
+
+
+#youtube-dl
+youtube-dl  -xo '%(title)s.%(ext)s' -f 'bestaudio[ext=wav]/best[ext=wav]/best' https://www.youtube.com/watch\?v\=qi66H_04Ppsls

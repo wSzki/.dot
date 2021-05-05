@@ -30,6 +30,12 @@ ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=magenta'
 
+########################## SUBNIXR THEME SETTINGS ######################
+
+MNML_PROMPT=(mnml_status mnml_cwd)
+MNML_MAGICENTER=()
+MNML_INFOLN=()
+
 ########################## APOLLO THEME SETTINGS ######################
 
 #zstyle ':apollo:*:core:modules:left' modules "vi_mode" "status" "dir"
@@ -62,7 +68,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 #export ZSH="$HOME/.oh-my-zsh"
-MNML_PROMPT=(mnml_status mnml_cwd)
+
 # OTHER PATHS
 #export POD="$HOME/.pod"
 #export DOT="$HOME/.dot"
@@ -233,7 +239,7 @@ alias gdb="gdb -q"
 ### K IS LS
 alias ka="k -a"
 alias kk="k -Ah"
-#alias ls="k"
+alias ls="k"
 alias l="k "
 alias lsa="k -a"
 
