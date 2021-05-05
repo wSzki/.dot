@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-killall qjoypad &&
-qjoypad
-/bin/chromium --app='https://derkyjadex.github.io/M8WebDisplay/'
+qjoypad &
+/bin/chromium --app='https://derkyjadex.github.io/M8WebDisplay/' &&
+killall qjoypad

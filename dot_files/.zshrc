@@ -233,8 +233,8 @@ alias gdb="gdb -q"
 ### K IS LS
 alias ka="k -a"
 alias kk="k -Ah"
-alias ls="k"
-alias l="k -a"
+#alias ls="k"
+alias l="k "
 alias lsa="k -a"
 
 
@@ -245,9 +245,14 @@ alias pbp="xclip -selection clipboard -o"
 ### MISC
 #alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
 #alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
+alias bday="birthday -f ~/.dot/schedule"
+alias schedule="vim ~/.dot/schedule"
 alias play_music="cd ~/.dot && mpv --playlist=playlist --shuffle --no-video --loop-playlist &>/dev/null & disown"
 alias orca="~/.orca/build/orca"
-
+alias aliasipinfo="curl ipinfo.io"
+alias internet_log="ss -p"
+alias session_screen_share="cd ; mkfifo sharescreen; script -f sharescreen"
+alias screenshot_terminal="ps aux | convert label:@- process.png"
 alias ack="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
 alias veille="systemctl suspend && slock"
 alias services="systemctl --type=service"
