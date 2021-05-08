@@ -30,7 +30,7 @@ xautolock -time 8 -locker "systemctl suspend" -detectsleep &
 #barrier -f --name wszki 192.168.0.14 &
 #telegram-desktop -startintray &
 #barrierc  -n wszk --enable-crypto --display :0 --debug INFO -f 192.168.0.44 &
-slock &
+#slock &
 rm -rf ~/.tmp/* &
 rm -rf ~/Desktop/ &
 barrier &
@@ -39,6 +39,8 @@ if [[ "$(xrandr | grep "DP-2-1 connected")" != "" ]]; then
 		~/.screenlayout/mac_4.sh
 	fi
 fi
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 exec i3
 
 ####################################################################

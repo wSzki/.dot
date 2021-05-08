@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
+if  pgrep qjoypad; then pkill qjoypad; fi & wait
 qjoypad &
-/bin/chromium --app='https://derkyjadex.github.io/M8WebDisplay/' &&
-killall qjoypad
+/bin/chromium --app='https://derkyjadex.github.io/M8WebDisplay/' &

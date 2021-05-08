@@ -104,6 +104,12 @@ autoload -U compinit && compinit -u
 alias back="~/.dot/backup.sh"
 alias autopush="git add .; git status; git commit -m "autopush"; git push"
 
+### SSH
+if [ $TERM = "xterm-kitty" ]
+then
+	alias ssh="kitty +kitten ssh"
+fi
+
 ### GIT
 alias gitls="curl -s \"https://api.github.com/users/wszki/repos?per_page=100\" | grep -o 'git@[^\"]*'"
 
@@ -197,7 +203,7 @@ alias playlist="vim ~/.playlist"
 #alias mpsyt="~/.local/bin/mpsyt"
 
 ### CD
-alias cddl="cd ~/.dl"
+alias cddl="cd ~/Downloads"
 alias tmp="cd ~/.tmp"
 alias cdt="cd /tmp"
 alias dot="cd ~/.dot"
@@ -214,9 +220,14 @@ alias ytdlm="cdyt; youtube-dl -x --audio-format wav"
 alias dddl="cdyt; youtube-dl -xi --audio-format wav"
 alias dddlhere="youtube-dl -xi --audio-format wav"
 alias ddlddl="cdyt; youtube-dl -xi --audio-format wav --no-playlist"
+alias youtube-dl-wav="youtube-dl -xo '%(title)s.%(ext)s' --audio-format wav"
+alias youtube-dl-playlist="youtube-dl -a playlist -xo '%(title)s.%(ext)s' --audio-format wav"
+
 
 ### PACMAN
 alias pac="sudo pacman -S"
+alias pacss="pacman -Ss"
+alias pacsyu="sudo pacman --noconfirm -Syu & disown"
 alias pac-orphans="pacman -Qtd"
 ### YAY
 alias yay-cache-clear="rm ~/.cache/yay/completion.cache"
@@ -254,6 +265,7 @@ alias pbp="xclip -selection clipboard -o"
 alias bday="birthday -f ~/.dot/schedule"
 alias schedule="vim ~/.dot/schedule"
 alias play_music="cd ~/.dot && mpv --playlist=playlist --shuffle --no-video --loop-playlist &>/dev/null & disown"
+alias nn="killall mpv && play_music"
 alias orca="~/.orca/build/orca"
 alias aliasipinfo="curl ipinfo.io"
 alias internet_log="ss -p"

@@ -141,7 +141,7 @@ Set priority in config file /etc/netctl/wlan0-...
 // Video streaming
 modprobe v4l2loopback
 
-
+- arranger = file organiser
 - remind
 - birthday - reminder
 - rtv - reddit
@@ -301,3 +301,38 @@ Download supercollider from website to complie with source code
 
 #youtube-dl
 youtube-dl  -xo '%(title)s.%(ext)s' -f 'bestaudio[ext=wav]/best[ext=wav]/best' https://www.youtube.com/watch\?v\=qi66H_04Ppsls
+
+
+# 42 WIFI
+
+cd /etc/NetworkManager/system-connections
+sudo touch SSID #SSID is the name of the profile, e.g. eduroam
+sudo nano SSID
+
+
+[ipv6]
+method=auto
+
+[connection]
+id=SSID #(e.g.EDUroam)
+uuid=9e123fbc-0123-46e3-97b5-f3214e123456 #unique uuid will be created upon creation of this profile
+type=802-11-wireless
+
+[802-11-wireless-security]
+key-mgmt=wpa-eap
+auth-alg=open
+
+[802-11-wireless]
+ssid=SSID
+mode=infrastructure
+mac-address=0A:12:3C:DA:C1:A5
+security=802-11-wireless-security
+
+[802-1x]
+eap=peap;
+identity=studentid123123
+phase2-auth=mschapv2
+password=mypass123123
+
+[ipv4]
+method=auto
