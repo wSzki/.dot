@@ -211,7 +211,6 @@ alias pod="cd ~/.pod"
 alias 42="cd ~/42"
 alias bookmarks="cd ~/.dot/bin/bookmarks"
 alias dbin="cd ~/.dot/bin/"
-alias j="autojump"
 alias music="cd ~/.cache/ytmdl"
 #alias cdd="cd ~/Tree "
 
@@ -227,7 +226,7 @@ alias youtube-dl-playlist="youtube-dl -a playlist -xo '%(title)s.%(ext)s' --audi
 ### PACMAN
 alias pac="sudo pacman -S"
 alias pacss="pacman -Ss"
-alias pacsyu="sudo pacman --noconfirm -Syu & disown"
+alias pacsyu="sudo pacman -Syu"
 alias pac-orphans="pacman -Qtd"
 ### YAY
 alias yay-cache-clear="rm ~/.cache/yay/completion.cache"
@@ -262,6 +261,14 @@ alias pbp="xclip -selection clipboard -o"
 ### MISC
 #alias f="fzf -e --preview='cat {}'  --preview-window=right:50%:wrap"
 #alias a="ack --color-match=yellow --color-lineno=magenta --color-filename=blue"
+#
+#
+#
+alias copy="xclip -sel clip"
+#
+#
+#
+#
 alias bday="birthday -f ~/.dot/schedule"
 alias schedule="vim ~/.dot/schedule"
 alias play_music="cd ~/.dot && mpv --playlist=playlist --shuffle --no-video --loop-playlist &>/dev/null & disown"
