@@ -395,7 +395,7 @@ bindsym $mod+r mode "resize"
 # Bottom
 bar {
 tray_output primary
-tray_padding 0
+tray_padding 1
 height 15
 		position bottom
 #	mode hide
