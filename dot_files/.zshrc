@@ -199,7 +199,7 @@ alias n3="vim $POD/_NOTES/cnb.md"
 alias n42="vim ~/42/notes.md"
 ### MPV
 alias mpyt="mpv --playlist=/home/wsz/.playlist --shuffle --no-video"
-alias playlist="vim ~/.playlist"
+alias playlist="vim ~/.dot/playlist"
 #alias mpsyt="~/.local/bin/mpsyt"
 
 ### CD
@@ -215,6 +215,8 @@ alias music="cd ~/.cache/ytmdl"
 #alias cdd="cd ~/Tree "
 
 ### YOUTUBLE DL
+#
+alias youtube-dl-mp3="youtube-dl --extract-audio --audio-format mp3     "
 alias ytdlm="cdyt; youtube-dl -x --audio-format wav"
 alias dddl="cdyt; youtube-dl -xi --audio-format wav"
 alias dddlhere="youtube-dl -xi --audio-format wav"

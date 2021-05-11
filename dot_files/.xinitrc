@@ -36,7 +36,7 @@ rm -rf ~/Desktop/ &
 barrier &
 if [[ "$(xrandr | grep "DP-2-1 connected")" != "" ]]; then
 	if [[ "$(xrandr | grep "DP-2-2 connected")" != "" ]]; then
-		~/.screenlayout/mac_4.sh
+		~/.screenlayout/default.sh
 	fi
 fi
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
