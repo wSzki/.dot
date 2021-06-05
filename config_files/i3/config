@@ -129,7 +129,9 @@ bindsym $mod+Return split v exec kitty;
 #bindsym $mod+Shift+Return exec st;
 #bindsym $mod+Return split v exec st;
 bindsym $mod+p exec rofi -show run
-bindsym $mod+space exec rofi -show run
+bindsym $mod+grave exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'OA
+
+#bindsym $mod+space exec rofi -show run
 bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 #bindsym $mod+i exec "firefox -new-window /home/wsz/.dot/suckless/tab/index.html"
 #bindsym $mod+grave exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
@@ -159,7 +161,7 @@ bindsym $mod+slash split h
 # Layout
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+w fullscreen toggle
-#bindsym $mod+space layout toggle tabbed split
+bindsym $mod+space layout toggle tabbed split
 
 #bindsym $mod+Shift+Right move right ; split v
 #bindsym $mod+Shift+Return exec st;
@@ -247,7 +249,7 @@ workspace 12 output $hdmi
 #workspace 9 output $vga
 #workspace 0 output $screen
 #
-#bindsym $winmod+a workspace "a"
+bindsym $winmod+a workspace "a"
 #bindsym $winmod+b workspace "b"
 #bindsym $winmod+c workspace "c"
 #bindsym $winmod+d workspace "d"
@@ -274,7 +276,7 @@ workspace 12 output $hdmi
 #bindsym $winmod+y workspace "y"
 #bindsym $winmod+z workspace "z"
 #
-#bindsym $winmod+Shift+a move container to workspace "a"
+bindsym $winmod+Shift+a move container to workspace "a"
 #bindsym $winmod+Shift+b move container to workspace "b"
 #bindsym $winmod+Shift+c move container to workspace "c"
 #bindsym $winmod+Shift+d move container to workspace "d"

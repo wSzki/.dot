@@ -39,6 +39,30 @@ endif
 "        \ let &scrolloff=winheight(win_getid())/2
 "augroup END
 
+
+"Add the following snippet to your vimrc to improve scroll performance for certain file types:
+augroup syntaxSyncMinLines
+    autocmd!
+    autocmd Syntax * syntax sync minlines=2000
+augroup END
+
+"Better wrapping
+set breakindent
+set breakindentopt=shift:2
+set showbreak=↳
+"set showbreak=\\\\\↳
+set nowrap
+
+"Automatically equalize splits when Vim is resized
+autocmd VimResized * wincmd =
+
+"automatically update an open buffer if it has been changed outside the current edit session, usually by an external program.
+"set autoread
+"augroup autoRead
+"    autocmd!
+"    autocmd CursorHold * silent! checktime
+"augroup END
+
 " General settings
 set clipboard=unnamedplus
 set nu
@@ -89,14 +113,15 @@ set smartindent
 set linebreak
 set ruler
 set cursorline
-set nowrap
 
 " Search
 set incsearch
 set hlsearch
-set ignorecase
+set infercase
 set smartcase
 nnoremap <CR> :noh<CR><CR>
+"set ignorecase
+"infercase better than ignore
 
 " Split
 set splitbelow
@@ -191,9 +216,10 @@ noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
 noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
 
 " Printf
-noremap <Leader>pd i<Right><CR>printf("%d\n", );<Left><Left>
-noremap <Leader>pi i<Right><CR>printf("%i\n", );<Left><Left>
-noremap <Leader>ps i<Right><CR>printf("%s\n", );<left><Left>
+noremap <Leader>pd oprintf("%d\n", );<Left><Left>
+noremap <Leader>pi oprintf("%i\n", );<Left><Left>
+noremap <Leader>ps oprintf("%s\n", );<left><Left>
+noremap <Leader>ping  oprintf("%s\n", );<left><Left>"----- PING -----"
 
 " Int min & max
 noremap <Leader>intmax i2147483647
@@ -473,6 +499,8 @@ augroup vimrc_autocmd
 	" Go to previous (last accessed) window.
 	autocmd VimEnter * wincmd p
 	nmap <C-p> :NERDTreeToggle<CR>
+	" open in new tab
+	let NERDTreeMapOpenInTab='<ENTER>'
 augroup END
 
 

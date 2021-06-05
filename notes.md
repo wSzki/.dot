@@ -141,6 +141,10 @@ Set priority in config file /etc/netctl/wlan0-...
 // Video streaming
 modprobe v4l2loopback
 
+
+- croc // awesome file sharing
+- cdecl // c explain
+- greenclip - rofi clipboard manager
 - arranger = file organiser
 - remind
 - birthday - reminder
