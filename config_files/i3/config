@@ -129,7 +129,7 @@ bindsym $mod+Return split v exec kitty;
 #bindsym $mod+Shift+Return exec st;
 #bindsym $mod+Return split v exec st;
 bindsym $mod+p exec rofi -show run
-bindsym $mod+grave exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'OA
+bindsym $mod+grave exec rofi -lines 15 -width 750 -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'OA
 
 #bindsym $mod+space exec rofi -show run
 bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
