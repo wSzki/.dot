@@ -134,7 +134,7 @@ alias gccc="gcc -Wall -Werror -Wextra"
 alias clangc="gcc -Wall -Werror -Wextra"
 alias gccf="gcc -g -fsanitize=address -Wall -Werror -Wextra"
 alias clangf="gcc -g -fsanitize=address -Wall -Werror -Wextra"
-alias norminette="~/.norminette/norminette.rb"
+#alias norminette="~/.norminette/norminette.rb"
 alias norme="norminette -R CheckForbiddenSourceHeader"
 alias grademe="~/42/Libftest/grademe.sh -n"
 alias deepthought="vim ~/42/Libftest/deepthought"
@@ -188,7 +188,9 @@ alias krc="vim ~/.config/kitty/kitty.conf"
 ### VIM
 FILE="/etc/passwd"
 if [ -f /bin/nvim ];then alias vim="nvim" ; fi
-alias v="vim -o \`fzf\`"
+#alias v="vim -o \`fzf\`"
+alias v="xdotool key v i m space asterisk asterisk Tab"
+alias c="xdotool key c d space asterisk asterisk Tab"
 
 ### NOTES
 alias n0="vim $DOT/notes.md"
@@ -267,6 +269,8 @@ alias pbp="xclip -selection clipboard -o"
 #
 #
 alias copy="xclip -sel clip"
+alias ytfzf="ytfzf -t"
+alias yyy="ytfzf -tm"
 #
 #
 #

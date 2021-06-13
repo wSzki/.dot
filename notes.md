@@ -1,5 +1,18 @@
 https://kkovacs.eu/cool-but-obscure-unix-tools
 
+
+foreach
+vpath
+makefile
+
+#Norminette
+
+git clone https://github.com/42School/norminette.git ~/.norminette                                                             ~
+cd ~/.norminette
+pip3 install -r requirements.txt
+sudo python3 setup.py install
+
+
 #Raspberry
 startx in /etc/profile
 
@@ -142,6 +155,8 @@ Set priority in config file /etc/netctl/wlan0-...
 modprobe v4l2loopback
 
 
+- info
+- howdoi
 - croc // awesome file sharing
 - cdecl // c explain
 - greenclip - rofi clipboard manager

@@ -1,3 +1,2 @@
 #!/bin/bash
-
-/bin/chromium --app="https://www.synthtopia.com"
+/bin/firefox 'https://www.synthtopia.com/'

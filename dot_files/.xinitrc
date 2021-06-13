@@ -33,12 +33,13 @@ xautolock -time 8 -locker "systemctl suspend" -detectsleep &
 #slock &
 rm -rf ~/.tmp/* &
 rm -rf ~/Desktop/ &
-barrier &
+#barrier &
 if [[ "$(xrandr | grep "DP-2-1 connected")" != "" ]]; then
 	if [[ "$(xrandr | grep "DP-2-2 connected")" != "" ]]; then
 		~/.screenlayout/default.sh
 	fi
 fi
+
 greenclip daemon &
 #eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 #export SSH_AUTH_SOCK

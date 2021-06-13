@@ -42,8 +42,8 @@ endif
 
 "Add the following snippet to your vimrc to improve scroll performance for certain file types:
 augroup syntaxSyncMinLines
-    autocmd!
-    autocmd Syntax * syntax sync minlines=2000
+	autocmd!
+	autocmd Syntax * syntax sync minlines=2000
 augroup END
 
 "Better wrapping
@@ -90,6 +90,24 @@ set foldmethod=manual
 "	au BufWinEnter           ?* silent! loadview
 "augroup END
 
+"Close vim, last buffer
+"function! CloseOnLast()
+	"let cnt = 0
+
+	"for i in range(0, bufnr("$"))
+		"if buflisted(i)
+			"let cnt += 1
+		"endif
+	"endfor
+
+	"if cnt <= 1
+		"q
+	"else
+		"bd
+	"endif
+"endfunction
+
+"nnoremap qq :call CloseOnLast()<CR>
 
 " Key maps
 nmap <f11> :windo set relativenumber!<CR>
@@ -196,12 +214,17 @@ noremap <Leader>wso :w <CR>:so % <CR><ESC>
 
 nnoremap <C-w> <ESC><ESC><ESC>:w<CR><ESC>
 inoremap <C-w> <ESC><ESC>:w<CR><ESC>i
-
 " Remap visual block
 nnoremap <C-e> <C-q>
 
 nnoremap <C-q> <ESC><ESC>:q<CR>
 inoremap <C-q> <ESC><ESC>:q<CR>
+
+nnoremap <C-PageUp> :bp<CR>
+nnoremap <C-Down> :bn<CR>
+
+inoremap <C-PageUp> <ESC><ESC>:bp<CR>
+inoremap <C-Down> <ESC><ESC>;bn<CR>
 
 " ### C
 " Libraries
@@ -214,7 +237,7 @@ noremap <Leader>stdarg i#include <stdarg.h><CR><ESC>
 " Misc
 noremap <Leader>main iint	main(int ac, char **av)<CR>{<CR>}<Up><CR>
 noremap <Leader>while iwhile()<CR>{<CR>}<Up><CR><Up><Up><End><ESC>gg=G`` i
-
+noremap <Leader>brace o}<UP><CR><UP>{<ESC>gg=G``
 " Printf
 noremap <Leader>pd oprintf("%d\n", );<Left><Left>
 noremap <Leader>pi oprintf("%i\n", );<Left><Left>

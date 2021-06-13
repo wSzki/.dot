@@ -1,3 +1,1 @@
-#!/bin/bash
-
-/bin/chromium --app="https://2.webmail.autistici.org/?_task=mail&_mbox=INBOX"
+firefox https://2.webmail.autistici.org/?_task=mail&_mbox=INBOX

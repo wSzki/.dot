@@ -14,6 +14,7 @@ gaps inner 8
 gaps top -3
 gaps bottom -3
 exec --no-startup-id i3-msg "workspace 1"
+exec --no-startup-id dockd --daemon
 #for_window [workspace="11"] floating enable resize set 600 800
 
 # Class                 border  backgr. text    indicator
@@ -132,7 +133,9 @@ bindsym $mod+p exec rofi -show run
 bindsym $mod+grave exec rofi -lines 15 -width 750 -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'OA
 
 #bindsym $mod+space exec rofi -show run
-bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
+bindsym $mod+i exec firefox --new-tab ~/.dot/suckless/tab/index.html
+#bindsym $mod+i exec firefox
+#bindsym $mod+i exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 #bindsym $mod+i exec "firefox -new-window /home/wsz/.dot/suckless/tab/index.html"
 #bindsym $mod+grave exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
 bindsym $mod+Shift+i split v exec "chromium --app='file:///home/wsz/.dot/suckless/tab/index.html'"
@@ -155,8 +158,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right ;
 
 # Split
-bindsym $mod+backslash split v
-bindsym $mod+slash split h
+bindsym $mod+slash split v
+bindsym $mod+backslash split h
 
 # Layout
 bindsym $mod+Shift+space floating toggle
