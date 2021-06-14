@@ -234,6 +234,7 @@ alias pacsyu="sudo pacman -Syu"
 alias pac-orphans="pacman -Qtd"
 ### YAY
 alias yay-cache-clear="rm ~/.cache/yay/completion.cache"
+alias yay="paru -S"
 
 ### RM LOCK
 #alias rm="rm -i"

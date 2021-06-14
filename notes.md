@@ -1,19 +1,33 @@
 https://kkovacs.eu/cool-but-obscure-unix-tools
 
+###### USE INFO FOR MAN #######
+
+# FIREFOX
+
+- SCALE
+ about:config layout.css.devPixelsPerPx
+
+# HUB
+Generate token in github > dev.settings
+Use instead password, username = wszki
+
+# MAKEFILE
 
 foreach
 vpath
 makefile
 
-#Norminette
+# NORMINETTE
 
-git clone https://github.com/42School/norminette.git ~/.norminette                                                             ~
+git clone https://github.com/42School/norminette.git ~/.norminette
 cd ~/.norminette
 pip3 install -r requirements.txt
 sudo python3 setup.py install
 
+# VIM PYTHON
+python3 -m pip install --user --upgrade pynvim
 
-#Raspberry
+# RASPBERRY
 startx in /etc/profile
 
 # [TIPS]
@@ -29,28 +43,30 @@ sudo !!
 ctrl a = begin
 ctrl e = end
 
+convert file.{jpg, png}
+parallel convert '{}' '{.}.jpg' ::: *.rw2
+
+`
+
+# VSCODE THEME LOCATION
 /home/wsz/.vscode-oss/extensions/sainnhe.gruvbox-material-6.3.4/themes
 
-// MOUSE FLICKER
+
+# MOUSE FLICKER
 xrandr --output eDP-1 --auto --output HDMI-2 --auto --scale 2x2 --right-of eDP-1  # Simpler oneliner scaling
 xrandr --output eDP-1 --scale 0.9999x0.9999  # Stop flicker
-
-.Xresources < Xcursor.size: 12
 xf86-video-nouveau ?
 
 
-convert file.{jpg, png}
-
- parallel convert '{}' '{.}.jpg' ::: *.rw2
-
-VIM PYTHON
-python3 -m pip install --user --upgrade pynvim
+# MOUSE SIZE
+.Xresources < Xcursor.size: 12
 
 
-# SuperCollider
+
+# SUPERCOLLIDER
 /home/wsz/.local/share/SuperCollider/Extensions
 tar xjvf  SuperCollider-3.11.2-Source.tar.bz2
-
+``
 ▲ share/SuperCollider/Extensions tree
 .
 ├── MiBraids.so
@@ -90,7 +106,7 @@ tar xjvf  SuperCollider-3.11.2-Source.tar.bz2
 │           ├── MiTides.schelp
 │           └── MiVerb.schelp
 └── scide_scnvim -> /home/wsz/.vim/plugged/scnvim/scide_scnvim
-`
+``
 
 # add user to video group for backlight control
 # acpi backlight
