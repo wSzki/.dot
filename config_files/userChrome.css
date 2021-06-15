@@ -1,0 +1,44 @@
+#tabbrowser-tabs, #tabbrowser-tabs arrowscrollbox { min-height: 0 !important; }
+#tabbrowser-tabs tab { height: var(--tab-min-height); }
+#tabbrowser-tabs tab:first-of-type:last-of-type { display: none !important; }
+
+
+/* HIDE COMPLETELY */
+/*#main-window[chromehidden*="toolbar"] #nav-bar {*/
+  /*visibility: collapse;*/
+/*}*/
+/*#TabsToolbar { visibility: collapse !important; }*/
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+/* remove all items from the urlbar drop down */
+#PopupAutoCompleteRichResult {display:none !important;}
+
+  #urlbar .search-one-offs:not([hidden]) {
+    display: none !important;
+  }
+
+
+#PopupAutoCompleteRichResult {
+  display: none!important;
+}
+
+ #nav-bar {
+     min-height: 0 !important;
+     max-height: 0 !important;
+     height: 0 !important;
+     --moz-transform: scaleY(0) !important;
+     transform: scaleY(0) !important;
+     transition: all 0.1s ease !important;
+ }
+
+/*Thanks to /u/Ynjxsjmh/ for #nav-bar:focus-within*/
+ #titlebar:hover~#nav-bar,
+ #nav-bar:hover,
+ #nav-bar:focus-within {
+     --moz-transform: scale(1) !important;
+     transform: scale(1) !important;
+     max-height: 36px !important;
+     height: 36px !important;
+     min-height: 36px !important;
+ }

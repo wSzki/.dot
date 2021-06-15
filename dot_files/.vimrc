@@ -92,19 +92,19 @@ set foldmethod=manual
 
 "Close vim, last buffer
 "function! CloseOnLast()
-	"let cnt = 0
+"let cnt = 0
 
-	"for i in range(0, bufnr("$"))
-		"if buflisted(i)
-			"let cnt += 1
-		"endif
-	"endfor
+"for i in range(0, bufnr("$"))
+"if buflisted(i)
+"let cnt += 1
+"endif
+"endfor
 
-	"if cnt <= 1
-		"q
-	"else
-		"bd
-	"endif
+"if cnt <= 1
+"q
+"else
+"bd
+"endif
 "endfunction
 
 "nnoremap qq :call CloseOnLast()<CR>
@@ -310,6 +310,14 @@ endif
 if has ('nvim')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } }
+	Plug 'kyazdani42/nvim-web-devicons'
+	" Recommended (for coloured icons)
+	" Plug 'ryanoasis/vim-devicons' Icons without colours
+	"Plug 'akinsho/nvim-bufferline.lua'
+	"Plug 'onsails/lspkind-nvim'
+	"Plug 'nvim-lua/popup.nvim'
+	"Plug 'nvim-lua/plenary.nvim'
+	"Plug 'nvim-telescope/telescope.nvim'
 endif
 
 
