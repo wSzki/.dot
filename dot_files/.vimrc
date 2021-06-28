@@ -64,7 +64,10 @@ autocmd VimResized * wincmd =
 "augroup END
 
 " General settings
+" Disable clear clipboard onleave
+"autocmd VimLeave * call system("xclip -ib", getreg('+'))
 set clipboard=unnamedplus
+"set clipboard=unnamed
 set nu
 syntax on
 set scrolloff=5
@@ -211,7 +214,8 @@ endfunction
 " ### GLOBAL
 "noremap <Leader>pi :so% <CR> :PlugInstall<CR><ESC>
 noremap <Leader>wso :w <CR>:so % <CR><ESC>
-
+nnoremap <C-m> <ESC><ESC><ESC>:make re<CR>
+"inoremap <S-C-m> <ESC><ESC><ESC>:make re<CR>
 nnoremap <C-w> <ESC><ESC><ESC>:w<CR><ESC>
 inoremap <C-w> <ESC><ESC>:w<CR><ESC>i
 " Remap visual block
@@ -221,10 +225,10 @@ nnoremap <C-q> <ESC><ESC>:q<CR>
 inoremap <C-q> <ESC><ESC>:q<CR>
 
 nnoremap <C-PageUp> :bp<CR>
-nnoremap <C-Down> :bn<CR>
+nnoremap <C-PageDown> :bn<CR>
 
 inoremap <C-PageUp> <ESC><ESC>:bp<CR>
-inoremap <C-Down> <ESC><ESC>;bn<CR>
+inoremap <C-PageDown> <ESC><ESC>;bn<CR>
 
 " ### C
 " Libraries

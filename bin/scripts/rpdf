@@ -2,5 +2,5 @@
 
 
 #!/bin/bash
-pdftotext -layout $1 - | /bin/ccat --color=always | less -r
+pdftotext -layout $1 - | bat --color=always | less -r
 

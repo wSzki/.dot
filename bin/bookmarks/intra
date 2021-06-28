@@ -1,2 +1,2 @@
 #!/bin/bash
-/bin/firefox 'https://profile.intra.42.fr/'
+/bin/chromium --app='https://profile.intra.42.fr/'

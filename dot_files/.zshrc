@@ -18,6 +18,7 @@ zplug "subnixr/minimal"
 
 zplug load #--verbose
 
+
 ########################## SYNTAX HIGHLIGHTING #######################
 
 ZSH_HIGHLIGHT_STYLES[path]='fg=gray, italic'
@@ -76,10 +77,23 @@ fi
 #export PATH="$DOT/bin/bookmarks:$PATH"
 
 # Native Plugins
-plugins=(autojump colorize git colored-man-pages fzf)
+plugins=(autojump colorize git fzf)
 #plugins=(colorize autojump git k colored-man-pages fzf thefuck zsh-autosuggestions)
 
+# Man colors
+# 31 red 32 green 33 yellow 34 blue 1; bold 4; underline
+export LESS_TERMCAP_mb=$'\e[1;31m'
+# Function Names and Paragraph Title
+export LESS_TERMCAP_md=$'\e[31m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+# End Message
+export LESS_TERMCAP_so=$'\e[1;34m'
+export LESS_TERMCAP_ue=$'\e[0m'
+# Variables
+export LESS_TERMCAP_us=$'\e[1;33m'
 export ZSH="$HOME/.oh-my-zsh"
+
 
 # Bindkeys
 bindkey "^f" fzf-file-widget
@@ -454,5 +468,6 @@ export NVM_DIR="$HOME/.config"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 eval $(thefuck --alias)
+
+source /home/wsz/.config/broot/launcher/bash/br

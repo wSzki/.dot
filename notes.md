@@ -1,6 +1,11 @@
-https://kkovacs.eu/cool-but-obscure-unix-tools
 
+
+###############################
 ###### USE INFO FOR MAN #######
+###############################
+
+
+https://kkovacs.eu/cool-but-obscure-unix-tools
 
 # UNGOOGLED CHROMIUM
 https://github.com/ungoogled-software/ungoogled-chromium-archlinux
@@ -15,12 +20,11 @@ sudo /bin/gethostszero
 sudo hosts-gen
 
 # M8
-
+<!--use pavucontrol to set default soundcard-->
 sudo usermod -aG dialout $USER
 sudo usermod -aG uucp $USER
 
 # FIREFOX
-
 - SCALE
 about:config layout.css.devPixelsPerPx
 
@@ -31,31 +35,31 @@ about:config layout.css.devPixelsPerPx
 
 /* HIDE COMPLETELY */
 /*#main-window[chromehidden*="toolbar"] #nav-bar {*/
-  /*visibility: collapse;*/
+/*visibility: collapse;*/
 /*}*/
 /*#TabsToolbar { visibility: collapse !important; }*/
 
 
 
- #nav-bar {
-     min-height: 0 !important;
-     max-height: 0 !important;
-     height: 0 !important;
-     --moz-transform: scaleY(0) !important;
-     transform: scaleY(0) !important;
-     transition: all 0.1s ease !important;
- }
+#nav-bar {
+	min-height: 0 !important;
+	max-height: 0 !important;
+height: 0 !important;
+		--moz-transform: scaleY(0) !important;
+transform: scaleY(0) !important;
+transition: all 0.1s ease !important;
+}
 
- /* Thanks to /u/Ynjxsjmh/ for #nav-bar:focus-within
- #titlebar:hover~#nav-bar,
- #nav-bar:hover,
- #nav-bar:focus-within {
-     --moz-transform: scale(1) !important;
-     transform: scale(1) !important;
-     max-height: 36px !important;
-     height: 36px !important;
-     min-height: 36px !important;
- }
+/* Thanks to /u/Ynjxsjmh/ for #nav-bar:focus-within
+#titlebar:hover~#nav-bar,
+#nav-bar:hover,
+#nav-bar:focus-within {
+--moz-transform: scale(1) !important;
+transform: scale(1) !important;
+max-height: 36px !important;
+height: 36px !important;
+min-height: 36px !important;
+}
 
 
 
@@ -64,13 +68,11 @@ Generate token in github > dev.settings
 Use instead password, username = wszki
 
 # MAKEFILE
-
 foreach
 vpath
 makefile
 
 # NORMINETTE
-
 git clone https://github.com/42School/norminette.git ~/.norminette
 cd ~/.norminette
 pip3 install -r requirements.txt
@@ -83,7 +85,6 @@ python3 -m pip install --user --upgrade pynvim
 startx in /etc/profile
 
 # [TIPS]
-
 `
 for i in *.png
 do
@@ -103,21 +104,31 @@ parallel convert '{}' '{.}.jpg' ::: *.rw2
 # VSCODE THEME LOCATION
 /home/wsz/.vscode-oss/extensions/sainnhe.gruvbox-material-6.3.4/themes
 
-
 # MOUSE FLICKER
 xrandr --output eDP-1 --auto --output HDMI-2 --auto --scale 2x2 --right-of eDP-1  # Simpler oneliner scaling
 xrandr --output eDP-1 --scale 0.9999x0.9999  # Stop flicker
 xf86-video-nouveau ?
 
-
 # MOUSE SIZE
 .Xresources < Xcursor.size: 12
 
-
+# AUDIO
+<!--check all missing components-->
+git clone git://github.com/raboof/realtimeconfigquickscan.git
+cd realtimeconfigquickscan
+perl ./realTimeConfigQuickScan.pl
 
 # SUPERCOLLIDER
 /home/wsz/.local/share/SuperCollider/Extensions
 tar xjvf  SuperCollider-3.11.2-Source.tar.bz2
+
+	sudo pacman -S realtime-privileges
+	sudo vim /etc/security/limits.d/99-realtime-privileges.conf
+	@audio          -       rtprio          99
+	sudo usermod -a -G realtime wsz
+
+	Download supercollider from website to complie with source code
+	/home/wsz/.local/share/SuperCollider/Extensions
 ``
 ▲ share/SuperCollider/Extensions tree
 .
@@ -172,6 +183,7 @@ tar xjvf  SuperCollider-3.11.2-Source.tar.bz2
 
 nohup = no hang up, don't kill process if terminal dies
 .zprofile contains rofi data., autostartx
+
 # [WIFI]
 
 wifi-menu
@@ -180,17 +192,18 @@ wifi-menu
 - openresolv
 
 - nmtui
-sudo ip link set wlan0 down
-sudo systemctl stop NetworkManager.service
-sudo systemctl disable NetworkManager.service
-sudo systemctl enable netctl-auto@wlan0.service
+- nmcli radio wifi on off
+- nm-connection-editor > GUI
 
-sudo systemctl start netctl-auto@wlan0.service
-Set priority in config file /etc/netctl/wlan0-...
+<!--sudo ip link set wlan0 down-->
+<!--sudo systemctl stop NetworkManager.service-->
+<!--sudo systemctl disable NetworkManager.service-->
+<!--sudo systemctl enable netctl-auto@wlan0.service-->
 
+<!--sudo systemctl start netctl-auto@wlan0.service-->
+<!--Set priority in config file /etc/netctl/wlan0-...-->
 
 # [AUR]
-
 
 ## [Virtualbox]
 
@@ -215,6 +228,7 @@ Set priority in config file /etc/netctl/wlan0-...
 	- libxft-dev
 	- make
 	- gcc
+	- colorgcc
 	- cpupower
 	- valgrind
 	- gdb
@@ -334,64 +348,12 @@ Set priority in config file /etc/netctl/wlan0-...
 # POWERTOP
 	etc/default/cpupower -> set default governor
 
-# AUDIO
-	sudo pacman -S realtime-privileges
-	sudo vim /etc/security/limits.d/99-realtime-privileges.conf
-	@audio          -       rtprio          99
-	sudo usermod -a -G realtime wsz
-
-
-
-
-	Download supercollider from website to complie with source code
-	/home/wsz/.local/share/SuperCollider/Extensions
-	▲ share/SuperCollider/Extensions tree
-	.
-	├── MiBraids.so
-	├── MiClouds.so
-	├── MiElements.so
-	├── MiMu.so
-	├── MiOmi.so
-	├── MiPlaits.so
-	├── MiRings.so
-	├── MiRipples.so
-	├── MiTides.so
-	├── MiVerb.so
-	├── MiWarps.so
-	├── sc
-	│   ├── Classes
-	│   │   ├── MiBraids.sc
-	│   │   ├── MiClouds.sc
-	│   │   ├── MiElements.sc
-	│   │   ├── MiMu.sc
-	│   │   ├── MiOmi.sc
-	│   │   ├── MiPlaits.sc
-	│   │   ├── MiRings.sc
-	│   │   ├── MiRipples.sc
-	│   │   ├── MiTides.sc
-	│   │   ├── MiVerb.sc
-	│   │   └── MiWarps.sc
-	│   └── HelpSource
-	│       └── Classes
-	│           ├── MiBraids.schelp
-	│           ├── MiClouds.schelp
-	│           ├── MiElements.schelp
-	│           ├── MiMu.schelp
-	│           ├── MiOmi.schelp
-	│           ├── MiPlaits.schelp
-	│           ├── MiRings.schelp
-	│           ├── MiRipples.schelp
-	│           ├── MiTides.schelp
-	│           └── MiVerb.schelp
-	└── scide_scnvim -> /home/wsz/.vim/plugged/scnvim/scide_scnvim
-
-
-
 #youtube-dl
 	youtube-dl  -xo '%(title)s.%(ext)s' -f 'bestaudio[ext=wav]/best[ext=wav]/best' https://www.youtube.com/watch\?v\=qi66H_04Ppsls
 
-
 # 42 WIFI
+
+USE nm-connection-editor
 
 	cd /etc/NetworkManager/system-connections
 	sudo touch SSID #SSID is the name of the profile, e.g. eduroam
@@ -402,7 +364,7 @@ Set priority in config file /etc/netctl/wlan0-...
 	method=auto
 
 	[connection]
-id=SSID #(e.g.EDUroam)
+	id=SSID #(e.g.EDUroam)
 	uuid=9e123fbc-0123-46e3-97b5-f3214e123456 #unique uuid will be created upon creation of this profile
 	type=802-11-wireless
 

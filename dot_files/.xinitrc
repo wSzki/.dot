@@ -36,7 +36,8 @@ rm -rf ~/Desktop/ &
 #barrier &
 if [[ "$(xrandr | grep "DP-2-1 connected")" != "" ]]; then
 	if [[ "$(xrandr | grep "DP-2-2 connected")" != "" ]]; then
-		~/.screenlayout/default.sh
+		refresh_display
+		#~/.screenlayout/default.sh
 	fi
 fi
 

@@ -22,6 +22,7 @@ cp -r ~/.config/mps-youtube ~/.dot/config_files
 cp -r ~/.config/kitty ~/.dot/config_files
 cp -r ~/.config/nvim/ ~/.dot/config_files
 cp -r ~/.config/ytfzf ~/.dot/config_files
+cp -r ~/.config/bat ~/.dot/config_files
 cp ~/.mozilla/firefox/*/chrome/userChrome.css ~/.dot/config_files
 #cp -r ~/.config/i3-switch-if-workspace-empty/ ~/.dot/config_files
 #cp -r ~/.config/i3blocks-email ~/.dot/config_files
